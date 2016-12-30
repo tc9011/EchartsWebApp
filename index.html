@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <title>Angular Tour of Heroes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <script src="node_modules/core-js/client/shim.min.js"></script>     <!--为老式浏览器提供的填充库-->
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <!--Angular需要的库-->
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>        <!--Angular需要的库-->
+    <script src="node_modules/systemjs/dist/system.src.js"></script>    <!--导入并运行了在 main 文件中写的 app 模块。-->
+    <!--&lt;!&ndash; 2. Configure SystemJS &ndash;&gt;-->
+    <script src="systemjs.config.js"></script>
+    <script>
+        System.import('app').catch(function(err){ console.error(err); });
+    </script>
+</head>
+
+<body>
+<my-app>Loading...</my-app>
+</body>
+</html>
