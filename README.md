@@ -1,2 +1,2 @@
-# Echarts2WebApp
-echarts2 base on Angular2
+# EchartsWebApp
+echarts base on Angular2
