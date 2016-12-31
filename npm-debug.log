@@ -1,36 +1,36 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/Users/MAC/.nvm/versions/node/v5.9.1/bin/node',
-1 verbose cli   '/Users/MAC/.nvm/versions/node/v5.9.1/bin/npm',
+1 verbose cli [ '/Users/MAC/.nvm/versions/node/v6.2.2/bin/node',
+1 verbose cli   '/Users/MAC/.nvm/versions/node/v6.2.2/bin/npm',
 1 verbose cli   'run',
 1 verbose cli   'tsc:w' ]
-2 info using npm@3.7.3
-3 info using node@v5.9.1
+2 info using npm@3.9.5
+3 info using node@v6.2.2
 4 verbose run-script [ 'pretsc:w', 'tsc:w', 'posttsc:w' ]
 5 info lifecycle Echarts2WebApp@1.0.0~pretsc:w: Echarts2WebApp@1.0.0
 6 silly lifecycle Echarts2WebApp@1.0.0~pretsc:w: no script for pretsc:w, continuing
 7 info lifecycle Echarts2WebApp@1.0.0~tsc:w: Echarts2WebApp@1.0.0
 8 verbose lifecycle Echarts2WebApp@1.0.0~tsc:w: unsafe-perm in lifecycle true
-9 verbose lifecycle Echarts2WebApp@1.0.0~tsc:w: PATH: /Users/MAC/.nvm/versions/node/v5.9.1/lib/node_modules/npm/bin/node-gyp-bin:/Users/MAC/Documents/Project/Echarts2WebApp/node_modules/.bin:/Users/MAC/.nvm/versions/node/v5.9.1/bin:/Users/MAC/.nvm/versions/node/v5.9.1/lib/node_modules/npm/bin/node-gyp-bin:/Users/MAC/Documents/Project/Echarts2WebApp/node_modules/.bin:/Users/MAC/.nvm/versions/node/v5.9.1/bin:/Users/MAC/.nvm/versions/node/v5.9.1/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/aria2/bin
+9 verbose lifecycle Echarts2WebApp@1.0.0~tsc:w: PATH: /Users/MAC/.nvm/versions/node/v6.2.2/lib/node_modules/npm/bin/node-gyp-bin:/Users/MAC/Documents/Project/Echarts2WebApp/node_modules/.bin:/Users/MAC/.nvm/versions/node/v6.2.2/bin:/Users/MAC/.nvm/versions/node/v6.2.2/lib/node_modules/npm/bin/node-gyp-bin:/Users/MAC/Documents/Project/Echarts2WebApp/node_modules/.bin:/Users/MAC/.nvm/versions/node/v6.2.2/bin:/Users/MAC/.nvm/versions/node/v6.2.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/aria2/bin
 10 verbose lifecycle Echarts2WebApp@1.0.0~tsc:w: CWD: /Users/MAC/Documents/Project/Echarts2WebApp
 11 silly lifecycle Echarts2WebApp@1.0.0~tsc:w: Args: [ '-c', 'tsc -w' ]
 12 silly lifecycle Echarts2WebApp@1.0.0~tsc:w: Returned: code: 1  signal: null
 13 info lifecycle Echarts2WebApp@1.0.0~tsc:w: Failed to exec tsc:w script
 14 verbose stack Error: Echarts2WebApp@1.0.0 tsc:w: `tsc -w`
 14 verbose stack Exit status 1
-14 verbose stack     at EventEmitter.<anonymous> (/Users/MAC/.nvm/versions/node/v5.9.1/lib/node_modules/npm/lib/utils/lifecycle.js:239:16)
-14 verbose stack     at emitTwo (events.js:100:13)
-14 verbose stack     at EventEmitter.emit (events.js:185:7)
-14 verbose stack     at ChildProcess.<anonymous> (/Users/MAC/.nvm/versions/node/v5.9.1/lib/node_modules/npm/lib/utils/spawn.js:24:14)
-14 verbose stack     at emitTwo (events.js:100:13)
-14 verbose stack     at ChildProcess.emit (events.js:185:7)
-14 verbose stack     at maybeClose (internal/child_process.js:850:16)
+14 verbose stack     at EventEmitter.<anonymous> (/Users/MAC/.nvm/versions/node/v6.2.2/lib/node_modules/npm/lib/utils/lifecycle.js:245:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:191:7)
+14 verbose stack     at ChildProcess.<anonymous> (/Users/MAC/.nvm/versions/node/v6.2.2/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:191:7)
+14 verbose stack     at maybeClose (internal/child_process.js:852:16)
 14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:215:5)
 15 verbose pkgid Echarts2WebApp@1.0.0
 16 verbose cwd /Users/MAC/Documents/Project/Echarts2WebApp
 17 error Darwin 16.3.0
-18 error argv "/Users/MAC/.nvm/versions/node/v5.9.1/bin/node" "/Users/MAC/.nvm/versions/node/v5.9.1/bin/npm" "run" "tsc:w"
-19 error node v5.9.1
-20 error npm  v3.7.3
+18 error argv "/Users/MAC/.nvm/versions/node/v6.2.2/bin/node" "/Users/MAC/.nvm/versions/node/v6.2.2/bin/npm" "run" "tsc:w"
+19 error node v6.2.2
+20 error npm  v3.9.5
 21 error code ELIFECYCLE
 22 error Echarts2WebApp@1.0.0 tsc:w: `tsc -w`
 22 error Exit status 1
