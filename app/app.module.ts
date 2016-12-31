@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent }         from './app.component';
 import {LineComponent} from "./line/line.component";
 import {BarComponent} from "./bar/bar.component";
+import {LbOptionDataComponent} from "./lineandbaroptiondata/lb-option-data.component";
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {BarComponent} from "./bar/bar.component";
     declarations: [
         AppComponent,
         LineComponent,
-        BarComponent
+        BarComponent,
+        LbOptionDataComponent
     ],
     bootstrap: [ AppComponent ]
 })

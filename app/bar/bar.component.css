@@ -1,0 +1,9 @@
+#mybar {
+    margin-top: 25px;
+    float: right;
+    height: 600px;
+    width: 80%;
+}
+lb-option-data{
+    float: left;
+}

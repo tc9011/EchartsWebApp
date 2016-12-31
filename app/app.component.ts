@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
     template: `
     <h1>{{title}}</h1>
     <nav>
-      <a routerLink="/line" routerLinkActive="active">折线图</a>
-      <a routerLink="/bar" routerLinkActive="active">柱状图</a>
+        <a routerLink="/line" routerLinkActive="active">折线图</a>
+        <a routerLink="/bar" routerLinkActive="active">柱状图</a>
     </nav>
     <router-outlet></router-outlet>
   `,
