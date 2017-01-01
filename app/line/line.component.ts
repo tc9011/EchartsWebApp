@@ -19,7 +19,8 @@ export class LineComponent implements OnChanges,AfterViewInit{
                 dataZoom: {show: true},
                 restore: {show: true},
                 saveAsImage: {show: true}
-            }
+            },
+            right: 30
         },
         dataZoom: [{
           type: 'slider',

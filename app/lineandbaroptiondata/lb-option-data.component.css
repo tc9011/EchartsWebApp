@@ -1,10 +1,9 @@
 #xdataarea{
     margin-top: 50px;
-    float: left;
 }
 
 #xdata{
-    display: block;
+    /*display: block;*/
 }
 
 #ydataarea{
@@ -12,4 +11,5 @@
 }
 .lboptiondata{
     width: 50%;
+    display: inline;
 }

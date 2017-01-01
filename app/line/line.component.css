@@ -1,9 +1,6 @@
 #myline {
     margin-top: 15px;
-    float: right;
-    height: 600px;
-    width: 50%;
-}
-lb-option-data{
     float: left;
+    height: 600px;
+    width: 80%;
 }
