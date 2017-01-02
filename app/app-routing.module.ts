@@ -14,20 +14,20 @@ const routes: Routes = [
     },
     {
         path: 'line',
-        component: LineComponent
+        component: LineComponent,
+        children: [{
+            path: 'datainput',
+            component: DataInputComponent,
+        }, {
+            path: 'lboption',
+            component: LbOptionDataComponent,
+        }]
+
     },
     {
         path: 'bar',
         component: BarComponent
     },
-    {
-        path: 'lboption',
-        component: LbOptionDataComponent
-    },
-    {
-        path: 'datainput',
-        component: DataInputComponent
-    }
 ];
 
 @NgModule({

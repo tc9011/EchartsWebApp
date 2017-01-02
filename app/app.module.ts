@@ -18,14 +18,14 @@ import {DataInputComponent} from "./datainput/datainput.component";
         BrowserModule,
         FormsModule,
         HttpModule,
-        AppRoutingModule
+        AppRoutingModule,
     ],
     declarations: [
         AppComponent,
         LineComponent,
         BarComponent,
         LbOptionDataComponent,
-        DataInputComponent
+        DataInputComponent,
     ],
     bootstrap: [ AppComponent ]
 })
