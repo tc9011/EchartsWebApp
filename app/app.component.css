@@ -1,7 +1,10 @@
-h1 {
+h1,span {
     font-size: 1.2em;
     color: #999;
-    margin-bottom: 0;
+}
+span{
+    font-size: 1em;
+    margin-top: 10px;
 }
 h2 {
     font-size: 2em;

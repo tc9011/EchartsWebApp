@@ -8,8 +8,13 @@ import {DataInputComponent} from "./datainput/datainput.component";
 
 const routes: Routes = [
     {
-        path: '',
-        redirectTo: '/line',
+        path: 'line',
+        redirectTo: '/line/datainput',
+        pathMatch: 'full'
+    },
+    {
+        path: 'bar',
+        redirectTo: '/bar/datainput',
         pathMatch: 'full'
     },
     {
@@ -22,11 +27,17 @@ const routes: Routes = [
             path: 'lboption',
             component: LbOptionDataComponent,
         }]
-
     },
     {
         path: 'bar',
-        component: BarComponent
+        component: BarComponent,
+        children: [{
+            path: 'datainput',
+            component: DataInputComponent,
+        }, {
+            path: 'lboption',
+            component: LbOptionDataComponent,
+        }]
     },
 ];
 
