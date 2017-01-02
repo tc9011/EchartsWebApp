@@ -34,9 +34,14 @@ nav a.active {
 .dataarea{
     overflow: hidden;
     height: 600px;
-    width: 50%;
+    width: 400px;
     border: 1px solid gray;
-    left: 10px;
     box-shadow: 1px 1px 2px gray;
     border-radius: 5px;
+    position: absolute;
+    left: 960px;
+    top: 15px;
+}
+section{
+    position: relative;
 }

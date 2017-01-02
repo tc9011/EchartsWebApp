@@ -3,11 +3,15 @@
     margin-bottom: 10px;
     float: left;
     height: 600px;
-    width: 1040px;
+    width: 950px;
     border: 1px solid gray;
     margin-right: 10px;
     box-shadow: 1px 1px 2px gray;
     border-radius: 5px;
+    position: relative;
+}
+nav{
+    margin-left: 5px;
 }
 nav a {
     padding: 5px 10px;
@@ -26,4 +30,18 @@ nav a:hover {
 }
 nav a.active {
     color: #039be5;
+}
+.dataarea{
+    overflow: hidden;
+    height: 600px;
+    width: 400px;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 2px gray;
+    border-radius: 5px;
+    position: absolute;
+    left: 960px;
+    top: 15px;
+}
+section{
+    position: relative;
 }

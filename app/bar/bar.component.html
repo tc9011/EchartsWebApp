@@ -1,3 +1,11 @@
-<div id="mybar"></div>
-<datainput></datainput>
-<lb-option-data></lb-option-data>
+<section>
+    <div id="mybar"></div>
+
+    <div class="dataarea">
+        <nav>
+            <a routerLink="/datainput" routerLinkActive="active">图表数据</a>
+            <a routerLink="/lb-option-data" routerLinkActive="active">图表属性</a>
+        </nav>
+        <router-outlet></router-outlet>
+    </div>
+</section>
