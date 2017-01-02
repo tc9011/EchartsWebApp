@@ -1,7 +1,29 @@
 #mybar {
-    margin-top: 25px;
+    margin-top: 15px;
+    margin-bottom: 10px;
     float: left;
     height: 600px;
-    width: 80%;
+    width: 1040px;
+    border: 1px solid gray;
+    margin-right: 10px;
+    box-shadow: 1px 1px 2px gray;
+    border-radius: 5px;
 }
-
+nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #eee;
+    border-radius: 4px;
+}
+nav a:visited, a:link {
+    color: #607D8B;
+}
+nav a:hover {
+    color: #039be5;
+    background-color: #CFD8DC;
+}
+nav a.active {
+    color: #039be5;
+}

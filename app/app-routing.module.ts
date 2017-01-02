@@ -14,11 +14,7 @@ const routes: Routes = [
     },
     {
         path: 'line',
-        component: LineComponent,
-        children: [{
-            path: 'datainput',
-            component: DataInputComponent,
-        }]
+        component: LineComponent
     },
     {
         path: 'bar',
@@ -27,6 +23,10 @@ const routes: Routes = [
     {
         path: 'lboption',
         component: LbOptionDataComponent
+    },
+    {
+        path: 'datainput',
+        component: DataInputComponent
     }
 ];
 
