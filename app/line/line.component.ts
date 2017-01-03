@@ -71,7 +71,7 @@ export class LineComponent implements OnChanges,AfterViewInit{
     }
 
     ngAfterViewInit() {
-        var that = this;
+        let that = this;
         // var dataflag = that.dataflag;
         that.lineData = that.data;      //data赋值给linedata
 
@@ -84,8 +84,8 @@ export class LineComponent implements OnChanges,AfterViewInit{
         that.createCharts();
     }
     ngOnChanges() {
-        var that = this;
-        var dataflag = that.dataflag;
+        let that = this;
+        let dataflag = that.dataflag;
         that.lineData = that.data;
 
         //清空原始数组
