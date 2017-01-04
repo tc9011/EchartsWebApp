@@ -7,6 +7,17 @@ import {Component, OnChanges, AfterViewInit} from "@angular/core";
 })
 export class LineComponent implements OnChanges,AfterViewInit{
     option:any = {
+        title: {
+            text: 'ECharts 入门示例',
+            textStyle: {
+                color: '#333',
+                fontStyle: 'normal',
+                fontWeight: 'border',
+                fontSize: 20,
+            },
+            left: 'center',
+            top: '5%'
+        },
         tooltip: {
             show: true,
             trigger: 'axis'
@@ -20,7 +31,8 @@ export class LineComponent implements OnChanges,AfterViewInit{
                 restore: {show: true},
                 saveAsImage: {show: true}
             },
-            right: 30
+            right: 30,
+            top: 15
         },
         dataZoom: [{
           type: 'slider',
@@ -30,8 +42,8 @@ export class LineComponent implements OnChanges,AfterViewInit{
         legend: {
             selectedMode: true,
             selected: {},
-            right: '0px',
-            top: '80px',
+            right: 0,
+            top: 150,
             orient: 'vertical',
             textStyle: {
                 fontSize: 12,
