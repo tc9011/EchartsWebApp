@@ -1,15 +1,12 @@
-#xdataarea{
-    margin-top: 50px;
+.textcontent{
+    height: 10px;
+    width: 100%;
+    line-height: 10px;
+    margin-top: 10px;
 }
-
-#xdata{
-    /*display: block;*/
+.textcontent input{
+    width: 70%;
 }
-
-#ydataarea{
-    margin-top: 50px;
-}
-.lboptiondata{
-    width: 50%;
-    display: inline;
+.textfontsize{
+    margin-top: 20px;
 }
