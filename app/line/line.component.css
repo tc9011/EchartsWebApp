@@ -3,7 +3,7 @@
     margin-bottom: 10px;
     float: left;
     height: 700px;
-    width: 950px;
+    width: 1100px;
     border: 1px solid gray;
     margin-right: 10px;
     box-shadow: 1px 1px 2px gray;
@@ -39,7 +39,7 @@ nav a.active {
     box-shadow: 1px 1px 2px gray;
     border-radius: 5px;
     position: absolute;
-    left: 960px;
+    left: 1110px;
     top: 15px;
 }
 section{

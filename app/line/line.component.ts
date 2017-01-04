@@ -37,10 +37,16 @@ export class LineComponent implements OnChanges,AfterViewInit{
                 fontSize: 12,
             },
             show: true,
-            data: []
+            data: ['销量','售22222222价']
+        },
+        grid: {
+            show: false,
+            top: 150,
+            right: 200,
+
         },
         xAxis: {
-            data: [1,2,3],
+            data: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"],
             axisLabel: {
                 interval: 0,
             }
@@ -51,7 +57,15 @@ export class LineComponent implements OnChanges,AfterViewInit{
                 name: '',
             }
         ],
-        series: [1,2,3]
+        series: [{
+            name: '销量',
+            type: 'line',
+            data: [5, 20, 36, 10, 10, 2000000]
+        },{
+            name: '售22222222价',
+            type: 'line',
+            data: [500, 2099, 3699, 1099, 1990, 2000000]
+        }]
     };
 
     createCharts() {
@@ -76,10 +90,10 @@ export class LineComponent implements OnChanges,AfterViewInit{
         that.lineData = that.data;      //data赋值给linedata
 
         //清空原始数组
-        that.option.legend.data = [];
-        that.option.series.data = [];
-        that.option.xAxis.data = [];
-        that.option.series = [];
+        // that.option.legend.data = [];
+        // that.option.series.data = [];
+        // that.option.xAxis.data = [];
+        // that.option.series = [];
         //调用echarts画图
         that.createCharts();
     }
@@ -89,10 +103,10 @@ export class LineComponent implements OnChanges,AfterViewInit{
         that.lineData = that.data;
 
         //清空原始数组
-        that.option.legend.data = [];
-        that.option.series.data = [];
-        that.option.xAxis.data = [];
-        that.option.series = [];
+        // that.option.legend.data = [];
+        // that.option.series.data = [];
+        // that.option.xAxis.data = [];
+        // that.option.series = [];
         if (dataflag > 1)//can't run that.createCharts when ngOnChanges run firsttime
         {
             that.createCharts();
