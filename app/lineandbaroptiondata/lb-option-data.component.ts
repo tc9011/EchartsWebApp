@@ -1,4 +1,6 @@
-import {Component} from "@angular/core";
+import {Component, Input} from "@angular/core";
+import {MyEcharts} from "../my-echarts";
+import {MyEchartsService} from "../my-echarts.service";
 @Component({
     moduleId: module.id,
     selector: 'lb-option-data',
@@ -7,5 +9,8 @@ import {Component} from "@angular/core";
 })
 
 export class LbOptionDataComponent{
+    myecharts: MyEcharts;
+    constructor(private myechartsService: MyEchartsService){
 
+    }
 }

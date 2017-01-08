@@ -1,4 +1,4 @@
-import {Component, OnChanges, AfterViewInit} from "@angular/core";
+import {Component, OnChanges, AfterViewInit, Input, Output} from "@angular/core";
 @Component({
     moduleId: module.id,
     selector: 'my-line',
@@ -90,11 +90,13 @@ export class LineComponent implements OnChanges,AfterViewInit{
         myChart.setOption(that.option);
     }
 
+
     ngOnInit():void{
         let that = this;
         that.createCharts();
 
     }
+
 
     ngAfterViewInit() {
         let that = this;
