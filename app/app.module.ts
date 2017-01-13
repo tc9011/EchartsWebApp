@@ -11,7 +11,6 @@ import {LineComponent} from "./line/line.component";
 import {BarComponent} from "./bar/bar.component";
 import {LbOptionDataComponent} from "./lineandbaroptiondata/lb-option-data.component";
 import {DataInputComponent} from "./datainput/datainput.component";
-import {MyEchartsService} from "./my-echarts.service";
 
 
 @NgModule({
@@ -28,7 +27,6 @@ import {MyEchartsService} from "./my-echarts.service";
         LbOptionDataComponent,
         DataInputComponent,
     ],
-    providers: [MyEchartsService],
     bootstrap: [ AppComponent ]
 })
 export class AppModule { }

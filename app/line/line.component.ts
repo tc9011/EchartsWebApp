@@ -100,6 +100,7 @@ export class LineComponent implements OnChanges,AfterViewInit{
 
     ngAfterViewInit() {
         let that = this;
+        that.option.title.text = that.myecharts.title;
         // var dataflag = that.dataflag;
         that.lineData = that.data;      //data赋值给linedata
 
