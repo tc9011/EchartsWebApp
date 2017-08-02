@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/EchartsWebApp.iml" filepath="$PROJECT_DIR$/.idea/EchartsWebApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/EchartsWebApp.iml" filepath="$PROJECT_DIR$/.idea/EchartsWebApp.iml" />
     </modules>
   </component>
 </project>

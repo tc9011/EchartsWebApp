@@ -1,0 +1,63 @@
+<div role="img" class="bg-img"></div>
+
+<div class="button-group">
+  <button type="button" class="btn btn-lg btn-default">default</button>
+  <button type="button" class="btn btn-lg btn-primary">primary</button>
+  <button type="button" class="btn btn-lg btn-success">success</button>
+  <button type="button" class="btn btn-lg btn-info">info</button>
+  <button type="button" class="btn btn-lg btn-warning">warning</button>
+  <button type="button" class="btn btn-lg btn-danger">danger</button>
+  <button type="button" class="btn btn-lg btn-link">link</button>
+</div>
+
+<md-card class="example-card">
+  <md-card-header>
+    <div md-card-avatar class="example-header-image"></div>
+    <md-card-title>Shiba Inu</md-card-title>
+    <md-card-subtitle>Dog Breed</md-card-subtitle>
+  </md-card-header>
+  <img md-card-image src="./assets/imgs/6.jpg">
+  <md-card-content>
+    <p>
+      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+      bred for hunting.
+    </p>
+  </md-card-content>
+  <md-card-actions>
+    <button md-button>LIKE</button>
+    <button md-button>SHARE</button>
+  </md-card-actions>
+</md-card>
+
+<p class="md-input">
+  <md-input-container class="example-full-width">
+    <textarea mdInput placeholder="Address 2"></textarea>
+  </md-input-container>
+</p>
+
+<!--animation example-->
+<button md-button class="animation-button" (click)="toggleState()">active animation</button>
+
+<p [@flyIn]="animation" [@fadeIn]="animation">I'm animation</p>
+<!--animation example-->
+
+<!--test fontawesome-->
+<div class="fontawesome">
+  <i class="fa fa-american-sign-language-interpreting fa-5x" aria-hidden="true"></i>
+  <span>I am fontawesome</span>
+  <i class="fa fa-american-sign-language-interpreting fa-5x" aria-hidden="true"></i>
+</div>
+<!--test fontawesome-->
+
+<!--test echarts-->
+<div id="main"></div>
+<!--test echarts-->
+
+<!--test jquery-->
+<div id="jq">jQuery works</div>
+<!--test jquery-->
+
+<!--test moment-->
+<div id="moment">moment.js works ,it's {{time}} now</div>
+<!--test moment-->
