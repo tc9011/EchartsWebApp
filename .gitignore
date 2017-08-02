@@ -6,7 +6,7 @@
 /out-tsc
 
 # dependencies
-/App/node_modules
+#/App/node_modules
 
 # IDEs and editors
 /.idea
@@ -18,11 +18,11 @@
 *.sublime-workspace
 
 # IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+#.vscode/*
+#!.vscode/settings.json
+#!.vscode/tasks.json
+#!.vscode/launch.json
+#!.vscode/extensions.json
 
 # misc
 /.sass-cache
@@ -31,7 +31,7 @@
 /libpeerconnection.log
 npm-debug.log
 testem.log
-/typings
+#/typings
 
 # e2e
 /e2e/*.js
