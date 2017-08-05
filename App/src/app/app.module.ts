@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import {SharedModule} from "./shared/shared.module";
 import {appRoutes} from './app.routes';
+import {MdCardModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import {appRoutes} from './app.routes';
     JsonpModule,
     BrowserAnimationsModule,
     SharedModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    MdCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
