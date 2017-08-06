@@ -1,15 +1,19 @@
 export const appRoutes=[
   {
     path:'',
-    redirectTo:'homepage',
+    redirectTo:'line',
     pathMatch:'full'
   },
   {
-    path:'homepage',
-    loadChildren: './homepage/homepage.module#HomepageModule',    //lazy load
+    path:'line',
+    loadChildren: './line-charts/line-charts.module#LineChartsModule',    //lazy load
+  },
+  {
+    path:'bar',
+    loadChildren: './bar-charts/bar-charts.module#BarChartsModule',    //lazy load
   },
   {
     path:'**',//fallback router must in the last
-    loadChildren: './homepage/homepage.module#HomepageModule'
+    loadChildren: './line-charts/line-charts.module#LineChartsModule'
   }
 ];
