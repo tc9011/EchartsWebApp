@@ -1,6 +1,21 @@
 @import '../assets/css/skins/indigo-pink.scss';
 
 section {
-  background: $homepage-background;
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: $homepage-background-color;
 }
 
+md-card{
+  width: 344px;
+  height: 176px;
+  background-color: $app-md-card-background-color;
+  margin: 0 auto;
+  margin-top: 20px;
+  &:first-child{
+    margin-top: 50px;
+  }
+}
