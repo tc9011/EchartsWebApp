@@ -1,9 +1,11 @@
 <section>
+  <button (click)="changeLanguage()" md-fab>English</button>
+
   <md-card>
     <md-card-content class="line-charts-card"></md-card-content>
     <md-card-footer>
       <p>
-        折线图
+        {{'app.line'  | translate}}
       </p>
     </md-card-footer>
   </md-card>
@@ -11,7 +13,7 @@
     <md-card-content class="bar-charts-card"></md-card-content>
     <md-card-footer>
       <p>
-        柱状图
+        {{'app.bar'  | translate}}
       </p>
     </md-card-footer>
   </md-card>
