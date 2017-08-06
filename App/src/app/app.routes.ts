@@ -1,9 +1,6 @@
+import {AppComponent} from "./app.component";
+
 export const appRoutes=[
-  {
-    path:'',
-    redirectTo:'line',
-    pathMatch:'full'
-  },
   {
     path:'line',
     loadChildren: './line-charts/line-charts.module#LineChartsModule',    //lazy load
@@ -14,6 +11,6 @@ export const appRoutes=[
   },
   {
     path:'**',//fallback router must in the last
-    loadChildren: './line-charts/line-charts.module#LineChartsModule'
+    component: AppComponent,
   }
 ];
