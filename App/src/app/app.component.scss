@@ -4,8 +4,22 @@ $nav-size:70px;
 $first-fan-angle: 22.5deg;
 $second-fan-angle: 45deg;
 
-@mixin first-fan{
+@mixin first-fan ($num){
+  @for $i from 1 through $num {
+    .menuHolder li.s2:nth-of-type(#{$i+1}) > a {
+      background: rgb(221-$i*17,221-$i*17,221-$i*17);
+      transform: rotate($i*$first-fan-angle);
+    }
+  }
+}
 
+@mixin second-fan ($num) {
+  @for $i from 1 through $num {
+    .menuHolder .a3 li:nth-of-type(#{$i+1}) > a {
+      background: rgb(153-$i*17,153-$i*17,153-$i*17);
+      transform: rotate($i*$second-fan-angle);
+    }
+  }
 }
 
 section {
@@ -69,11 +83,7 @@ button {
   top: 0;
 }
 
-.menuHolder ul.p2 {
-  z-index: -1;
-}
-
-.menuHolder ul.p3 {
+.menuHolder ul.p2, .menuHolder ul.p3 {
   z-index: -1;
 }
 
@@ -100,7 +110,8 @@ button {
   position: absolute;
   display: block;
   width: 3*$nav-size;
-  padding-left: 2*$nav-size;
+  padding-left: (2*$nav-size)-20;
+  padding-top: 50px;
   height: 3*$nav-size;
   background: #999;
   border-radius: 0 0 3*$nav-size 0;
@@ -112,61 +123,30 @@ button {
   transition: 1s;
 }
 
-.menuHolder li.s2:nth-of-type(6) > a {
-  background: #888;
-  transform: rotate(5*$first-fan-angle);
+@include first-fan(4);
+@include second-fan(2);
+
+
+.menuHolder li.s1:hover ul.p2, .menuHolder li.s2:hover ul.p3{
+  transform: rotate(0deg);
 }
 
-.menuHolder li.s2:nth-of-type(5) > a {
-  background: #999;
-  transform: rotate(4*$first-fan-angle);
-}
-
-.menuHolder li.s2:nth-of-type(4) > a {
-  background: #aaa;
-  transform: rotate(3*$first-fan-angle);
-}
-
-.menuHolder li.s2:nth-of-type(3) > a {
-  background: #bbb;
-  transform: rotate(2*$first-fan-angle);
-}
-
-.menuHolder li.s2:nth-of-type(2) > a {
-  background: #ccc;
+.menuHolder li.s2:hover ul.p3 span{
   transform: rotate($first-fan-angle);
 }
 
-.menuHolder .a3 li:nth-of-type(3) > a {
-  background: #777;
-  transform: rotate(2*$second-fan-angle);
-}
-
-.menuHolder .a3 li:nth-of-type(2) > a {
-  background: #888;
-  transform: rotate($second-fan-angle);
-}
-
-.menuHolder li.s1:hover ul.p2 {
-  transform: rotate(0deg);
-}
-
-.menuHolder li.s2:hover ul.p3 {
-  transform: rotate(0deg);
-}
-
 .menuHolder ul li:hover > a {
-  background: #f00;
+  background: $basic-pink;
   color: $white;
 }
 
 .menuHolder li.s2:hover > a {
-  background: #d00;
+  background: rgb(red($basic-pink)+17,green($basic-pink)+17,blue($basic-pink)+17);
   color: $white;
 }
 
 .menuHolder .a3 li:hover > a {
-  background: #b00;
+  background: rgb(red($basic-pink)+34,green($basic-pink)+34,blue($basic-pink)+34);
   color: $white;
 }
 
