@@ -1,16 +1,193 @@
 @import '../assets/css/skins/indigo-pink.scss';
 
+$nav-size:70px;
+$first-fan-angle: 22.5deg;
+$second-fan-angle: 45deg;
+
+@mixin first-fan{
+
+}
+
 section {
   position: absolute;
   left: 0;
   top: 0;
   min-width: 100vw;
   min-height: 100vh;
-  background-color: $basic-blue-color;
+  background-color: $basic-blue;
 }
 
-button{
-  float: right;
-  margin: 20px 20px;
-  margin-bottom: 0;
+button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
+
+.fa{
+  display: flex;
+  margin-top: 15px;
+  margin-left: 15px;
+  color: $white;
+}
+
+.menuHolder {
+  width: $nav-size;
+  height: $nav-size;
+  position: relative;
+  z-index: 100;
+}
+
+.menuHolder ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+}
+
+.menuHolder ul li {
+  border-radius: 0 0 3*$nav-size 0;
+  width: 0;
+  height: 0;
+}
+
+.menuHolder ul li a {
+  color: $black;
+  text-decoration: none;
+  font: bold 13px/30px arial, sans-serif;
+  text-align: center;
+  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.4);
+  transform-origin: 0 0;
+}
+
+.menuHolder ul.p1 li {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.menuHolder ul.p2 {
+  z-index: -1;
+}
+
+.menuHolder ul.p3 {
+  z-index: -1;
+}
+
+.menuHolder li.s1 > a {
+  position: absolute;
+  display: block;
+  width: $nav-size;
+  height: $nav-size;
+  background: $basic-pink;
+  border-radius: 0 0 $nav-size 0;
+}
+
+.menuHolder li.s2 > a {
+  position: absolute;
+  display: block;
+  width: 2*$nav-size;
+  padding-left: $nav-size;
+  height: 2*$nav-size;
+  background: #ddd;
+  border-radius: 0 0 2*$nav-size 0;
+}
+
+.menuHolder ul.p3 li a {
+  position: absolute;
+  display: block;
+  width: 3*$nav-size;
+  padding-left: 2*$nav-size;
+  height: 3*$nav-size;
+  background: #999;
+  border-radius: 0 0 3*$nav-size 0;
+}
+
+.menuHolder ul ul {
+  transform-origin: 0 0;
+  transform: rotate(90deg);
+  transition: 1s;
+}
+
+.menuHolder li.s2:nth-of-type(6) > a {
+  background: #888;
+  transform: rotate(5*$first-fan-angle);
+}
+
+.menuHolder li.s2:nth-of-type(5) > a {
+  background: #999;
+  transform: rotate(4*$first-fan-angle);
+}
+
+.menuHolder li.s2:nth-of-type(4) > a {
+  background: #aaa;
+  transform: rotate(3*$first-fan-angle);
+}
+
+.menuHolder li.s2:nth-of-type(3) > a {
+  background: #bbb;
+  transform: rotate(2*$first-fan-angle);
+}
+
+.menuHolder li.s2:nth-of-type(2) > a {
+  background: #ccc;
+  transform: rotate($first-fan-angle);
+}
+
+.menuHolder .a3 li:nth-of-type(3) > a {
+  background: #777;
+  transform: rotate(2*$second-fan-angle);
+}
+
+.menuHolder .a3 li:nth-of-type(2) > a {
+  background: #888;
+  transform: rotate($second-fan-angle);
+}
+
+.menuHolder li.s1:hover ul.p2 {
+  transform: rotate(0deg);
+}
+
+.menuHolder li.s2:hover ul.p3 {
+  transform: rotate(0deg);
+}
+
+.menuHolder ul li:hover > a {
+  background: #f00;
+  color: $white;
+}
+
+.menuHolder li.s2:hover > a {
+  background: #d00;
+  color: $white;
+}
+
+.menuHolder .a3 li:hover > a {
+  background: #b00;
+  color: $white;
+}
+
+.menuWindow {
+  width: $nav-size+10px;
+  height: 110px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  transition: 0s 1s;
+}
+
+.menuHolder:hover .menuWindow {
+  width: $nav-size+10px;
+  height: $nav-size+10px;
+  transition: 0s 0s;
+}
+
+.menuHolder span {
+  display: block;
+  transform: rotate(5deg);
+}
+
