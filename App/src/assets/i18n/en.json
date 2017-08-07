@@ -4,5 +4,9 @@
     "bar": "Bar Chart",
     "pipe": "Pipe Chart",
     "language": "language"
+  },
+  "chart": {
+    "data": "Data",
+    "setting": "Settings"
   }
 }
