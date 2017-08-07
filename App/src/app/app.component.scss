@@ -63,7 +63,7 @@ button {
 .menuHolder {
   width: $nav-size;
   height: $nav-size;
-  position: relative;
+  position: absolute;
   z-index: 100;
 }
 
