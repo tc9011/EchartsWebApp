@@ -1,6 +1,8 @@
 {
   "app": {
     "line": "Line Chart",
-    "bar": "Bar Chart"
+    "bar": "Bar Chart",
+    "pipe": "Pipe Chart",
+    "language": "language"
   }
 }

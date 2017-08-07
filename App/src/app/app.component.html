@@ -4,15 +4,15 @@
       <ul class="p1">
         <li class="s1"><a><i class="fa fa-plus fa-2x"></i></a>
           <ul class="p2">
-            <li class="s2"><a href="#"><span>语言</span></a>
+            <li class="s2"><a><span>{{"app.language" | translate}}</span></a>
               <ul class="p3 a3">
                 <li><a (click)="useChinese()"><span>中文</span></a></li>
                 <li><a (click)="useEnglish()"><span>English</span></a></li>
               </ul>
             </li>
-            <li class="s2"><a href="#"><span>柱状图</span></a></li>
-            <li class="s2"><a href="#"><span>折线图</span></a></li>
-            <li class="s2"><a href="#"><span>饼图</span></a></li>
+            <li class="s2"><a routerLink="line"><span>{{"app.line" | translate}}</span></a></li>
+            <li class="s2"><a routerLink="bar"><span>{{"app.bar" | translate}}</span></a></li>
+            <li class="s2"><a href="#"><span>{{"app.pipe" | translate}}</span></a></li>
           </ul>
         </li>
       </ul>
