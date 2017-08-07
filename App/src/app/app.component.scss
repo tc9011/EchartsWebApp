@@ -10,48 +10,7 @@ section {
 }
 
 button{
+  float: right;
   margin: 20px 20px;
   margin-bottom: 0;
-}
-
-md-card{
-  width: 344px;
-  height: 176px;
-  background-color: $white;
-  margin: 0 auto;
-  margin-top: 20px;
-  &:first-child{
-    margin-top: 50px;
-  }
-  &:hover{
-    cursor: pointer;
-  }
-}
-
-md-card-footer{
-  p{
-    margin-left: 20px;
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: $basic-blue-color;
-  }
-}
-
-.fa{
-  color: $basic-blue-color;
-}
-
-md-card md-card-content{
-  height: 130px;
-  width: 170px;
-  margin: 0 auto;
-  margin-top: -20px;
-}
-
-.line-charts-card{
-  background: url("../assets/imgs/basic Line.svg") no-repeat center;
-}
-
-.bar-charts-card{
-  background: url("../assets/imgs/basic Bar.svg") no-repeat center;
 }
