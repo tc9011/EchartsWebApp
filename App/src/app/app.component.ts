@@ -1,4 +1,4 @@
-import { Component,ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 
 @Component({
@@ -9,20 +9,18 @@ import {TranslateService} from '@ngx-translate/core';
 })
 export class AppComponent{
 
-  constructor(public translate: TranslateService, private el:ElementRef){
+  constructor(public translate: TranslateService){
     translate.addLangs(['zh', 'en']);
     translate.setDefaultLang('zh');
     translate.use('zh');
   }
 
-  changeLanguage(){
-    if (this.el.nativeElement.querySelector('button').innerText == 'English'){
+  useEnglish(){
       this.translate.use('en');
-      this.el.nativeElement.querySelector('button').innerText = '中文';
-    } else {
-      this.translate.use('zh');
-      this.el.nativeElement.querySelector('button').innerText = 'English';
-    }
 
+  }
+
+  useChinese(){
+    this.translate.use('zh');
   }
 }
