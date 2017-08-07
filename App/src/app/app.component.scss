@@ -4,6 +4,10 @@ $nav-size:70px;
 $first-fan-angle: 22.5deg;
 $second-fan-angle: 45deg;
 
+li:hover{
+  cursor: pointer;
+}
+
 @mixin first-fan ($num){
   @for $i from 1 through $num {
     .menuHolder li.s2:nth-of-type(#{$i+1}) > a {
