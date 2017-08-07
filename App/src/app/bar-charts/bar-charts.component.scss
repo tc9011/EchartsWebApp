@@ -1,0 +1,14 @@
+@import "../../assets/css/skins/indigo-pink";
+
+.left-area{
+  float: left;
+  width: 50%;
+  height: 100vh;
+  border-right: 1px solid $white;
+}
+
+.right-area{
+  width: 50%;
+  height: 100vh;
+  float: right;
+}
