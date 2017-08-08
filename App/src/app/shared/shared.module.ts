@@ -23,10 +23,4 @@ const sharedModule = [
   declarations: [],
   exports: sharedModule
 })
-export class SharedModule {
-  static forRoot(): ModuleWithProviders {
-    return {
-      ngModule: SharedModule
-    };
-  }
-}
+export class SharedModule {}

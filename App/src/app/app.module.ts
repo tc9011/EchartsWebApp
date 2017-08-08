@@ -29,7 +29,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FormsModule,
     HttpModule,
     BrowserAnimationsModule,
-    SharedModule.forRoot(),
+    SharedModule,
     RouterModule.forRoot(appRoutes),
     MdCardModule,
     MdButtonModule,
