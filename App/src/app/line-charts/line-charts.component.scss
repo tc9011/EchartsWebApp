@@ -4,8 +4,7 @@
   float: left;
   width: 50%;
   height: 100vh;
-  border-right: 1px solid $basic-blue;
-  background-color: $basic-blue;
+  border-right: 2px solid $basic-blue;
 }
 
 .right-area{
@@ -16,4 +15,9 @@
 
 :host /deep/ .mat-tab-labels .mat-tab-label{
   min-width: 50%;
+}
+
+.echarts {
+  margin-top: 210px;
+  min-height: 400px;
 }
