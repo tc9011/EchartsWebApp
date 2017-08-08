@@ -1,5 +1,9 @@
 import { NgModule,ModuleWithProviders } from '@angular/core';
 import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+
+import {TranslateModule} from '@ngx-translate/core';
 
 import { AngularEchartsModule } from 'ngx-echarts';
 import 'hammerjs';
@@ -7,7 +11,10 @@ import 'hammerjs';
 const sharedModule = [
   FormsModule,
   ReactiveFormsModule,
-  AngularEchartsModule
+  AngularEchartsModule,
+  HttpClientModule,
+  HttpModule,
+  TranslateModule
 ];
 
 
@@ -16,4 +23,10 @@ const sharedModule = [
   declarations: [],
   exports: sharedModule
 })
-export class SharedModule { }
+export class SharedModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: SharedModule
+    };
+  }
+}
