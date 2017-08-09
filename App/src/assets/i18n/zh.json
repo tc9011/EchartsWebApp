@@ -1,12 +1,16 @@
 {
-    "app": {
-        "line": "折线图",
-        "bar": "柱状图",
-        "pipe": "饼图",
-        "language": "语言"
-    },
-    "chart": {
-        "data": "数据",
-        "setting": "配置"
-    }
+	"app": {
+		"bar": "柱状图",
+		"language": "语言",
+		"line": "折线图",
+		"pipe": "饼图"
+	},
+	"chart": {
+		"data": "数据",
+		"setting": "配置"
+	},
+	"setting": {
+		"subtitle": "副标题",
+		"title": "标题"
+	}
 }

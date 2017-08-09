@@ -1,12 +1,16 @@
 {
-  "app": {
-    "line": "Line Chart",
-    "bar": "Bar Chart",
-    "pipe": "Pipe Chart",
-    "language": "language"
-  },
-  "chart": {
-    "data": "Data",
-    "setting": "Settings"
-  }
+	"app": {
+		"bar": "Bar Chart",
+		"language": "language",
+		"line": "Line Chart",
+		"pipe": "Pipe Chart"
+	},
+	"chart": {
+		"data": "Data",
+		"setting": "Settings"
+	},
+	"setting": {
+		"subtitle": "subtitle",
+		"title": "title"
+	}
 }
