@@ -155,7 +155,7 @@ section {
   color: $white;
 }
 
-.menuHolder li.s2:hover > a {
+.menuHolder ul li.s2:hover > a {
   background: rgb(red($button-basic-color)+17,green($button-basic-color)+17,blue($button-basic-color)+17);
   color: $white;
 }
