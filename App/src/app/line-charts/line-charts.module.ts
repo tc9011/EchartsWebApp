@@ -7,13 +7,15 @@ import {MdTabsModule} from '@angular/material';
 import { LineChartsComponent } from './line-charts.component';
 import { lineChartsRoutes } from './line-charts.routes'
 import {SharedModule} from "../shared/shared.module";
+import {LineAndBarSettingsModule} from "../shared/line-and-bar-settings/line-and-bar-settings.module";
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(lineChartsRoutes),
     MdTabsModule,
-    SharedModule
+    SharedModule,
+    LineAndBarSettingsModule
   ],
   declarations: [LineChartsComponent]
 })
