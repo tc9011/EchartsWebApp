@@ -13,9 +13,6 @@ import { AppComponent } from './app.component';
 import {SharedModule} from "./shared/shared.module";
 import {appRoutes} from './app.routes';
 
-import {MdButtonModule} from '@angular/material';
-import {MdCardModule} from '@angular/material';
-
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
 }
@@ -31,8 +28,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     BrowserAnimationsModule,
     SharedModule,
     RouterModule.forRoot(appRoutes),
-    MdCardModule,
-    MdButtonModule,
     HttpClientModule,
     HttpModule,
     TranslateModule.forRoot({
