@@ -1,0 +1,18 @@
+@import "../../../assets/css/skins/indigo-pink";
+
+table{
+  width: 100%;
+}
+
+th{
+  text-align: center;
+}
+
+#input-area td input{
+  display: inline;
+  width: 45%;
+  border-right: 1px solid $basic-blue;
+  &:last-child{
+    border-right: none;
+  }
+}

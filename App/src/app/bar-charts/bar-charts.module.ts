@@ -8,6 +8,7 @@ import { BarChartsComponent } from './bar-charts.component';
 import { barChartsRoutes } from './bar-charts.routes'
 import {SharedModule} from "../shared/shared.module";
 import {LineAndBarSettingsModule} from "../shared/line-and-bar-settings/line-and-bar-settings.module";
+import {TableModule} from "../shared/table/table.module";
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import {LineAndBarSettingsModule} from "../shared/line-and-bar-settings/line-and
     RouterModule.forChild(barChartsRoutes),
     MdTabsModule,
     SharedModule,
-    LineAndBarSettingsModule
+    LineAndBarSettingsModule,
+    TableModule
   ],
   declarations: [BarChartsComponent]
 })
