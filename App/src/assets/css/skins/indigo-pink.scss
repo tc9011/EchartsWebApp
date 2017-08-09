@@ -5,3 +5,27 @@ $white: #fff;
 $basic-pink: #ff4081;
 
 $black: #000;
+
+@mixin section-common {
+  .left-area{
+    float: left;
+    width: 68%;
+    min-height: 100vh;
+  }
+
+  .right-area{
+    width: 32%;
+    min-height: 100vh;
+    float: right;
+    border-left: 2px solid $basic-blue;
+  }
+
+  :host /deep/ .mat-tab-labels .mat-tab-label{
+    min-width: 50%;
+  }
+
+  .echarts {
+    margin-top: 100px;
+    min-height: 400px;
+  }
+}
