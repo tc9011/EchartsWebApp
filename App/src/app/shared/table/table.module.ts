@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TableComponent } from '../src/app/shared/table/table.component';
+import { TableComponent } from './table.component';
 
 @NgModule({
   imports: [
