@@ -6,6 +6,7 @@ import { HttpModule } from '@angular/http';
 import {TranslateModule} from '@ngx-translate/core';
 
 import { AngularEchartsModule } from 'ngx-echarts';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 import 'hammerjs';
 
 const sharedModule = [
@@ -14,7 +15,8 @@ const sharedModule = [
   AngularEchartsModule,
   HttpClientModule,
   HttpModule,
-  TranslateModule
+  TranslateModule,
+  Ng2SmartTableModule
 ];
 
 
