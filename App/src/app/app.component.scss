@@ -108,7 +108,7 @@ button {
   display: block;
   width: $nav-size;
   height: $nav-size;
-  background: $basic-pink;
+  background: $basic-blue;
   border-radius: 0 0 $nav-size 0;
 }
 
@@ -156,17 +156,17 @@ button {
 }
 
 .menuHolder ul li:hover > a {
-  background: $basic-pink;
+  background: $basic-blue;
   color: $white;
 }
 
 .menuHolder li.s2:hover > a {
-  background: rgb(red($basic-pink)+17,green($basic-pink)+17,blue($basic-pink)+17);
+  background: rgb(red($basic-blue)+17,green($basic-blue)+17,blue($basic-blue)+17);
   color: $white;
 }
 
 .menuHolder .a3 li:hover > a {
-  background: rgb(red($basic-pink)+34,green($basic-pink)+34,blue($basic-pink)+34);
+  background: rgb(red($basic-blue)+34,green($basic-blue)+34,blue($basic-blue)+34);
   color: $white;
 }
 
