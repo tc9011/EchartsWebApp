@@ -3,6 +3,7 @@
 $nav-size:70px;
 $first-fan-angle: 22.5deg;
 $second-fan-angle: 45deg;
+$button-basic-color: $basic-blue;
 
 @keyframes plus-animate {
   0% {
@@ -108,7 +109,7 @@ button {
   display: block;
   width: $nav-size;
   height: $nav-size;
-  background: $basic-blue;
+  background: $button-basic-color;
   border-radius: 0 0 $nav-size 0;
 }
 
@@ -156,17 +157,17 @@ button {
 }
 
 .menuHolder ul li:hover > a {
-  background: $basic-blue;
+  background: $button-basic-color;
   color: $white;
 }
 
 .menuHolder li.s2:hover > a {
-  background: rgb(red($basic-blue)+17,green($basic-blue)+17,blue($basic-blue)+17);
+  background: rgb(red($button-basic-color)+17,green($button-basic-color)+17,blue($button-basic-color)+17);
   color: $white;
 }
 
 .menuHolder .a3 li:hover > a {
-  background: rgb(red($basic-blue)+34,green($basic-blue)+34,blue($basic-blue)+34);
+  background: rgb(red($button-basic-color)+34,green($button-basic-color)+34,blue($button-basic-color)+34);
   color: $white;
 }
 
