@@ -11,7 +11,8 @@
 	},
 	"setting": {
 		"subtitle": "subtitle",
-		"title": "title"
+		"title": "title",
+		"titleColor": "Title Color"
 	},
 	"table": {
 		"save": "Save",

@@ -6,6 +6,9 @@ import { HttpModule } from '@angular/http';
 import {TranslateModule} from '@ngx-translate/core';
 
 import {CdkTableModule} from '@angular/cdk';
+
+import { Md2Module }  from 'md2';
+
 import {
   MdAutocompleteModule,
   MdButtonModule,
@@ -83,6 +86,8 @@ const sharedModule = [
   MdTabsModule,
   MdToolbarModule,
   MdTooltipModule,
+
+  Md2Module
 ];
 
 

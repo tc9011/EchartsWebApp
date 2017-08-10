@@ -10,7 +10,13 @@ export class LineChartsComponent implements OnInit {
   chartOption:any = {
     title: {
       text: '堆叠区域图',
-      subtext: "1111"
+      subtext: "1111",
+      textStyle: {
+        color: '#333',
+        fontStyle: 'normal',
+        fontWeight: 'bolder',
+        fontSize: 18,
+      }
     },
     tooltip : {
       trigger: 'axis'

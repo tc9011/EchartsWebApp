@@ -11,7 +11,8 @@
 	},
 	"setting": {
 		"subtitle": "副标题",
-		"title": "标题"
+		"title": "标题",
+		"titleColor": "标题颜色"
 	},
 	"table": {
 		"save": "保存",

@@ -1,12 +1,26 @@
-.titles{
+@import "../../../assets/css/skins/indigo-pink";
+
+.titles {
   width: 46%;
   margin-top: 10px;
   margin-left: 10px;
 }
 
-.save{
+.save {
   display: block;
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+:host ::ng-deep .input-focused {
+  border-color: $basic-blue !important;
+}
+
+:host ::ng-deep .md2-colorpicker-input.input-focused .md2-colorpicker-placeholder {
+  color: $basic-blue !important;
+}
+
+:host-context(.cdk-overlay-container) ::ng-deep div{
+  color: $basic-blue!important;
 }
