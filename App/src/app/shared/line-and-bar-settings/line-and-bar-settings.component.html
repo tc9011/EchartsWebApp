@@ -1,6 +1,7 @@
+<button md-raised-button class="save" (click)="save()">{{"table.save" | translate}}</button>
 <md-input-container class="titles">
-  <input mdInput placeholder="{{'setting.title' | translate}}">
+  <input mdInput placeholder="{{'setting.title' | translate}}" [(ngModel)]="title">
 </md-input-container>
 <md-input-container class="titles">
-  <input mdInput placeholder="{{'setting.subtitle' | translate}}">
+  <input mdInput placeholder="{{'setting.subtitle' | translate}}" [(ngModel)]="subtitle">
 </md-input-container>

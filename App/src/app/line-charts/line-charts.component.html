@@ -1,5 +1,5 @@
 <section class="left-area">
-  <div echarts [options]="chartOption" class="echarts"></div>
+  <div echarts [options]="chartOption" class="echarts" (chartInit)="onChartInit($event)"></div>
 </section>
 
 <section class="right-area">
@@ -11,8 +11,11 @@
     </md-tab>
     <md-tab label="{{'chart.setting' | translate}}">
       <section>
-        <app-line-and-bar-settings></app-line-and-bar-settings>
+        <app-line-and-bar-settings (inputChange)="onSettingsChange($event)"></app-line-and-bar-settings>
       </section>
     </md-tab>
   </md-tab-group>
 </section>
+
+
+

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bar-charts.component.scss']
 })
 export class BarChartsComponent implements OnInit {
+  echartsIntance:any;
   chartOption = {
     "title": {
       "text": "某地区蒸发量和降水量",
@@ -154,6 +155,16 @@ export class BarChartsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSettingsChange(settings:any){
+    this.chartOption.title.text = settings.title;
+    this.chartOption.title.subtext = settings.subtitle;
+    this.echartsIntance.setOption(this.chartOption);
+  }
+
+  onChartInit(ec) {
+    this.echartsIntance = ec;
   }
 
 }

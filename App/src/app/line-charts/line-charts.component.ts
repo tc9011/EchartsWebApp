@@ -6,9 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./line-charts.component.scss']
 })
 export class LineChartsComponent implements OnInit {
+  echartsIntance:any;
   chartOption:any = {
     title: {
-      text: '堆叠区域图'
+      text: '堆叠区域图',
+      subtext: "1111"
     },
     tooltip : {
       trigger: 'axis'
@@ -87,6 +89,16 @@ export class LineChartsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSettingsChange(settings:any){
+    this.chartOption.title.text = settings.title;
+    this.chartOption.title.subtext = settings.subtitle;
+    this.echartsIntance.setOption(this.chartOption);
+  }
+
+  onChartInit(ec) {
+    this.echartsIntance = ec;
   }
 
 }

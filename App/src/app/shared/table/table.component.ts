@@ -1,6 +1,5 @@
 import {Component, ElementRef, ViewChild, OnInit} from '@angular/core';
 import {DataSource} from '@angular/cdk';
-import {FormControl, Validators} from '@angular/forms';
 
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 import {Observable} from 'rxjs/Observable';
