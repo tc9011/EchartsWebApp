@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {SettingsService} from "../shared/servers/settings.service";
 
 @Component({
   selector: 'app-line-charts',
@@ -7,7 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LineChartsComponent implements OnInit {
   echartsIntance:any;
-  chartOption:any = {
+  chartOption:any;
+  exampleSettings:any = {
     title: {
       text: '堆叠区域图',
       subtext: "1111",
@@ -99,16 +101,15 @@ export class LineChartsComponent implements OnInit {
     ]
   };
 
-  constructor() { }
+  constructor(private settingsService:SettingsService) {
+    this.chartOption = this.exampleSettings;
+  }
 
   ngOnInit() {
   }
 
   onSettingsChange(settings:any){
-    this.chartOption.title.text = settings.title;
-    this.chartOption.title.subtext = settings.subtitle;
-    this.chartOption.title.textStyle.color = settings.titleColor;
-    this.chartOption.title.subtextStyle.color = settings.subtitleColor;
+    this.chartOption = this.settingsService.setChartOption(settings);
     this.echartsIntance.setOption(this.chartOption);
   }
 
