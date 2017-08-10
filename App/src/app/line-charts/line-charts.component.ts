@@ -16,7 +16,14 @@ export class LineChartsComponent implements OnInit {
         fontStyle: 'normal',
         fontWeight: 'bolder',
         fontSize: 18,
-      }
+      },
+      subtextStyle: {
+        color: '#aaa',
+        fontStyle: 'normal',
+        fontWeight: 'normal',
+        fontFamily: 'sans-serif',
+        fontSize: 12,
+      },
     },
     tooltip : {
       trigger: 'axis'
@@ -101,6 +108,7 @@ export class LineChartsComponent implements OnInit {
     this.chartOption.title.text = settings.title;
     this.chartOption.title.subtext = settings.subtitle;
     this.chartOption.title.textStyle.color = settings.titleColor;
+    this.chartOption.title.subtextStyle.color = settings.subtitleColor;
     this.echartsIntance.setOption(this.chartOption);
   }
 
