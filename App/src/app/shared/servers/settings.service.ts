@@ -6,7 +6,7 @@ export class SettingsService {
   constructor() { }
 
   setChartOption(settings){
-    let chartOption = {
+    return {
       title: {
         text: settings.title?settings.title:"堆叠区域图",
         subtext: settings.subtitle?settings.subtitle:"power by echarts",
@@ -97,7 +97,6 @@ export class SettingsService {
         }
       ]
     };
-    return chartOption;
   }
 
 }
