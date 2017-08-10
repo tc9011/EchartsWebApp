@@ -100,6 +100,7 @@ export class LineChartsComponent implements OnInit {
   onSettingsChange(settings:any){
     this.chartOption.title.text = settings.title;
     this.chartOption.title.subtext = settings.subtitle;
+    this.chartOption.title.textStyle.color = settings.titleColor;
     this.echartsIntance.setOption(this.chartOption);
   }
 

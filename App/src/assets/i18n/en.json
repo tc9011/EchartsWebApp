@@ -1,7 +1,7 @@
 {
 	"app": {
 		"bar": "Bar Chart",
-		"language": "language",
+		"language": "Language",
 		"line": "Line Chart",
 		"pipe": "Pipe Chart"
 	},
@@ -10,8 +10,9 @@
 		"setting": "Settings"
 	},
 	"setting": {
-		"subtitle": "subtitle",
-		"title": "title",
+		"subtitle": "Subtitle",
+		"subtitleColor": "Subtitle Color",
+		"title": "Title",
 		"titleColor": "Title Color"
 	},
 	"table": {

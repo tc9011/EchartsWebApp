@@ -11,19 +11,25 @@ export class LineAndBarSettingsComponent implements OnInit {
   title: string;
   subtitle: string;
   settings:any;
+  subtitleColor:string;
+  titleColor:string;
 
   constructor(public translate: TranslateService) { }
 
   ngOnInit() {
     this.settings = {
       "title": "",
-      "subtitle": ""
+      "subtitle": "",
+      "subtitleColor":"",
+      "titleColor":""
     }
   }
 
   save(){
     this.settings.title = this.title;
     this.settings.subtitle = this.subtitle;
+    this.settings.subtitleColor = this.subtitleColor;
+    this.settings.titleColor = this.titleColor;
     this.inputChange.emit(this.settings);
   }
 
