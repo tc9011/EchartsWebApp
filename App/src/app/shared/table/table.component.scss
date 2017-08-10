@@ -11,7 +11,7 @@ th{
   text-align: center;
 }
 
-#input-area td input{
+.input-area td input{
   display: inline;
   width: 45%;
   border-right: 1px solid $basic-blue;
@@ -19,4 +19,8 @@ th{
   &:last-child{
     border-right: none;
   }
+}
+
+.input-area td:first-child{
+  border-right: 2px solid $basic-blue;
 }
