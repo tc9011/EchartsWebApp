@@ -12,5 +12,11 @@
 	"setting": {
 		"subtitle": "subtitle",
 		"title": "title"
+	},
+	"table": {
+		"xCoordinates": "X-axis coordinates",
+		"xData": "Y-axis coordinates",
+		"yCoordinates": "X-axis Data",
+		"yData": "Y-axis Data"
 	}
 }

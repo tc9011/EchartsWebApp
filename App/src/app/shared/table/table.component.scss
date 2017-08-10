@@ -1,26 +1,7 @@
 @import "../../../assets/css/skins/indigo-pink";
 
-table{
+.input-area{
+  margin-top: 10px;
+  margin-left: 10px;
   width: 95%;
-  margin-left: 5px;
-  margin-top: 5px;
-  box-shadow: 0 5px 5px -3px rgba(0,0,0,.2), 0 8px 10px 1px rgba(0,0,0,.14), 0 5px 5px -3px rgba(0,0,0,.2);
-}
-
-th{
-  text-align: center;
-}
-
-.input-area td input{
-  display: inline;
-  width: 45%;
-  border-right: 1px solid $basic-blue;
-  text-align: center;
-  &:last-child{
-    border-right: none;
-  }
-}
-
-.input-area td:first-child{
-  border-right: 2px solid $basic-blue;
 }

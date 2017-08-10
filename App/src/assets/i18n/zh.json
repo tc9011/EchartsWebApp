@@ -12,5 +12,11 @@
 	"setting": {
 		"subtitle": "副标题",
 		"title": "标题"
+	},
+	"table": {
+		"xCoordinates": "X轴坐标",
+		"xData": "X轴数据",
+		"yCoordinates": "Y轴坐标",
+		"yData": "Y轴数据"
 	}
 }
