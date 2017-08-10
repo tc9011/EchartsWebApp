@@ -1,12 +1,13 @@
 <md-input-container class="input-area">
-  <textarea mdInput placeholder="{{'table.xCoordinates' | translate}}"></textarea>
+  <textarea mdInput placeholder="{{'table.xCoordinates' | translate}}" [(ngModel)]="xCoordinates"></textarea>
 </md-input-container>
 <md-input-container class="input-area">
-  <textarea mdInput placeholder="{{'table.yCoordinates' | translate}}"></textarea>
+  <textarea mdInput placeholder="{{'table.yCoordinates' | translate}}" [(ngModel)]="yCoordinates"></textarea>
 </md-input-container>
 <md-input-container class="input-area">
-  <textarea mdInput placeholder="{{'table.xData' | translate}}"></textarea>
+  <textarea mdInput placeholder="{{'table.xData' | translate}}" [(ngModel)]="xData"></textarea>
 </md-input-container>
 <md-input-container class="input-area">
-  <textarea mdInput placeholder="{{'table.yData' | translate}}"></textarea>
+  <textarea mdInput placeholder="{{'table.yData' | translate}}" [(ngModel)]="yData"></textarea>
 </md-input-container>
+<button md-raised-button (click)="save()">{{"table.save" | translate}}</button>

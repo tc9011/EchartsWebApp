@@ -14,6 +14,7 @@
 		"title": "title"
 	},
 	"table": {
+		"save": "Save",
 		"xCoordinates": "X-axis coordinates",
 		"xData": "Y-axis coordinates",
 		"yCoordinates": "X-axis Data",
