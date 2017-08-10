@@ -12,7 +12,7 @@ export class LineChartsComponent implements OnInit {
   exampleSettings:any = {
     title: {
       text: '堆叠区域图',
-      subtext: "1111",
+      subtext: "power by echarts",
       textStyle: {
         color: '#333',
         fontStyle: 'normal',

@@ -8,16 +8,16 @@ export class SettingsService {
   setChartOption(settings){
     let chartOption = {
       title: {
-        text: settings.title,
-        subtext: settings.subtitle,
+        text: settings.title?settings.title:"堆叠区域图",
+        subtext: settings.subtitle?settings.subtitle:"power by echarts",
         textStyle: {
-          color: settings.titleColor,
+          color: settings.titleColor?settings.titleColor:"black",
           fontStyle: 'normal',
           fontWeight: 'bolder',
           fontSize: 18,
         },
         subtextStyle: {
-          color: settings.subtitleColor,
+          color: settings.subtitleColor?settings.subtitleColor:"balck",
           fontStyle: 'normal',
           fontWeight: 'normal',
           fontFamily: 'sans-serif',
