@@ -4,7 +4,7 @@
 
 <section *ngFor="let item of numberOfDataGroup;index as i">
   <md-input-container class="input-area">
-    <textarea mdInput placeholder="{{'table.title' | translate}}" [(ngModel)]="data.xCoordinates"></textarea>
+    <input mdInput placeholder="{{'table.title' | translate}}" [(ngModel)]="data.xCoordinates">
   </md-input-container>
   <md-input-container class="input-area">
     <textarea mdInput placeholder="{{'table.xData' | translate}}" [(ngModel)]="data.xData"></textarea>
