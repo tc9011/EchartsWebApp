@@ -52,7 +52,7 @@ export class SettingsService {
       ],
       yAxis : [
         {
-          type : 'value'
+          type : 'value',
         }
       ],
       series : [
@@ -61,7 +61,7 @@ export class SettingsService {
           type:'line',
           stack: '总量',
           areaStyle: {normal: {}},
-          data:[120, 132, 101, 134, 90, 230, 210]
+          data:settings.xData?settings.xData:[120, 132, 101, 134, 90, 230, 210]
         },
         {
           name:'联盟广告',
@@ -101,20 +101,12 @@ export class SettingsService {
     };
   }
 
-  saveData(xCoordinates:string,yCoordinates:string,xData:string,yData:string){
-    return {
-      "xCoordinates": this.splitData(xCoordinates),
-      "yCoordinates": this.splitData(yCoordinates),
-      "xData": this.splitData(xData),
-      "yData": this.splitData(yData)
-    }
-  }
 
-  splitData(data:string){
+  splitData(data:any){
     let dataArray = [];
 
     if(data){
-      data = data.replace(/\s|\,|\，/g, ' ');
+      data = String(data).replace(/\s|\,|\，/g, ' ');
       dataArray = data.split(" ");
     }
 
