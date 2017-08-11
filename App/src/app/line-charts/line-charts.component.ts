@@ -14,21 +14,27 @@ export class LineChartsComponent implements OnInit {
   echartsIntance:any;
   chartOption:any;
 
-  title: string;
-  subtitle: string;
-  subtitleColor:string;
-  titleColor:string;
+  settings:any;
 
 
   constructor(private settingsService: SettingsService, public translate: TranslateService) {
     this.chartOption = this.settingsService.exampleSettings;
     this.numberOfDataGroup = [1];
+    this.settings = {
+      'title': '',
+      'subtitle': '',
+      'titleColor': '',
+      'subtitleColor': '',
+      'xData': '',
+      'yData': ''
+    }
   }
 
   ngOnInit() {
   }
 
   reloadEcharts(){
+    this.chartOption = this.settingsService.setChartOption(this.settings);
     this.echartsIntance.setOption(this.chartOption);
   }
 

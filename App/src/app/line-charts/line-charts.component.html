@@ -17,10 +17,10 @@
             <input mdInput placeholder="{{'table.title' | translate}}">
           </md-input-container>
           <md-input-container class="input-area">
-            <textarea mdInput placeholder="{{'table.xData' | translate}}"></textarea>
+            <textarea mdInput placeholder="{{'table.xData' | translate}}" [(ngModel)]="settings.xData"></textarea>
           </md-input-container>
           <md-input-container class="input-area">
-            <textarea mdInput placeholder="{{'table.yData' | translate}}"></textarea>
+            <textarea mdInput placeholder="{{'table.yData' | translate}}" [(ngModel)]="settings.yData"></textarea>
           </md-input-container>
         </section>
 
@@ -33,14 +33,14 @@
         <button md-raised-button class="settings-save" (click)="reloadEcharts()">{{"table.save" | translate}}</button>
 
         <md-input-container class="titles">
-          <input mdInput placeholder="{{'setting.title' | translate}}">
+          <input mdInput placeholder="{{'setting.title' | translate}}" [(ngModel)]="settings.title">
         </md-input-container>
         <md-input-container class="titles">
-          <input mdInput placeholder="{{'setting.subtitle' | translate}}">
+          <input mdInput placeholder="{{'setting.subtitle' | translate}}" [(ngModel)]="settings.subtitle">
         </md-input-container>
 
-        <md2-colorpicker class="title-color-picker" placeholder="{{'setting.titleColor' | translate}}" ></md2-colorpicker>
-        <md2-colorpicker class="subtitle-color-picker" placeholder="{{'setting.subtitleColor' | translate}}" ></md2-colorpicker>
+        <md2-colorpicker class="title-color-picker" placeholder="{{'setting.titleColor' | translate}}" [(ngModel)]="settings.titleColor"></md2-colorpicker>
+        <md2-colorpicker class="subtitle-color-picker" placeholder="{{'setting.subtitleColor' | translate}}" [(ngModel)]="settings.subtitleColor"></md2-colorpicker>
 
       </section>
     </md-tab>

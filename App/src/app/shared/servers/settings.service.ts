@@ -193,12 +193,13 @@ export class SettingsService {
   }
 
   setChartOption(settings){
-    this.option.title.text = settings.title;
-    this.option.title.subtitle = settings.subtitle;
+    this.option.title.text = settings.title?settings.title:'堆叠区域图';
+    this.option.title.subtext = settings.subtitle?settings.subtitle:'power by echarts';
     this.option.title.textStyle.color = settings.titleColor?settings.titleColor:"black";
     this.option.title.subtextStyle.color = settings.subtitleColor?settings.subtitleColor:"balck";
-    this.option.xAxis.data = settings.xCoordinates?settings.xCoordinates:['周一','周二','周三','周四','周五','周六','周日'];
-    this.option.series[0].data = settings.xData?settings.xData:[120, 132, 101, 134, 90, 230, 210];
+    this.option.xAxis.data = this.splitData(settings.xData)?this.splitData(settings.xData):['周一','周二','周三','周四','周五','周六','周日'];
+    this.option.series[0].data = this.splitData(settings.yData)?this.splitData(settings.yData):[120, 132, 101, 134, 90, 230, 210];
+
     return this.option;
   }
 
