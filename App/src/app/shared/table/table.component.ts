@@ -32,11 +32,12 @@ export class TableComponent implements OnChanges {
 
 
   ngOnChanges(){
-    
+
   }
 
   save(){
-    this.data = this.settingsService.saveData(this.data.xCoordinates,this.data.yCoordinates,this.data.xData,this.data.yData);
+    this.data.xCoordinates = this.settingsService.splitData(this.data.xCoordinates);
+    this.data.xData = this.settingsService.splitData(this.data.xData);
     this.dataChange.emit(this.data);
   }
 
