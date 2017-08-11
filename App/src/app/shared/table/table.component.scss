@@ -8,6 +8,17 @@
 
 .table-save{
   float: right;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  margin: 10px 10px;
+}
+
+.add-item{
+  display: inline-block;
+  margin: 10px 10px;
+}
+
+section{
+  border-bottom: 2px solid $basic-blue;
+  &:last-child{
+    border-bottom: none;
+  }
 }

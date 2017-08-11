@@ -1,13 +1,15 @@
-<md-input-container class="input-area">
-  <textarea mdInput placeholder="{{'table.xCoordinates' | translate}}" [(ngModel)]="data.xCoordinates"></textarea>
-</md-input-container>
-<md-input-container class="input-area">
-  <textarea mdInput placeholder="{{'table.yCoordinates' | translate}}" [(ngModel)]="data.yCoordinates"></textarea>
-</md-input-container>
-<md-input-container class="input-area">
-  <textarea mdInput placeholder="{{'table.xData' | translate}}" [(ngModel)]="data.xData"></textarea>
-</md-input-container>
-<md-input-container class="input-area">
-  <textarea mdInput placeholder="{{'table.yData' | translate}}" [(ngModel)]="data.yData"></textarea>
-</md-input-container>
+<button md-raised-button (click)="addItem()" class="add-item">{{"table.addItem" | translate}}</button>
+<button md-raised-button (click)="deleteItem()" class="delete-item">{{"table.deleteItem" | translate}}</button>
 <button md-raised-button (click)="save()" class="table-save">{{"table.save" | translate}}</button>
+
+<section *ngFor="let item of numberOfDataGroup;index as i">
+  <md-input-container class="input-area">
+    <textarea mdInput placeholder="{{'table.xCoordinates' | translate}}" [(ngModel)]="data.xCoordinates"></textarea>
+  </md-input-container>
+  <md-input-container class="input-area">
+    <textarea mdInput placeholder="{{'table.xData' | translate}}" [(ngModel)]="data.xData"></textarea>
+  </md-input-container>
+  <md-input-container class="input-area">
+    <textarea mdInput placeholder="{{'table.yData' | translate}}" [(ngModel)]="data.yData"></textarea>
+  </md-input-container>
+</section>

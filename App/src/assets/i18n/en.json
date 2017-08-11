@@ -16,10 +16,11 @@
 		"titleColor": "Title Color"
 	},
 	"table": {
+		"addItem": "Add Item",
+		"deleteItem": "Delete Item",
 		"save": "Save",
 		"xCoordinates": "X-axis coordinates",
 		"xData": "X-axis Data",
-		"yCoordinates": "Y-axis coordinates(Can not fill)",
 		"yData": "Y-axis Data"
 	}
 }

@@ -16,10 +16,11 @@
 		"titleColor": "标题颜色"
 	},
 	"table": {
+		"addItem": "增加数据组",
+		"deleteItem": "删除数据组",
 		"save": "保存",
 		"xCoordinates": "X轴坐标",
 		"xData": "X轴数据",
-		"yCoordinates": "Y轴坐标（可不填）",
 		"yData": "Y轴数据"
 	}
 }
