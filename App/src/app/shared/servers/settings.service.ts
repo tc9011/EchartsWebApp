@@ -114,13 +114,8 @@ export class SettingsService {
     let dataArray = [];
 
     if(data){
-      if (data.indexOf(" ") != -1){
-        dataArray = data.split(" ");
-      }else if (data.indexOf(",") != -1){
-        dataArray = data.split(",");
-      }else if (data.indexOf("，") != -1){
-        dataArray = data.split("，");
-      }
+      data = data.replace(/\s|\,|\，/g, ' ');
+      dataArray = data.split(" ");
     }
 
     return dataArray;
