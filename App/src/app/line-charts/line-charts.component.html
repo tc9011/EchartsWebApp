@@ -6,14 +6,12 @@
   <md-tab-group>
     <md-tab label="{{'chart.data' | translate}}">
       <section>
-        <app-table></app-table>
-        <button md-raised-button class="table-save" (click)="reloadEcharts()">{{"table.save" | translate}}</button>
+        <app-table (dataChange)="onDataChange($event)"></app-table>
       </section>
     </md-tab>
     <md-tab label="{{'chart.setting' | translate}}">
       <section>
-        <button md-raised-button class="settings-save" (click)="reloadEcharts()">{{"table.save" | translate}}</button>
-        <app-line-and-bar-settings></app-line-and-bar-settings>
+        <app-line-and-bar-settings (inputChange)="onSettingsChange($event)"></app-line-and-bar-settings>
       </section>
     </md-tab>
   </md-tab-group>

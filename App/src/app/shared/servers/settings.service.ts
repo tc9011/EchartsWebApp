@@ -2,27 +2,24 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class SettingsService {
-  dataArray:any;
-  settings:any;
 
   constructor() {
-    this.dataArray = null;
   }
 
-  setChartOption(){
+  setChartOption(settings){
 
     return {
       title: {
-        text: this.settings.title,
-        subtext: this.settings.subtitle,
+        text: settings.title,
+        subtext: settings.subtitle,
         textStyle: {
-          color: this.settings.titleColor?this.settings.titleColor:"black",
+          color: settings.titleColor?settings.titleColor:"black",
           fontStyle: 'normal',
           fontWeight: 'bolder',
           fontSize: 18,
         },
         subtextStyle: {
-          color: this.settings.subtitleColor?this.settings.subtitleColor:"balck",
+          color: settings.subtitleColor?settings.subtitleColor:"balck",
           fontStyle: 'normal',
           fontWeight: 'normal',
           fontFamily: 'sans-serif',
@@ -50,13 +47,12 @@ export class SettingsService {
         {
           type : 'category',
           boundaryGap : false,
-          data : this.dataArray.xCoordinates?this.dataArray.xCoordinates:['周一','周二','周三','周四','周五','周六','周日']
+          data : settings.xCoordinates?settings.xCoordinates:['周一','周二','周三','周四','周五','周六','周日']
         }
       ],
       yAxis : [
         {
-          type : 'value',
-          data : ['周一','周二','周三','周四','周五','周六','周日']
+          type : 'value'
         }
       ],
       series : [
@@ -106,7 +102,7 @@ export class SettingsService {
   }
 
   saveData(xCoordinates:string,yCoordinates:string,xData:string,yData:string){
-    this.dataArray = {
+    return {
       "xCoordinates": this.splitData(xCoordinates),
       "yCoordinates": this.splitData(yCoordinates),
       "xData": this.splitData(xData),

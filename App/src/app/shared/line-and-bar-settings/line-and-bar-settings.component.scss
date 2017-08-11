@@ -6,6 +6,13 @@
   margin-left: 10px;
 }
 
+.settings-save{
+  display: block;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 :host ::ng-deep .input-focused {
   border-color: $basic-blue !important;
 }

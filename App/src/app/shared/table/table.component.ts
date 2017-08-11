@@ -18,22 +18,26 @@ import {SettingsService} from "../servers/settings.service";
   styleUrls: ['./table.component.scss']
 })
 export class TableComponent implements OnChanges {
-  xCoordinates:string;
-  yCoordinates:string;
-  xData:string;
-  yData:string;
+  @Output() dataChange:EventEmitter<any> = new EventEmitter();
+  data:any;
 
   constructor(public translate: TranslateService, public settingsService:SettingsService){
-
+    this.data = {
+      "xCoordinates": "",
+      "yCoordinates": "",
+      "xData": "",
+      "yData": ""
+    }
   }
 
 
   ngOnChanges(){
-    this.settingsService.saveData(this.xCoordinates,this.yCoordinates,this.xData,this.yData);
+    
   }
 
-  // save(){
-  //   this.settingsService.saveData(this.xCoordinates,this.yCoordinates,this.xData,this.yData);
-  // }
+  save(){
+    this.data = this.settingsService.saveData(this.data.xCoordinates,this.data.yCoordinates,this.data.xData,this.data.yData);
+    this.dataChange.emit(this.data);
+  }
 
 }

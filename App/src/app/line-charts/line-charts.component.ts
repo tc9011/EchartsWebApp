@@ -109,8 +109,16 @@ export class LineChartsComponent implements OnInit {
   ngOnInit() {
   }
 
-  reloadEcharts(){
-    this.chartOption = this.settingsService.setChartOption();
+  onSettingsChange(settings){
+    this.reloadEcharts(settings);
+  }
+
+  onDataChange(data){
+    this.reloadEcharts(data);
+  }
+  
+  reloadEcharts(settings){
+    this.chartOption = this.settingsService.setChartOption(settings);
     this.echartsIntance.setOption(this.chartOption);
   }
 

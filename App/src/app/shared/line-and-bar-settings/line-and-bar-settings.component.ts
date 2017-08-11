@@ -8,6 +8,7 @@ import {SettingsService} from "../servers/settings.service";
   styleUrls: ['./line-and-bar-settings.component.scss']
 })
 export class LineAndBarSettingsComponent implements OnInit {
+  @Output() inputChange:EventEmitter<any> = new EventEmitter();
   title: string;
   subtitle: string;
   settings:any;
@@ -30,7 +31,7 @@ export class LineAndBarSettingsComponent implements OnInit {
     this.settings.subtitle = this.subtitle;
     this.settings.subtitleColor = this.subtitleColor;
     this.settings.titleColor = this.titleColor;
-    this.settingsService.setChartOption();
+    this.inputChange.emit(this.settings);
   }
 
 }
