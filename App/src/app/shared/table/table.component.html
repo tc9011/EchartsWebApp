@@ -1,5 +1,5 @@
 <button md-raised-button (click)="addItem()" class="add-item">{{"table.addItem" | translate}}</button>
-<button md-raised-button (click)="deleteItem()" class="delete-item">{{"table.deleteItem" | translate}}</button>
+<button md-raised-button #deleteBtn (click)="deleteItem()" class="delete-item">{{"table.deleteItem" | translate}}</button>
 <button md-raised-button (click)="save()" class="table-save">{{"table.save" | translate}}</button>
 
 <section *ngFor="let item of numberOfDataGroup;index as i">
