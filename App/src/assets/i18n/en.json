@@ -19,7 +19,7 @@
 		"addItem": "Add Item",
 		"deleteItem": "Delete Item",
 		"save": "Save",
-		"xCoordinates": "X-axis coordinates",
+		"title": "Data Name",
 		"xData": "X-axis Data",
 		"yData": "Y-axis Data"
 	}

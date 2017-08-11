@@ -19,7 +19,7 @@
 		"addItem": "增加数据组",
 		"deleteItem": "删除数据组",
 		"save": "保存",
-		"xCoordinates": "X轴坐标",
+		"title": "数据组名称",
 		"xData": "X轴数据",
 		"yData": "Y轴数据"
 	}
