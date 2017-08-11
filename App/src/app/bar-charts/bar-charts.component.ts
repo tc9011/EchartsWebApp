@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import {SettingsService} from "../shared/servers/settings.service";
 
 @Component({
   selector: 'app-bar-charts',
   templateUrl: './bar-charts.component.html',
-  styleUrls: ['./bar-charts.component.scss']
+  styleUrls: ['./bar-charts.component.scss'],
+  providers: [SettingsService]
 })
 export class BarChartsComponent implements OnInit {
   echartsIntance:any;

@@ -3,5 +3,60 @@
 
 @include section-common;
 
+.titles {
+  width: 46%;
+  margin-top: 10px;
+  margin-left: 10px;
+}
 
+.settings-save{
+  display: block;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+:host ::ng-deep .input-focused {
+  border-color: $basic-blue !important;
+}
+
+:host ::ng-deep .md2-colorpicker-input.input-focused .md2-colorpicker-placeholder {
+  color: $basic-blue !important;
+}
+
+:host ::ng-deep .color-picker-selector .md2-colorpicker-value{
+  min-width: 10px;
+}
+
+:host ::ng-deep .md2-colorpicker-input{
+  min-width: 10px;
+}
+
+.title-color-picker,.subtitle-color-picker{
+  display: inline-block;
+  width: 48%;
+}
+
+.input-area{
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 95%;
+}
+
+.table-save{
+  float: right;
+  margin: 10px 10px;
+}
+
+.add-item{
+  display: inline-block;
+  margin: 10px 10px;
+}
+
+.data-group{
+  border-bottom: 2px solid $basic-blue;
+  &:last-child{
+    border-bottom: none;
+  }
+}
 
