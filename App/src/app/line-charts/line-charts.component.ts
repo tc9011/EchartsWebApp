@@ -9,6 +9,7 @@ import {SettingsService} from "../shared/servers/settings.service";
 export class LineChartsComponent implements OnInit {
   echartsIntance:any;
   chartOption:any;
+  settings:any;
   exampleSettings:any = {
     title: {
       text: '堆叠区域图',
@@ -108,8 +109,8 @@ export class LineChartsComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSettingsChange(settings:any){
-    this.chartOption = this.settingsService.setChartOption(settings);
+  reloadEcharts(){
+    this.chartOption = this.settingsService.setChartOption();
     this.echartsIntance.setOption(this.chartOption);
   }
 

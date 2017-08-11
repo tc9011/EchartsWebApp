@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
+import {SettingsService} from "../servers/settings.service";
 
 @Component({
   selector: 'app-line-and-bar-settings',
@@ -7,14 +8,13 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./line-and-bar-settings.component.scss']
 })
 export class LineAndBarSettingsComponent implements OnInit {
-  @Output() inputChange:EventEmitter<any> = new EventEmitter();
   title: string;
   subtitle: string;
   settings:any;
   subtitleColor:string;
   titleColor:string;
 
-  constructor(public translate: TranslateService) { }
+  constructor(public translate: TranslateService, public settingsService:SettingsService) { }
 
   ngOnInit() {
     this.settings = {
@@ -30,7 +30,7 @@ export class LineAndBarSettingsComponent implements OnInit {
     this.settings.subtitle = this.subtitle;
     this.settings.subtitleColor = this.subtitleColor;
     this.settings.titleColor = this.titleColor;
-    this.inputChange.emit(this.settings);
+    this.settingsService.setChartOption();
   }
 
 }

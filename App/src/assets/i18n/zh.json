@@ -19,7 +19,7 @@
 		"save": "保存",
 		"xCoordinates": "X轴坐标",
 		"xData": "X轴数据",
-		"yCoordinates": "Y轴坐标",
+		"yCoordinates": "Y轴坐标（可不填）",
 		"yData": "Y轴数据"
 	}
 }

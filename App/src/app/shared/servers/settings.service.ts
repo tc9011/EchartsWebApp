@@ -2,22 +2,27 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class SettingsService {
+  dataArray:any;
+  settings:any;
 
-  constructor() { }
+  constructor() {
+    this.dataArray = null;
+  }
 
-  setChartOption(settings){
+  setChartOption(){
+
     return {
       title: {
-        text: settings.title?settings.title:"堆叠区域图",
-        subtext: settings.subtitle?settings.subtitle:"power by echarts",
+        text: this.settings.title,
+        subtext: this.settings.subtitle,
         textStyle: {
-          color: settings.titleColor?settings.titleColor:"black",
+          color: this.settings.titleColor?this.settings.titleColor:"black",
           fontStyle: 'normal',
           fontWeight: 'bolder',
           fontSize: 18,
         },
         subtextStyle: {
-          color: settings.subtitleColor?settings.subtitleColor:"balck",
+          color: this.settings.subtitleColor?this.settings.subtitleColor:"balck",
           fontStyle: 'normal',
           fontWeight: 'normal',
           fontFamily: 'sans-serif',
@@ -45,12 +50,13 @@ export class SettingsService {
         {
           type : 'category',
           boundaryGap : false,
-          data : ['周一','周二','周三','周四','周五','周六','周日']
+          data : this.dataArray.xCoordinates?this.dataArray.xCoordinates:['周一','周二','周三','周四','周五','周六','周日']
         }
       ],
       yAxis : [
         {
-          type : 'value'
+          type : 'value',
+          data : ['周一','周二','周三','周四','周五','周六','周日']
         }
       ],
       series : [
@@ -97,6 +103,31 @@ export class SettingsService {
         }
       ]
     };
+  }
+
+  saveData(xCoordinates:string,yCoordinates:string,xData:string,yData:string){
+    this.dataArray = {
+      "xCoordinates": this.splitData(xCoordinates),
+      "yCoordinates": this.splitData(yCoordinates),
+      "xData": this.splitData(xData),
+      "yData": this.splitData(yData)
+    }
+  }
+
+  splitData(data:string){
+    let dataArray = [];
+
+    if(data){
+      if (data.indexOf(" ") != -1){
+        dataArray = data.split(" ");
+      }else if (data.indexOf(",") != -1){
+        dataArray = data.split(",");
+      }else if (data.indexOf("，") != -1){
+        dataArray = data.split("，");
+      }
+    }
+
+    return dataArray;
   }
 
 }

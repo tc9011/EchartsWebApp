@@ -18,8 +18,8 @@
 	"table": {
 		"save": "Save",
 		"xCoordinates": "X-axis coordinates",
-		"xData": "Y-axis coordinates",
-		"yCoordinates": "X-axis Data",
+		"xData": "X-axis Data",
+		"yCoordinates": "Y-axis coordinates(Can not fill)",
 		"yData": "Y-axis Data"
 	}
 }
