@@ -31,6 +31,7 @@ export class LineChartsComponent implements OnInit{
       'xData': '',
       'yData': ''
     };
+    this.setChartOption();  //初始化echarts
   }
 
   ngOnInit() {
@@ -39,10 +40,14 @@ export class LineChartsComponent implements OnInit{
 
   // 重新加载echarts
   reloadEcharts(){
-    this.chartOption = this.settingsService.setChartOption(this.settings,this.dataGroup);
+    this.setChartOption();
     this.echartsIntance.setOption(this.chartOption,{
       notMerge: true
     });
+  }
+
+  setChartOption(){
+    this.chartOption = this.settingsService.setChartOption(this.settings,this.dataGroup);
   }
 
   onChartInit(ec) {
