@@ -6,8 +6,8 @@
   <md-tab-group>
 
     <md-tab label="{{'chart.data' | translate}}">
+      <!--数据输入区-->
       <section>
-        <!--数据输入区-->
         <button md-raised-button (click)="addItem()" class="add-item">{{"table.addItem" | translate}}</button>
         <button md-raised-button #deleteBtn (click)="deleteItem()" class="delete-item">{{"table.deleteItem" | translate}}</button>
         <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
@@ -29,10 +29,11 @@
     </md-tab>
 
     <md-tab label="{{'chart.setting' | translate}}">
+      <!--配置区-->
       <section>
-        <!--配置区-->
         <button md-raised-button class="settings-save" (click)="reloadEcharts()">{{"table.save" | translate}}</button>
 
+        <!--标题内容-->
         <md-input-container class="titles">
           <input mdInput placeholder="{{'setting.title' | translate}}" [(ngModel)]="settings.title">
         </md-input-container>
@@ -40,9 +41,22 @@
           <input mdInput placeholder="{{'setting.subtitle' | translate}}" [(ngModel)]="settings.subtitle">
         </md-input-container>
 
+        <!--标题颜色-->
         <md2-colorpicker class="title-color-picker" placeholder="{{'setting.titleColor' | translate}}" [(ngModel)]="settings.titleColor"></md2-colorpicker>
         <md2-colorpicker class="subtitle-color-picker" placeholder="{{'setting.subtitleColor' | translate}}" [(ngModel)]="settings.subtitleColor"></md2-colorpicker>
 
+        <!--标题字体大小-->
+        <md-select class="title-font-size" [(ngModel)]="settings.titleFontSize" placeholder="{{'setting.titleFontSize' | translate}}">
+          <md-option *ngFor="let titleSize of titleSizes" [value]="titleSize">
+            {{ titleSize }}
+          </md-option>
+        </md-select>
+
+        <md-select class="subtitle-font-size" [(ngModel)]="settings.subtitleFontSize" placeholder="{{'setting.subtitleFontSize' | translate}}">
+          <md-option *ngFor="let subtitleSize of subtitleSizes" [value]="subtitleSize">
+            {{ subtitleSize }}
+          </md-option>
+        </md-select>
       </section>
     </md-tab>
 
