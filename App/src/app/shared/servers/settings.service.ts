@@ -3,8 +3,62 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class SettingsService {
   option:any;
+  exmapleOption:any;
 
   constructor() {
+    this.exmapleOption = {
+      title: {
+        text: '折线图',
+        subtext: 'power by echarts',
+        textStyle: {
+          color: 'black',
+          fontStyle: 'normal',
+          fontWeight: 'bolder',
+          fontSize: 18,
+        },
+        subtextStyle: {
+          color: 'black',
+          fontStyle: 'normal',
+          fontWeight: 'normal',
+          fontFamily: 'sans-serif',
+          fontSize: 12,
+        },
+      },
+      tooltip : {
+        trigger: 'axis'
+      },
+      legend: {
+        data:['邮件营销']
+      },
+      toolbox: {
+        feature: {
+          saveAsImage: {}
+        }
+      },
+      grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+      },
+      xAxis : [
+        {
+          type : 'category',
+          boundaryGap : false,
+          data : ['周一','周二','周三','周四','周五','周六','周日']
+        }
+      ],
+      yAxis : [
+        {
+          type : 'value',
+        }
+      ],
+      series : [{
+        name: '邮件营销',
+        type:'line',
+        data:[120, 132, 101, 134, 90, 230, 210]
+      }]
+    };
     this.option = {
       title: {
         text: 'echart',
@@ -58,7 +112,7 @@ export class SettingsService {
 
   // 配置chartoption
   setChartOption(settings:any,dataGroup:Array<any>){
-    this.option.title.text = settings.title?settings.title:'堆叠区域图';
+    this.option.title.text = settings.title?settings.title:'折线图';
     this.option.title.subtext = settings.subtitle?settings.subtitle:'power by echarts';
     this.option.title.textStyle.color = settings.titleColor?settings.titleColor:"black";
     this.option.title.subtextStyle.color = settings.subtitleColor?settings.subtitleColor:"balck";
