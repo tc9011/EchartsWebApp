@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {SettingsService} from "../shared/servers/settings.service";
 import {TranslateService} from "@ngx-translate/core";
 
@@ -8,7 +8,7 @@ import {TranslateService} from "@ngx-translate/core";
   styleUrls: ['./line-charts.component.scss'],
   providers: [SettingsService]
 })
-export class LineChartsComponent implements OnInit {
+export class LineChartsComponent implements OnInit{
   @ViewChild('deleteBtn') deleteBtn:any;
   dataGroup:Array<any>;
   echartsIntance:any;
@@ -30,18 +30,19 @@ export class LineChartsComponent implements OnInit {
       'subtitleColor': '',
       'xData': '',
       'yData': ''
-    }
+    };
   }
 
   ngOnInit() {
     this.deleteBtn.disabled = true;
-    this.reloadEcharts();
   }
 
   // 重新加载echarts
   reloadEcharts(){
     this.chartOption = this.settingsService.setChartOption(this.settings,this.dataGroup);
-    this.echartsIntance.setOption(this.chartOption);
+    this.echartsIntance.setOption(this.chartOption,{
+      notMerge: true
+    });
   }
 
   onChartInit(ec) {
@@ -76,9 +77,9 @@ export class LineChartsComponent implements OnInit {
     }
   }
 
-  clearData(){
+  /*clearData(){
     this.dataGroup = [];
     this.reloadEcharts();
-  }
+  }*/
 
 }
