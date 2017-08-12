@@ -17,6 +17,7 @@
 	},
 	"table": {
 		"addItem": "增加数据组",
+		"clear": "清除数据",
 		"deleteItem": "删除数据组",
 		"save": "保存",
 		"title": "数据组名称",

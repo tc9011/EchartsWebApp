@@ -7,20 +7,21 @@
 
     <md-tab label="{{'chart.data' | translate}}">
       <section>
-
+        <!--数据输入区-->
         <button md-raised-button (click)="addItem()" class="add-item">{{"table.addItem" | translate}}</button>
         <button md-raised-button #deleteBtn (click)="deleteItem()" class="delete-item">{{"table.deleteItem" | translate}}</button>
         <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
+        <button md-raised-button (click)="clearData()" class="data-clear">{{"table.clear" | translate}}</button>
 
-        <section class="data-group" *ngFor="let item of numberOfDataGroup;index as i">
+        <section class="data-group" *ngFor="let item of dataGroup;index as i">
           <md-input-container class="input-area">
-            <input mdInput placeholder="{{'table.title' | translate}}">
+            <input mdInput placeholder="{{'table.title' | translate}}" [(ngModel)]="item.title">
           </md-input-container>
           <md-input-container class="input-area">
-            <textarea mdInput placeholder="{{'table.xData' | translate}}" [(ngModel)]="settings.xData"></textarea>
+            <textarea mdInput placeholder="{{'table.xData' | translate}}" [(ngModel)]="item.xData"></textarea>
           </md-input-container>
           <md-input-container class="input-area">
-            <textarea mdInput placeholder="{{'table.yData' | translate}}" [(ngModel)]="settings.yData"></textarea>
+            <textarea mdInput placeholder="{{'table.yData' | translate}}" [(ngModel)]="item.yData"></textarea>
           </md-input-container>
         </section>
 
@@ -29,7 +30,7 @@
 
     <md-tab label="{{'chart.setting' | translate}}">
       <section>
-
+        <!--配置区-->
         <button md-raised-button class="settings-save" (click)="reloadEcharts()">{{"table.save" | translate}}</button>
 
         <md-input-container class="titles">

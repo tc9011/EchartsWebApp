@@ -21,6 +21,7 @@ li:hover{
   cursor: pointer;
 }
 
+//第一圈
 @mixin first-fan ($num){
   @for $i from 1 through $num {
     .menuHolder li.s2:nth-of-type(#{$i+1}) > a {
@@ -30,6 +31,7 @@ li:hover{
   }
 }
 
+//第二圈
 @mixin second-fan ($num) {
   @for $i from 1 through $num {
     .menuHolder .a3 li:nth-of-type(#{$i+1}) > a {

@@ -17,6 +17,7 @@
 	},
 	"table": {
 		"addItem": "Add Item",
+		"clear": "Clear Data",
 		"deleteItem": "Delete Item",
 		"save": "Save",
 		"title": "Data Name",

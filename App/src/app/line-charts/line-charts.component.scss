@@ -16,6 +16,7 @@
   margin-bottom: 10px;
 }
 
+//改变colorpicker原有样式
 :host ::ng-deep .input-focused {
   border-color: $basic-blue !important;
 }
@@ -36,6 +37,7 @@
   display: inline-block;
   width: 48%;
 }
+
 
 .input-area{
   margin-top: 10px;
@@ -58,5 +60,11 @@
   &:last-child{
     border-bottom: none;
   }
+}
+
+.data-clear{
+  float: right;
+  margin: 10PX;
+  margin-right: 0;
 }
 
