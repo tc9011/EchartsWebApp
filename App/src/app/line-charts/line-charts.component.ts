@@ -18,7 +18,6 @@ export class LineChartsComponent implements OnInit {
 
 
   constructor(private settingsService: SettingsService, public translate: TranslateService) {
-    this.chartOption = this.settingsService.exampleSettings;
     this.dataGroup = [{
       title: '邮件营销',
       xData: '周一,周二,周三,周四,周五,周六,周日',
@@ -36,6 +35,7 @@ export class LineChartsComponent implements OnInit {
 
   ngOnInit() {
     this.deleteBtn.disabled = true;
+    this.reloadEcharts();
   }
 
   // 重新加载echarts
