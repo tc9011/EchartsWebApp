@@ -121,7 +121,7 @@ export class SettingsService {
         trigger: 'axis'
       },
       legend: {
-        data:['邮件营销','联盟广告','视频广告','直接访问','搜索引擎']
+        data:[]
       },
       toolbox: {
         feature: {
@@ -167,18 +167,27 @@ export class SettingsService {
     let dataLength = dataGroup.length,
         seriesLength = this.option.series.length;
 
-    if (dataLength < seriesLength){                     //删除已经删除的数据数据
+    if (dataLength < seriesLength){                     //删除数据
       for (let m = 0; m < seriesLength-dataLength; m++){
         this.option.series.pop();
+        this.option.legend.data.pop();
       }
-    }else {
+    } else {                                            //增加数据
       for (let i = 0; i < dataLength; i++){
         for (let j = 0; j <= seriesLength; j++){
           if (this.option.series[i]){                     //当option.series中包含dataGroup的数据
+            //设置legend
+            this.option.legend.data[i] = dataGroup[i].title;
+
+            //设置series
             this.option.series[i].name = dataGroup[i].title;
             this.option.series[i].data = this.splitData(dataGroup[i].yData);
             this.option.xAxis[0].data = this.splitData(dataGroup[i].xData);
           } else {                                        //当option.series中不包含dataGroup的数据
+            //设置legend
+            this.option.legend.data.push(dataGroup[i].title);
+
+            //设置series
             let yData = {
               name: dataGroup[i].title,
               type:'line',
