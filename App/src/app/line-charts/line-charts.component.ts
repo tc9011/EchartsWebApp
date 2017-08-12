@@ -31,6 +31,7 @@ export class LineChartsComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.deleteBtn.disabled = true;
   }
 
   reloadEcharts(){
