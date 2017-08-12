@@ -12,8 +12,10 @@
 	"setting": {
 		"subtitle": "Subtitle",
 		"subtitleColor": "Subtitle Color",
+		"subtitleFontSize": "Subtitle Font Size",
 		"title": "Title",
-		"titleColor": "Title Color"
+		"titleColor": "Title Color",
+		"titleFontSize": "Title Font Size"
 	},
 	"table": {
 		"addItem": "Add Item",

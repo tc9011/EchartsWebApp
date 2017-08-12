@@ -58,10 +58,15 @@ export class SettingsService {
 
   // 配置chartoption
   setChartOption(settings:any,dataGroup:Array<any>){
+    //标题
     this.option.title.text = settings.title?settings.title:'折线图';
     this.option.title.subtext = settings.subtitle?settings.subtitle:'power by echarts';
+    //标题颜色
     this.option.title.textStyle.color = settings.titleColor?settings.titleColor:"black";
     this.option.title.subtextStyle.color = settings.subtitleColor?settings.subtitleColor:"balck";
+    //标题字体大小
+    this.option.title.textStyle.fontSize = settings.titleSizes?settings.titleSizes:"18";
+    this.option.title.subtextStyle.fontSize = settings.subtitleSizes?settings.subtitleSizes:"18";
 
     this.setXYData(dataGroup);
 

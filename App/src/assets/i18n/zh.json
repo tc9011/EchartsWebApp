@@ -12,8 +12,10 @@
 	"setting": {
 		"subtitle": "副标题",
 		"subtitleColor": "副标题颜色",
+		"subtitleFontSize": "副标题字体大小",
 		"title": "标题",
-		"titleColor": "标题颜色"
+		"titleColor": "标题颜色",
+		"titleFontSize": "标题字体大小"
 	},
 	"table": {
 		"addItem": "增加数据组",
