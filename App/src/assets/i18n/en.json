@@ -21,7 +21,7 @@
 		"deleteItem": "Delete Item",
 		"save": "Save",
 		"title": "Data Name",
-		"xData": "X-axis Data",
-		"yData": "Y-axis Data"
+		"xData": "X-axis Data(Data should be separated by spaces or commas)",
+		"yData": "Y-axis Data(Data should be separated by spaces or commas)"
 	}
 }
