@@ -52,7 +52,7 @@ export class LineChartsComponent implements OnInit {
   addItem(){
     let _tempObject = {
       title: '',
-      xData: '',
+      xData: this.dataGroup[0].xData,
       yData: ''
     };
     this.dataGroup.push(_tempObject);
