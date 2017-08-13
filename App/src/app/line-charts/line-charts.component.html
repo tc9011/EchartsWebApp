@@ -9,20 +9,24 @@
       <!--数据输入区-->
       <section>
         <button md-raised-button (click)="addItem()" class="add-item">{{"table.addItem" | translate}}</button>
-        <button md-raised-button #deleteBtn (click)="deleteItem()" class="delete-item">{{"table.deleteItem" | translate}}</button>
+        <button md-raised-button #deleteBtn (click)="deleteItem()" class="delete-item">{{"table.deleteItem" |
+          translate}}
+        </button>
         <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
         <!--<button md-raised-button (click)="clearData()" class="data-clear">{{"table.clear" | translate}}</button>-->
 
         <section class="data-group" *ngFor="let item of dataGroup;index as i">
-          <md-input-container class="input-area">
-            <input mdInput placeholder="{{'table.title' | translate}}" [(ngModel)]="item.title">
-          </md-input-container>
-          <md-input-container class="input-area">
-            <textarea mdInput placeholder="{{'table.xData' | translate}}" [(ngModel)]="item.xData"></textarea>
-          </md-input-container>
-          <md-input-container class="input-area">
-            <textarea mdInput placeholder="{{'table.yData' | translate}}" [(ngModel)]="item.yData"></textarea>
-          </md-input-container>
+          <md-card>
+            <md-input-container class="input-area">
+              <input mdInput placeholder="{{'table.title' | translate}}" [(ngModel)]="item.title">
+            </md-input-container>
+            <md-input-container class="input-area">
+              <textarea mdInput placeholder="{{'table.xData' | translate}}" [(ngModel)]="item.xData"></textarea>
+            </md-input-container>
+            <md-input-container class="input-area">
+              <textarea mdInput placeholder="{{'table.yData' | translate}}" [(ngModel)]="item.yData"></textarea>
+            </md-input-container>
+          </md-card>
         </section>
 
       </section>
@@ -33,30 +37,38 @@
       <section>
         <button md-raised-button class="settings-save" (click)="reloadEcharts()">{{"table.save" | translate}}</button>
 
-        <!--标题内容-->
-        <md-input-container class="titles">
-          <input mdInput placeholder="{{'setting.title' | translate}}" [(ngModel)]="settings.title">
-        </md-input-container>
-        <md-input-container class="titles">
-          <input mdInput placeholder="{{'setting.subtitle' | translate}}" [(ngModel)]="settings.subtitle">
-        </md-input-container>
+        <md-card>
+          <md-slide-toggle class="title-slide-toggle">{{'setting.isTitle' | translate}}</md-slide-toggle>
+          <!--标题内容-->
+          <md-input-container class="titles">
+            <input mdInput placeholder="{{'setting.title' | translate}}" [(ngModel)]="settings.title">
+          </md-input-container>
+          <md-input-container class="titles">
+            <input mdInput placeholder="{{'setting.subtitle' | translate}}" [(ngModel)]="settings.subtitle">
+          </md-input-container>
 
-        <!--标题颜色-->
-        <md2-colorpicker class="title-color-picker" placeholder="{{'setting.titleColor' | translate}}" [(ngModel)]="settings.titleColor"></md2-colorpicker>
-        <md2-colorpicker class="subtitle-color-picker" placeholder="{{'setting.subtitleColor' | translate}}" [(ngModel)]="settings.subtitleColor"></md2-colorpicker>
+          <!--标题颜色-->
+          <md2-colorpicker class="title-color-picker" placeholder="{{'setting.titleColor' | translate}}"
+                           [(ngModel)]="settings.titleColor"></md2-colorpicker>
+          <md2-colorpicker class="subtitle-color-picker" placeholder="{{'setting.subtitleColor' | translate}}"
+                           [(ngModel)]="settings.subtitleColor"></md2-colorpicker>
 
-        <!--标题字体大小-->
-        <md-select class="title-font-size" [(ngModel)]="settings.titleFontSize" placeholder="{{'setting.titleFontSize' | translate}}">
-          <md-option *ngFor="let titleSize of titleSizes" [value]="titleSize">
-            {{ titleSize }}
-          </md-option>
-        </md-select>
+          <!--标题字体大小-->
+          <md-select class="title-font-size" [(ngModel)]="settings.titleFontSize"
+                     placeholder="{{'setting.titleFontSize' | translate}}">
+            <md-option *ngFor="let titleSize of titleSizes" [value]="titleSize">
+              {{ titleSize }}
+            </md-option>
+          </md-select>
 
-        <md-select class="subtitle-font-size" [(ngModel)]="settings.subtitleFontSize" placeholder="{{'setting.subtitleFontSize' | translate}}">
-          <md-option *ngFor="let subtitleSize of subtitleSizes" [value]="subtitleSize">
-            {{ subtitleSize }}
-          </md-option>
-        </md-select>
+          <md-select class="subtitle-font-size" [(ngModel)]="settings.subtitleFontSize"
+                     placeholder="{{'setting.subtitleFontSize' | translate}}">
+            <md-option *ngFor="let subtitleSize of subtitleSizes" [value]="subtitleSize">
+              {{ subtitleSize }}
+            </md-option>
+          </md-select>
+        </md-card>
+
       </section>
     </md-tab>
 

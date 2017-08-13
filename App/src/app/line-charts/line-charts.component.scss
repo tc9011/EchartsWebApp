@@ -55,13 +55,6 @@
   margin: 10px 10px;
 }
 
-.data-group{
-  border-bottom: 2px solid $basic-blue;
-  &:last-child{
-    border-bottom: none;
-  }
-}
-
 .data-clear{
   float: right;
   margin: 10PX;
@@ -77,4 +70,13 @@
   margin: 10px;
   margin-top: 40px;
   margin-left: 83px;
+}
+
+.title-slide-toggle{
+  display: block;
+  margin: 10px;
+}
+
+md-card{
+  margin: 5px;
 }

@@ -10,6 +10,7 @@
 		"setting": "配置"
 	},
 	"setting": {
+		"isTitle": "是否显示标题",
 		"subtitle": "副标题",
 		"subtitleColor": "副标题颜色",
 		"subtitleFontSize": "副标题字体大小",
