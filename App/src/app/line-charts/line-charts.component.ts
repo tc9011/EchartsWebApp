@@ -37,6 +37,7 @@ export class LineChartsComponent implements OnInit{
       'titleLeft': 0,
       'borderColor': '',
       'borderWidth': 0,
+      'legendChecked': true
     };
     this.setChartOption();  //初始化echarts
   }

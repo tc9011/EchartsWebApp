@@ -12,7 +12,8 @@
 	"setting": {
 		"borderColor": "Title Border Color",
 		"borderWidth": "Title Border Width",
-		"isTitle": "Display the title",
+		"isLegend": "Show Legend",
+		"isTitle": "Show Title",
 		"itemGap": "The distance between title and subtitles",
 		"subtitle": "Subtitle",
 		"subtitleColor": "Subtitle Color",

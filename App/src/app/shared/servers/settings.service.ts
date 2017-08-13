@@ -34,6 +34,7 @@ export class SettingsService {
         trigger: 'axis'
       },
       legend: {
+        show: true,
         data:[]
       },
       toolbox: {
@@ -85,6 +86,8 @@ export class SettingsService {
     this.option.title.borderColor = settings.borderColor?settings.borderColor:"#ccc";
     // 边框线宽
     this.option.title.borderWidth = settings.borderWidth;
+    //是否显示标题
+    this.option.legend.show = settings.legendChecked;
 
     this.setXYData(dataGroup);
 

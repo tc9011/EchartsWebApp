@@ -117,6 +117,11 @@
                            [(ngModel)]="settings.borderColor"></md2-colorpicker>
         </md-card>
 
+        <md-card>
+          <!--是否显示图例-->
+          <md-slide-toggle class="legend-slide-toggle" [color]="'primary'" [checked]="settings.legendChecked" [(ngModel)]="settings.legendChecked">{{'setting.isLegend' | translate}}</md-slide-toggle>
+        </md-card>
+
       </section>
     </md-tab>
 
