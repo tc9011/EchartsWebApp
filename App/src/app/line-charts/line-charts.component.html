@@ -38,6 +38,7 @@
         <button md-raised-button class="settings-save" (click)="reloadEcharts()">{{"table.save" | translate}}</button>
 
         <md-card>
+          <!--是否显示标题-->
           <md-slide-toggle class="title-slide-toggle" [color]="'primary'" [checked]="settings.titleChecked" [(ngModel)]="settings.titleChecked">{{'setting.isTitle' | translate}}</md-slide-toggle>
           <!--标题内容-->
           <md-input-container class="titles">
@@ -67,6 +68,18 @@
               {{ subtitleSize }}
             </md-option>
           </md-select>
+
+          <!--主标题和副标题之间间隔-->
+          <label for="itemGap" class="itemGap-label">{{'setting.itemGap' | translate}}</label>
+          <md-slider
+            id="itemGap"
+            [color]="'primary'"
+            [invert]="invert"
+            [max]="'40'"
+            [min]="'0'"
+            [thumb-label]="true"
+            [(ngModel)]="settings.itemGap">
+          </md-slider>
         </md-card>
 
       </section>

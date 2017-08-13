@@ -26,12 +26,13 @@ export class LineChartsComponent implements OnInit{
     }];
     this.settings = {
       'titleChecked': true,
-      'title': '',
-      'subtitle': '',
+      'title': '折线图',
+      'subtitle': 'power by echarts',
       'titleColor': '',
       'subtitleColor': '',
       'titleFontSize': '',
-      'subtitleFontSize': ''
+      'subtitleFontSize': '',
+      'itemGap': 10
     };
     this.setChartOption();  //初始化echarts
   }

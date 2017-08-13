@@ -16,6 +16,7 @@ export class SettingsService {
           fontWeight: 'bolder',
           fontSize: 18,
         },
+        // textAlign:'left',
         subtextStyle: {
           color: 'black',
           fontStyle: 'normal',
@@ -23,6 +24,7 @@ export class SettingsService {
           fontFamily: 'sans-serif',
           fontSize: 12,
         },
+        itemGap: 10,
       },
       tooltip : {
         trigger: 'axis'
@@ -62,14 +64,16 @@ export class SettingsService {
     //是否显示标题
     this.option.title.show = settings.titleChecked;
     //标题
-    this.option.title.text = settings.title?settings.title:'折线图';
-    this.option.title.subtext = settings.subtitle?settings.subtitle:'power by echarts';
+    this.option.title.text = settings.title;
+    this.option.title.subtext = settings.subtitle;
     //标题颜色
     this.option.title.textStyle.color = settings.titleColor?settings.titleColor:"black";
     this.option.title.subtextStyle.color = settings.subtitleColor?settings.subtitleColor:"balck";
     //标题字体大小
     this.option.title.textStyle.fontSize = settings.titleFontSize?settings.titleFontSize:"18";
     this.option.title.subtextStyle.fontSize = settings.subtitleFontSize?settings.subtitleFontSize:"18";
+    //主标题和副标题之间间隔
+    this.option.title.itemGap = settings.itemGap;
 
     this.setXYData(dataGroup);
 

@@ -11,6 +11,7 @@
 	},
 	"setting": {
 		"isTitle": "显示标题",
+		"itemGap": "主副标题之间的间距",
 		"subtitle": "副标题",
 		"subtitleColor": "副标题颜色",
 		"subtitleFontSize": "副标题字体大小",
