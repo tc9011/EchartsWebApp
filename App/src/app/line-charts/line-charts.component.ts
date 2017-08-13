@@ -42,7 +42,9 @@ export class LineChartsComponent implements OnInit{
       'legendLeft': 50,
       'legendOrient': 'horizontal',
       'legendItemGap': 10,
-      'isSelectedMode': true
+      'isSelectedMode': true,
+      'legendFontSize': '',
+      'legendColor': ''
     };
     this.setChartOption();  //初始化echarts
   }

@@ -40,7 +40,11 @@ export class SettingsService {
         orient: 'horizontal',
         itemGap: 10,
         selectedMode: true,
-        data:[]
+        data:[],
+        textStyle: {
+          color: '#333',
+          fontSize: 12
+        }
       },
       toolbox: {
         feature: {
@@ -102,6 +106,10 @@ export class SettingsService {
     this.option.legend.itemGap = settings.legendItemGap;
     //是否图例选择的模式可用
     this.option.legend.selectedMode = settings.isSelectedMode;
+    // 图例字体大小
+    this.option.legend.textStyle.fontSize = settings.legendFontSize?settings.legendFontSize:'12';
+    // 图例字体颜色
+    this.option.legend.textStyle.color = settings.legendColor?settings.legendColor:'#333';
 
 
     this.setXYData(dataGroup);

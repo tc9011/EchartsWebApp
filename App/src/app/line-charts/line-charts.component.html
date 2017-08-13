@@ -121,6 +121,18 @@
           <!--是否显示图例-->
           <md-slide-toggle class="legend-slide-toggle" [color]="'primary'" [checked]="settings.legendChecked" [(ngModel)]="settings.legendChecked">{{'setting.isLegend' | translate}}</md-slide-toggle>
 
+          <!--图例字体大小-->
+          <md-select class="legend-font-size" [(ngModel)]="settings.legendFontSize"
+                     placeholder="{{'setting.legendFontSize' | translate}}">
+            <md-option *ngFor="let titleSize of titleSizes" [value]="titleSize">
+              {{ titleSize }}
+            </md-option>
+          </md-select>
+
+          <!--图例字体颜色-->
+          <md2-colorpicker class="legend-color-picker" placeholder="{{'setting.legendColor' | translate}}"
+                           [(ngModel)]="settings.legendColor"></md2-colorpicker>
+
           <!--图例位置-->
           <label for="legendTop" class="legend-top">{{'setting.legendTop' | translate}}</label>
           <md-slider
@@ -166,6 +178,7 @@
 
           <!--图例选择的模式-->
           <md-slide-toggle class="selectedMode-slide-toggle" [color]="'primary'" [checked]="settings.isSelectedMode" [(ngModel)]="settings.isSelectedMode">{{'setting.isSelectedMode' | translate}}</md-slide-toggle>
+
         </md-card>
 
       </section>

@@ -18,6 +18,8 @@
 		"isSelectedMode": "开启图例选择",
 		"isTitle": "显示标题",
 		"itemGap": "主副标题之间的间距",
+		"legendColor": "图例字体颜色",
+		"legendFontSize": "图例字体大小",
 		"legendItemGap": "图例之间的间距",
 		"legendLeft": "图例离容器左侧的距离",
 		"legendOrient": "图例朝向",
