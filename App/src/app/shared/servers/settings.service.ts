@@ -65,8 +65,8 @@ export class SettingsService {
     this.option.title.textStyle.color = settings.titleColor?settings.titleColor:"black";
     this.option.title.subtextStyle.color = settings.subtitleColor?settings.subtitleColor:"balck";
     //标题字体大小
-    this.option.title.textStyle.fontSize = settings.titleSizes?settings.titleSizes:"18";
-    this.option.title.subtextStyle.fontSize = settings.subtitleSizes?settings.subtitleSizes:"18";
+    this.option.title.textStyle.fontSize = settings.titleFontSize?settings.titleFontSize:"18";
+    this.option.title.subtextStyle.fontSize = settings.subtitleFontSize?settings.subtitleFontSize:"18";
 
     this.setXYData(dataGroup);
 
