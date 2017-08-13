@@ -7,6 +7,7 @@ export class SettingsService {
   constructor() {
     this.option = {
       title: {
+        show: true,
         text: 'echart',
         subtext: '1111',
         textStyle: {
@@ -58,6 +59,8 @@ export class SettingsService {
 
   // 配置chartoption
   setChartOption(settings:any,dataGroup:Array<any>){
+    //是否显示标题
+    this.option.title.show = settings.titleChecked;
     //标题
     this.option.title.text = settings.title?settings.title:'折线图';
     this.option.title.subtext = settings.subtitle?settings.subtitle:'power by echarts';

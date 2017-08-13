@@ -38,7 +38,7 @@
         <button md-raised-button class="settings-save" (click)="reloadEcharts()">{{"table.save" | translate}}</button>
 
         <md-card>
-          <md-slide-toggle class="title-slide-toggle" [color]="'primary'">{{'setting.isTitle' | translate}}</md-slide-toggle>
+          <md-slide-toggle class="title-slide-toggle" [color]="'primary'" [checked]="settings.titleChecked" [(ngModel)]="settings.titleChecked">{{'setting.isTitle' | translate}}</md-slide-toggle>
           <!--标题内容-->
           <md-input-container class="titles">
             <input mdInput placeholder="{{'setting.title' | translate}}" [(ngModel)]="settings.title">

@@ -10,7 +10,7 @@
 		"setting": "Settings"
 	},
 	"setting": {
-		"isTitle": "Whether to display the title",
+		"isTitle": "Display the title",
 		"subtitle": "Subtitle",
 		"subtitleColor": "Subtitle Color",
 		"subtitleFontSize": "Subtitle Font Size",

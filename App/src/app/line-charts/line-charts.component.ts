@@ -25,6 +25,7 @@ export class LineChartsComponent implements OnInit{
       yData: '120, 132, 101, 134, 90, 230, 210'
     }];
     this.settings = {
+      'titleChecked': true,
       'title': '',
       'subtitle': '',
       'titleColor': '',
