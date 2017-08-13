@@ -44,7 +44,9 @@ export class SettingsService {
         textStyle: {
           color: '#333',
           fontSize: 12
-        }
+        },
+        borderColor: '#ccc',
+        borderWidth: 0
       },
       toolbox: {
         feature: {
@@ -110,6 +112,10 @@ export class SettingsService {
     this.option.legend.textStyle.fontSize = settings.legendFontSize?settings.legendFontSize:'12';
     // 图例字体颜色
     this.option.legend.textStyle.color = settings.legendColor?settings.legendColor:'#333';
+    // 图例边框颜色
+    this.option.legend.borderColor = settings.legendBorderColor;
+    // 图例边框线宽
+    this.option.legend.borderWidth = settings.legendBorderWidth;
 
 
     this.setXYData(dataGroup);

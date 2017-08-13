@@ -44,7 +44,9 @@ export class LineChartsComponent implements OnInit{
       'legendItemGap': 10,
       'isSelectedMode': true,
       'legendFontSize': '',
-      'legendColor': ''
+      'legendColor': '',
+      'legendBorderColor': '',
+      'legendBorderWidth': ''
     };
     this.setChartOption();  //初始化echarts
   }

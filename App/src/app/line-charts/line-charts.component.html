@@ -179,7 +179,20 @@
             [(ngModel)]="settings.legendItemGap">
           </md-slider>
 
+          <!--边框线宽-->
+          <label for="legendBorderWidth" class="itemGap legend-border-width">{{'setting.legendBorderWidth' | translate}}</label>
+          <md-slider
+            id="legendBorderWidth"
+            [color]="'primary'"
+            [max]="'10'"
+            [min]="'0'"
+            [thumb-label]="true"
+            [(ngModel)]="settings.legendBorderWidth">
+          </md-slider>
 
+          <!--边框颜色-->
+          <md2-colorpicker class="legend-border-color-picker" placeholder="{{'setting.legendBorderColor' | translate}}"
+                           [(ngModel)]="settings.legendBorderColor"></md2-colorpicker>
 
         </md-card>
 

@@ -18,6 +18,8 @@
 		"isSelectedMode": "Whether series can be toggled displaying",
 		"isTitle": "Show Title",
 		"itemGap": "The distance between title and subtitle",
+		"legendBorderColor": "Legend Border Color",
+		"legendBorderWidth": "Legend Border Width",
 		"legendColor": "Legend Font Color",
 		"legendFontSize": "Legend Font Size",
 		"legendItemGap": "The distance between legends",
