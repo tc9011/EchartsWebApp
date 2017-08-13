@@ -152,6 +152,17 @@
               {{'setting.Horizontal' | translate}}
             </md-option>
           </md-select>
+
+          <!--图例之间间隔-->
+          <label for="legendItemGap" class="itemGap">{{'setting.legendItemGap' | translate}}</label>
+          <md-slider
+            id="legendItemGap"
+            [color]="'primary'"
+            [max]="'200'"
+            [min]="'0'"
+            [thumb-label]="true"
+            [(ngModel)]="settings.legendItemGap">
+          </md-slider>
         </md-card>
 
       </section>

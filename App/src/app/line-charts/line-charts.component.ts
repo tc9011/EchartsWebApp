@@ -40,7 +40,8 @@ export class LineChartsComponent implements OnInit{
       'legendChecked': true,
       'legendTop': 0,
       'legendLeft': 50,
-      'legendOrient': ''
+      'legendOrient': 'horizontal',
+      'legendItemGap': 10
     };
     this.setChartOption();  //初始化echarts
   }

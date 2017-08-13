@@ -17,6 +17,7 @@
 		"isLegend": "显示图例",
 		"isTitle": "显示标题",
 		"itemGap": "主副标题之间的间距",
+		"legendItemGap": "图例之间的间距",
 		"legendLeft": "图例离容器左侧的距离",
 		"legendOrient": "图例朝向",
 		"legendTop": "图例离容器上侧的距离",

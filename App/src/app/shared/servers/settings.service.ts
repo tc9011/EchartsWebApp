@@ -37,7 +37,8 @@ export class SettingsService {
         show: true,
         left: '50%',
         top: '0%',
-        orient: '',
+        orient: 'horizontal',
+        itemGap: 10,
         data:[]
       },
       toolbox: {
@@ -95,7 +96,10 @@ export class SettingsService {
     this.option.legend.left = this.addPercent(settings.legendLeft);
     this.option.legend.top = this.addPercent(settings.legendTop);
     //图例朝向
-    this.option.legend.orient = settings.legendOrient;
+    this.option.legend.orient = settings.legendOrient?settings.legendOrient:'horizontal';
+    //图例之间间隔
+    this.option.legend.itemGap = settings.legendItemGap;
+
 
     this.setXYData(dataGroup);
 
