@@ -46,7 +46,8 @@ export class LineChartsComponent implements OnInit{
       'legendFontSize': '',
       'legendColor': '',
       'legendBorderColor': '',
-      'legendBorderWidth': ''
+      'legendBorderWidth': '',
+      'gridChecked': false
     };
     this.setChartOption();  //初始化echarts
   }

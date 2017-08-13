@@ -54,6 +54,7 @@ export class SettingsService {
         }
       },
       grid: {
+        show: false,
         left: '3%',
         right: '4%',
         bottom: '3%',
@@ -116,7 +117,8 @@ export class SettingsService {
     this.option.legend.borderColor = settings.legendBorderColor;
     // 图例边框线宽
     this.option.legend.borderWidth = settings.legendBorderWidth;
-
+    // 显示直角坐标系网格
+    this.option.grid.show = settings.gridChecked;
 
     this.setXYData(dataGroup);
 
