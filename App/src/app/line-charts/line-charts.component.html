@@ -100,6 +100,21 @@
             [thumb-label]="true"
             [(ngModel)]="settings.titleLeft">
           </md-slider>
+
+          <!--边框线宽-->
+          <label for="borderWidth" class="border-width">{{'setting.borderWidth' | translate}}</label>
+          <md-slider
+            id="borderWidth"
+            [color]="'primary'"
+            [max]="'10'"
+            [min]="'0'"
+            [thumb-label]="true"
+            [(ngModel)]="settings.borderWidth">
+          </md-slider>
+
+          <!--边框颜色-->
+          <md2-colorpicker class="border-color-picker" placeholder="{{'setting.borderColor' | translate}}"
+                           [(ngModel)]="settings.borderColor"></md2-colorpicker>
         </md-card>
 
       </section>

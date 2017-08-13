@@ -10,6 +10,8 @@
 		"setting": "Settings"
 	},
 	"setting": {
+		"borderColor": "Title Border Color",
+		"borderWidth": "Title Border Width",
 		"isTitle": "Display the title",
 		"itemGap": "The distance between title and subtitles",
 		"subtitle": "Subtitle",

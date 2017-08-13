@@ -26,7 +26,9 @@ export class SettingsService {
         },
         itemGap: 10,
         left: '0%',
-        top: '0%'
+        top: '0%',
+        borderColor: '#ccc',
+        borderWidth: 0
       },
       tooltip : {
         trigger: 'axis'
@@ -79,6 +81,10 @@ export class SettingsService {
     //标题位置
     this.option.title.left = this.addPercent(settings.titleLeft);
     this.option.title.top = this.addPercent(settings.titleTop);
+    //边框颜色
+    this.option.title.borderColor = settings.borderColor?settings.borderColor:"#ccc";
+    // 边框线宽
+    this.option.title.borderWidth = settings.borderWidth;
 
     this.setXYData(dataGroup);
 

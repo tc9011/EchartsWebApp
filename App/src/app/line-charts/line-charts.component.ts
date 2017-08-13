@@ -34,7 +34,9 @@ export class LineChartsComponent implements OnInit{
       'subtitleFontSize': '',
       'itemGap': 10,
       'titleTop': 0,
-      'titleLeft': 0
+      'titleLeft': 0,
+      'borderColor': '',
+      'borderWidth': 0,
     };
     this.setChartOption();  //初始化echarts
   }

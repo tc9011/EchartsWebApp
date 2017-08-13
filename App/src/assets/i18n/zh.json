@@ -10,6 +10,8 @@
 		"setting": "配置"
 	},
 	"setting": {
+		"borderColor": "标题边框颜色",
+		"borderWidth": "标题边框线宽",
 		"isTitle": "显示标题",
 		"itemGap": "主副标题之间的间距",
 		"subtitle": "副标题",
