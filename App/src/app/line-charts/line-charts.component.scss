@@ -67,7 +67,7 @@
   margin-top: 40px;
 }
 
-.title-slide-toggle{
+.title-slide-toggle,.legend-slide-toggle{
   display: block;
   margin: 10px;
 }
@@ -77,11 +77,14 @@ md-card{
   margin-top: 10px;
 }
 
-.itemGap,.title-top,.title-left,.border-width{
+.itemGap,.title-top,.title-left,.border-width,.legend-top,.legend-left{
   margin-top: 20px;
   width: 150px;
   height: auto;
 }
 
+.legend-orient{
+  margin-top: 10px;
+}
 
 

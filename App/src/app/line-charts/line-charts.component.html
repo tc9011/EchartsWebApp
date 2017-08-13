@@ -120,6 +120,38 @@
         <md-card>
           <!--是否显示图例-->
           <md-slide-toggle class="legend-slide-toggle" [color]="'primary'" [checked]="settings.legendChecked" [(ngModel)]="settings.legendChecked">{{'setting.isLegend' | translate}}</md-slide-toggle>
+
+          <!--图例位置-->
+          <label for="legendTop" class="legend-top">{{'setting.legendTop' | translate}}</label>
+          <md-slider
+            id="legendTop"
+            [color]="'primary'"
+            [max]="'100'"
+            [min]="'0'"
+            [thumb-label]="true"
+            [(ngModel)]="settings.legendTop">
+          </md-slider>
+
+          <label for="legendLeft" class="legend-left">{{'setting.legendLeft' | translate}}</label>
+          <md-slider
+            id="legendLeft"
+            [color]="'primary'"
+            [max]="'100'"
+            [min]="'0'"
+            [thumb-label]="true"
+            [(ngModel)]="settings.legendLeft">
+          </md-slider>
+
+          <!--图例朝向-->
+          <md-select class="legend-orient" [(ngModel)]="settings.legendOrient"
+                     placeholder="{{'setting.legendOrient' | translate}}">
+            <md-option [value]="'vertical'">
+              {{'setting.Vertical' | translate}}
+            </md-option>
+            <md-option [value]="'horizontal'">
+              {{'setting.Horizontal' | translate}}
+            </md-option>
+          </md-select>
         </md-card>
 
       </section>

@@ -10,11 +10,16 @@
 		"setting": "Settings"
 	},
 	"setting": {
+		"Horizontal": "Horizontal",
+		"Vertical": "Vertical",
 		"borderColor": "Title Border Color",
 		"borderWidth": "Title Border Width",
 		"isLegend": "Show Legend",
 		"isTitle": "Show Title",
 		"itemGap": "The distance between title and subtitles",
+		"legendLeft": "The distance from the left of the legend",
+		"legendOrient": "The Orient of Legend",
+		"legendTop": "The distance from the top of the legend",
 		"subtitle": "Subtitle",
 		"subtitleColor": "Subtitle Color",
 		"subtitleFontSize": "Subtitle Font Size",

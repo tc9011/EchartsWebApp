@@ -35,6 +35,9 @@ export class SettingsService {
       },
       legend: {
         show: true,
+        left: '50%',
+        top: '0%',
+        orient: '',
         data:[]
       },
       toolbox: {
@@ -86,8 +89,13 @@ export class SettingsService {
     this.option.title.borderColor = settings.borderColor?settings.borderColor:"#ccc";
     // 边框线宽
     this.option.title.borderWidth = settings.borderWidth;
-    //是否显示标题
+    //是否显示图例
     this.option.legend.show = settings.legendChecked;
+    //图例位置
+    this.option.legend.left = this.addPercent(settings.legendLeft);
+    this.option.legend.top = this.addPercent(settings.legendTop);
+    //图例朝向
+    this.option.legend.orient = settings.legendOrient;
 
     this.setXYData(dataGroup);
 
