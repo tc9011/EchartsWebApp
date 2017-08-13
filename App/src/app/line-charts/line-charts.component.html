@@ -207,6 +207,46 @@
           <!--显示直角坐标系网格-->
           <md-slide-toggle class="grid-slide-toggle" [color]="'primary'" [checked]="settings.gridChecked" [(ngModel)]="settings.gridChecked">{{'setting.isGrid' | translate}}</md-slide-toggle>
 
+          <!--网格位置-->
+          <label for="gridTop" class="grid-top">{{'setting.gridTop' | translate}}</label>
+          <md-slider
+            id="gridTop"
+            [color]="'primary'"
+            [max]="'100'"
+            [min]="'0'"
+            [thumb-label]="true"
+            [(ngModel)]="settings.gridTop">
+          </md-slider>
+
+          <label for="gridLeft" class="grid-left">{{'setting.gridLeft' | translate}}</label>
+          <md-slider
+            id="gridLeft"
+            [color]="'primary'"
+            [max]="'100'"
+            [min]="'0'"
+            [thumb-label]="true"
+            [(ngModel)]="settings.gridLeft">
+          </md-slider>
+
+          <label for="gridRight" class="grid-right">{{'setting.gridRight' | translate}}</label>
+          <md-slider
+            id="gridRight"
+            [color]="'primary'"
+            [max]="'100'"
+            [min]="'0'"
+            [thumb-label]="true"
+            [(ngModel)]="settings.gridRight">
+          </md-slider>
+
+          <label for="gridBottom" class="grid-bottom">{{'setting.gridBottom' | translate}}</label>
+          <md-slider
+            id="gridBottom"
+            [color]="'primary'"
+            [max]="'100'"
+            [min]="'0'"
+            [thumb-label]="true"
+            [(ngModel)]="settings.gridBottom">
+          </md-slider>
 
           <md-card-actions>
             <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>

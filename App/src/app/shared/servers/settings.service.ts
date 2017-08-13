@@ -58,6 +58,7 @@ export class SettingsService {
         left: '3%',
         right: '4%',
         bottom: '3%',
+        top: '17%',
         containLabel: true
       },
       xAxis : [
@@ -119,6 +120,12 @@ export class SettingsService {
     this.option.legend.borderWidth = settings.legendBorderWidth;
     // 显示直角坐标系网格
     this.option.grid.show = settings.gridChecked;
+    // 网格位置
+    this.option.grid.top = this.addPercent(settings.gridTop);
+    this.option.grid.bottom = this.addPercent(settings.gridBottom);
+    this.option.grid.left = this.addPercent(settings.gridLeft);
+    this.option.grid.right = this.addPercent(settings.gridRight);
+
 
     this.setXYData(dataGroup);
 
