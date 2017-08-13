@@ -33,6 +33,23 @@ export class SettingsService {
       tooltip : {
         trigger: 'axis'
       },
+      toolbox: {
+        feature:{
+          saveAsImage: {
+            show:true
+          },
+          dataZoom:{
+            show: true
+          },
+          restore:{
+            show: true
+          }
+        }
+      },
+      dataZoom:[{
+        type: 'slider',
+        show: true,
+      }],
       legend: {
         show: true,
         left: '50%',
@@ -48,16 +65,11 @@ export class SettingsService {
         borderColor: '#ccc',
         borderWidth: 0
       },
-      toolbox: {
-        feature: {
-          saveAsImage: {}
-        }
-      },
       grid: {
         show: false,
         left: '3%',
         right: '4%',
-        bottom: '3%',
+        bottom: '12%',
         top: '17%',
         containLabel: true
       },
