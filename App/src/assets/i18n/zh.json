@@ -17,7 +17,9 @@
 		"subtitleFontSize": "副标题字体大小",
 		"title": "标题",
 		"titleColor": "标题颜色",
-		"titleFontSize": "标题字体大小"
+		"titleFontSize": "标题字体大小",
+		"titleLeft": "标题离容器左侧的距离",
+		"titleTop": "标题离容器上侧的距离"
 	},
 	"table": {
 		"addItem": "增加数据组",

@@ -70,7 +70,7 @@
           </md-select>
 
           <!--主标题和副标题之间间隔-->
-          <label for="itemGap" class="itemGap-label">{{'setting.itemGap' | translate}}</label>
+          <label for="itemGap" class="itemGap">{{'setting.itemGap' | translate}}</label>
           <md-slider
             id="itemGap"
             [color]="'primary'"
@@ -78,6 +78,27 @@
             [min]="'0'"
             [thumb-label]="true"
             [(ngModel)]="settings.itemGap">
+          </md-slider>
+
+          <!--标题位置-->
+          <label for="titleTop" class="title-top">{{'setting.titleTop' | translate}}</label>
+          <md-slider
+            id="titleTop"
+            [color]="'primary'"
+            [max]="'100'"
+            [min]="'0'"
+            [thumb-label]="true"
+            [(ngModel)]="settings.titleTop">
+          </md-slider>
+
+          <label for="titleLeft" class="title-left">{{'setting.titleLeft' | translate}}</label>
+          <md-slider
+            id="titleLeft"
+            [color]="'primary'"
+            [max]="'100'"
+            [min]="'0'"
+            [thumb-label]="true"
+            [(ngModel)]="settings.titleLeft">
           </md-slider>
         </md-card>
 

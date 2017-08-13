@@ -25,6 +25,8 @@ export class SettingsService {
           fontSize: 12,
         },
         itemGap: 10,
+        left: '0%',
+        top: '0%'
       },
       tooltip : {
         trigger: 'axis'
@@ -74,6 +76,9 @@ export class SettingsService {
     this.option.title.subtextStyle.fontSize = settings.subtitleFontSize?settings.subtitleFontSize:"18";
     //主标题和副标题之间间隔
     this.option.title.itemGap = settings.itemGap;
+    //标题位置
+    this.option.title.left = this.addPercent(settings.titleLeft);
+    this.option.title.top = this.addPercent(settings.titleTop);
 
     this.setXYData(dataGroup);
 
@@ -139,4 +144,8 @@ export class SettingsService {
     return dataArray;
   }
 
+  // 增加%
+  addPercent(data:number){
+    return data + '%';
+  }
 }
