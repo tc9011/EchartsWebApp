@@ -35,7 +35,7 @@
     <md-tab label="{{'chart.setting' | translate}}">
       <!--配置区-->
       <section>
-        <button md-raised-button class="settings-save" (click)="reloadEcharts()">{{"table.save" | translate}}</button>
+        <!--<button md-raised-button class="settings-save" (click)="reloadEcharts()">{{"table.save" | translate}}</button>-->
 
         <md-card>
           <!--是否显示标题-->
@@ -115,6 +115,10 @@
           <!--边框颜色-->
           <md2-colorpicker class="border-color-picker" placeholder="{{'setting.borderColor' | translate}}"
                            [(ngModel)]="settings.borderColor"></md2-colorpicker>
+
+          <md-card-actions>
+            <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
+          </md-card-actions>
         </md-card>
 
         <md-card>
@@ -194,6 +198,9 @@
           <md2-colorpicker class="legend-border-color-picker" placeholder="{{'setting.legendBorderColor' | translate}}"
                            [(ngModel)]="settings.legendBorderColor"></md2-colorpicker>
 
+          <md-card-actions>
+            <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
+          </md-card-actions>
         </md-card>
 
         <md-card>
@@ -201,6 +208,9 @@
           <md-slide-toggle class="grid-slide-toggle" [color]="'primary'" [checked]="settings.gridChecked" [(ngModel)]="settings.gridChecked">{{'setting.isGrid' | translate}}</md-slide-toggle>
 
 
+          <md-card-actions>
+            <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
+          </md-card-actions>
         </md-card>
 
       </section>

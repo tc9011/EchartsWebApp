@@ -16,6 +16,10 @@
   margin-bottom: 10px;
 }
 
+md-card-actions{
+  height: 50px;
+}
+
 //改变colorpicker原有样式
 :host ::ng-deep .input-focused {
   border-color: $basic-blue !important;
