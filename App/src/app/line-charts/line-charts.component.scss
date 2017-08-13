@@ -67,7 +67,7 @@
   margin-top: 40px;
 }
 
-.title-slide-toggle,.legend-slide-toggle,.selectedMode-slide-toggle{
+.title-slide-toggle{
   display: block;
   margin: 10px;
 }
@@ -86,14 +86,27 @@ md-card{
 .legend-orient{
   display: block;
   width: 200px;
-  margin-top: 10px;
+  margin-top: 35px;
 }
 
 .legend-font-size,.legend-color-picker{
-  display: inline-block;
+  display: block;
+  margin-top: 35px;
+  margin-bottom: 10px;
 }
 
 .legend-color-picker{
   margin-left: 20px;
 }
 
+.selectedMode-slide-toggle,.legend-slide-toggle{
+  display: inline-block;
+}
+
+.selectedMode-slide-toggle{
+  margin-left: 30px;
+}
+
+.legendItemGap{
+  margin-top: 35px;
+}

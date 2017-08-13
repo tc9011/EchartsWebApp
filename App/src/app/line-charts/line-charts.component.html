@@ -121,6 +121,9 @@
           <!--是否显示图例-->
           <md-slide-toggle class="legend-slide-toggle" [color]="'primary'" [checked]="settings.legendChecked" [(ngModel)]="settings.legendChecked">{{'setting.isLegend' | translate}}</md-slide-toggle>
 
+          <!--图例选择的模式-->
+          <md-slide-toggle class="selectedMode-slide-toggle" [color]="'primary'" [checked]="settings.isSelectedMode" [(ngModel)]="settings.isSelectedMode">{{'setting.isSelectedMode' | translate}}</md-slide-toggle>
+
           <!--图例字体大小-->
           <md-select class="legend-font-size" [(ngModel)]="settings.legendFontSize"
                      placeholder="{{'setting.legendFontSize' | translate}}">
@@ -166,7 +169,7 @@
           </md-select>
 
           <!--图例之间间隔-->
-          <label for="legendItemGap" class="itemGap">{{'setting.legendItemGap' | translate}}</label>
+          <label for="legendItemGap" class="itemGap legendItemGap">{{'setting.legendItemGap' | translate}}</label>
           <md-slider
             id="legendItemGap"
             [color]="'primary'"
@@ -176,8 +179,7 @@
             [(ngModel)]="settings.legendItemGap">
           </md-slider>
 
-          <!--图例选择的模式-->
-          <md-slide-toggle class="selectedMode-slide-toggle" [color]="'primary'" [checked]="settings.isSelectedMode" [(ngModel)]="settings.isSelectedMode">{{'setting.isSelectedMode' | translate}}</md-slide-toggle>
+
 
         </md-card>
 

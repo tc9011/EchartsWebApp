@@ -2,6 +2,7 @@
 
 @mixin section-common {
   .left-area{
+    position: fixed;
     float: left;
     width: 68%;
     min-height: 100vh;
