@@ -15,6 +15,7 @@
 		"borderColor": "Title Border Color",
 		"borderWidth": "Title Border Width",
 		"isLegend": "Show Legend",
+		"isSelectedMode": "Whether series can be toggled displaying",
 		"isTitle": "Show Title",
 		"itemGap": "The distance between title and subtitle",
 		"legendItemGap": "The distance between legends",

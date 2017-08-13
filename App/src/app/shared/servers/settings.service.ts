@@ -39,6 +39,7 @@ export class SettingsService {
         top: '0%',
         orient: 'horizontal',
         itemGap: 10,
+        selectedMode: true,
         data:[]
       },
       toolbox: {
@@ -99,6 +100,8 @@ export class SettingsService {
     this.option.legend.orient = settings.legendOrient?settings.legendOrient:'horizontal';
     //图例之间间隔
     this.option.legend.itemGap = settings.legendItemGap;
+    //是否图例选择的模式可用
+    this.option.legend.selectedMode = settings.isSelectedMode;
 
 
     this.setXYData(dataGroup);

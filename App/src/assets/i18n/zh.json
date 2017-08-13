@@ -15,6 +15,7 @@
 		"borderColor": "标题边框颜色",
 		"borderWidth": "标题边框线宽",
 		"isLegend": "显示图例",
+		"isSelectedMode": "开启图例选择",
 		"isTitle": "显示标题",
 		"itemGap": "主副标题之间的间距",
 		"legendItemGap": "图例之间的间距",

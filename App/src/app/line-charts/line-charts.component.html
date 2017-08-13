@@ -163,6 +163,9 @@
             [thumb-label]="true"
             [(ngModel)]="settings.legendItemGap">
           </md-slider>
+
+          <!--图例选择的模式-->
+          <md-slide-toggle class="selectedMode-slide-toggle" [color]="'primary'" [checked]="settings.isSelectedMode" [(ngModel)]="settings.isSelectedMode">{{'setting.isSelectedMode' | translate}}</md-slide-toggle>
         </md-card>
 
       </section>
