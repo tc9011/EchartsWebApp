@@ -58,7 +58,9 @@ export class LineChartsComponent implements OnInit {
       'xAxisPosition': '',
       'xAxisType': '',
       'xAxisName': '',
-      'xAxisNameLocation': ''
+      'xAxisNameLocation': '',
+      'xAxisFontSize': '',
+      'xAxisColor': ''
     };
     this.setChartOption();  // 初始化echarts
   }

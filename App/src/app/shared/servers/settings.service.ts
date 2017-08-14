@@ -82,7 +82,11 @@ export class SettingsService {
           type : 'category',
           position: 'bottom',
           boundaryGap : false,
-          data : ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+          data : ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+          nameTextStyle: {
+            color: '',
+            fontSize: 12
+          },
         }
       ],
       yAxis : [
@@ -155,6 +159,10 @@ export class SettingsService {
     this.option.xAxis[0].name = settings.xAxisName;
     // x轴名称位置
     this.option.xAxis[0].nameLocation = settings.xAxisNameLocation;
+    // x轴名称字体设置
+    this.option.xAxis[0].nameTextStyle.color = settings.xAxisColor;
+    this.option.xAxis[0].nameTextStyle.fontSize = settings.xAxisFontSize;
+
 
     this.setXYData(dataGroup);
 

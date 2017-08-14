@@ -43,6 +43,8 @@
 		"titleLeft": "标题离容器左侧的距离",
 		"titleTop": "标题离容器上侧的距离",
 		"xAxisBottom": "下侧",
+		"xAxisColor": "x轴名称字体颜色",
+		"xAxisFontSize": "x轴名称字体大小",
 		"xAxisName": "x轴名称",
 		"xAxisNameEnd": "x轴结束位置",
 		"xAxisNameLocation": "x轴名称位置",

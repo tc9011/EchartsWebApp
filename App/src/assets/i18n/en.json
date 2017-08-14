@@ -43,6 +43,8 @@
 		"titleLeft": "The distance from the left of the title",
 		"titleTop": "The distance from the top of the title",
 		"xAxisBottom": "Bottom",
+		"xAxisColor": "",
+		"xAxisFontSize": "",
 		"xAxisName": "xAxis Name",
 		"xAxisNameEnd": "",
 		"xAxisNameLocation": "",

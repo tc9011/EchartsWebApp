@@ -315,6 +315,19 @@
             </md-option>
           </md-select>
 
+          <!--x轴字体大小-->
+          <md-select class="xAxis-font-size" [(ngModel)]="settings.xAxisFontSize"
+                     placeholder="{{'setting.xAxisFontSize' | translate}}">
+            <md-option *ngFor="let titleSize of titleSizes" [value]="titleSize">
+              {{ titleSize }}
+            </md-option>
+          </md-select>
+
+          <!--x轴字体颜色-->
+          <md2-colorpicker class="xAxis-color-picker" placeholder="{{'setting.xAxisColor' | translate}}"
+                           [(ngModel)]="settings.xAxisColor"></md2-colorpicker>
+
+
           <md-card-actions>
             <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
           </md-card-actions>
