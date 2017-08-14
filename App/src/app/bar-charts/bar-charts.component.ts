@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SettingsService} from "../shared/servers/settings.service";
+import {SettingsService} from '../shared/servers/settings.service';
 
 @Component({
   selector: 'app-bar-charts',
@@ -8,73 +8,73 @@ import {SettingsService} from "../shared/servers/settings.service";
   providers: [SettingsService]
 })
 export class BarChartsComponent implements OnInit {
-  echartsIntance:any;
+  echartsIntance: any;
   chartOption = {
-    "title": {
-      "text": "某地区蒸发量和降水量",
-      "subtext": "纯属虚构"
+    'title': {
+      'text': '某地区蒸发量和降水量',
+      'subtext': '纯属虚构'
     },
-    "tooltip": {
-      "trigger": "axis"
+    'tooltip': {
+      'trigger': 'axis'
     },
-    "legend": {
-      "data": [
-        "蒸发量",
-        "降水量"
+    'legend': {
+      'data': [
+        '蒸发量',
+        '降水量'
       ]
     },
-    "toolbox": {
-      "show": true,
-      "feature": {
-        "dataView": {
-          "show": true,
-          "readOnly": false
+    'toolbox': {
+      'show': true,
+      'feature': {
+        'dataView': {
+          'show': true,
+          'readOnly': false
         },
-        "magicType": {
-          "show": true,
-          "type": [
-            "line",
-            "bar"
+        'magicType': {
+          'show': true,
+          'type': [
+            'line',
+            'bar'
           ]
         },
-        "restore": {
-          "show": true
+        'restore': {
+          'show': true
         },
-        "saveAsImage": {
-          "show": true
+        'saveAsImage': {
+          'show': true
         }
       }
     },
-    "calculable": true,
-    "xAxis": [
+    'calculable': true,
+    'xAxis': [
       {
-        "type": "category",
-        "data": [
-          "1月",
-          "2月",
-          "3月",
-          "4月",
-          "5月",
-          "6月",
-          "7月",
-          "8月",
-          "9月",
-          "10月",
-          "11月",
-          "12月"
+        'type': 'category',
+        'data': [
+          '1月',
+          '2月',
+          '3月',
+          '4月',
+          '5月',
+          '6月',
+          '7月',
+          '8月',
+          '9月',
+          '10月',
+          '11月',
+          '12月'
         ]
       }
     ],
-    "yAxis": [
+    'yAxis': [
       {
-        "type": "value"
+        'type': 'value'
       }
     ],
-    "series": [
+    'series': [
       {
-        "name": "蒸发量",
-        "type": "bar",
-        "data": [
+        'name': '蒸发量',
+        'type': 'bar',
+        'data': [
           2,
           4.9,
           7,
@@ -88,31 +88,31 @@ export class BarChartsComponent implements OnInit {
           6.4,
           3.3
         ],
-        "markPoint": {
-          "data": [
+        'markPoint': {
+          'data': [
             {
-              "type": "max",
-              "name": "最大值"
+              'type': 'max',
+              'name': '最大值'
             },
             {
-              "type": "min",
-              "name": "最小值"
+              'type': 'min',
+              'name': '最小值'
             }
           ]
         },
-        "markLine": {
-          "data": [
+        'markLine': {
+          'data': [
             {
-              "type": "average",
-              "name": "平均值"
+              'type': 'average',
+              'name': '平均值'
             }
           ]
         }
       },
       {
-        "name": "降水量",
-        "type": "bar",
-        "data": [
+        'name': '降水量',
+        'type': 'bar',
+        'data': [
           2.6,
           5.9,
           9,
@@ -126,27 +126,27 @@ export class BarChartsComponent implements OnInit {
           6,
           2.3
         ],
-        "markPoint": {
-          "data": [
+        'markPoint': {
+          'data': [
             {
-              "name": "年最高",
-              "value": 182.2,
-              "xAxis": 7,
-              "yAxis": 183
+              'name': '年最高',
+              'value': 182.2,
+              'xAxis': 7,
+              'yAxis': 183
             },
             {
-              "name": "年最低",
-              "value": 2.3,
-              "xAxis": 11,
-              "yAxis": 3
+              'name': '年最低',
+              'value': 2.3,
+              'xAxis': 11,
+              'yAxis': 3
             }
           ]
         },
-        "markLine": {
-          "data": [
+        'markLine': {
+          'data': [
             {
-              "type": "average",
-              "name": "平均值"
+              'type': 'average',
+              'name': '平均值'
             }
           ]
         }
@@ -159,7 +159,7 @@ export class BarChartsComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSettingsChange(settings:any){
+  onSettingsChange(settings: any) {
     this.chartOption.title.text = settings.title;
     this.chartOption.title.subtext = settings.subtitle;
     this.echartsIntance.setOption(this.chartOption);

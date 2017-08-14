@@ -1,8 +1,8 @@
-import {LineChartsComponent} from "./line-charts.component";
+import {LineChartsComponent} from './line-charts.component';
 
-export const lineChartsRoutes=[
+export const lineChartsRoutes = [
   {
-    path:'',
+    path: '',
     component: LineChartsComponent,
   }
 ];

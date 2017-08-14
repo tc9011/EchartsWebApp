@@ -1,5 +1,5 @@
-import { NgModule,ModuleWithProviders } from '@angular/core';
-import { FormsModule ,ReactiveFormsModule} from '@angular/forms';
+import { NgModule, ModuleWithProviders } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 
@@ -7,7 +7,7 @@ import {TranslateModule} from '@ngx-translate/core';
 
 import {CdkTableModule} from '@angular/cdk';
 
-import { Md2Module }  from 'md2';
+import { Md2Module } from 'md2';
 
 import {
   MdAutocompleteModule,
