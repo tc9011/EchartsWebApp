@@ -4,6 +4,8 @@
   ],
   "rules": {
     "callable-types": true,
+    "arrow-parens": true,
+    "arrow-return-shorthand": true,
     "class-name": true,
     "comment-format": [
       true,
@@ -40,6 +42,8 @@
       "timeEnd",
       "trace"
     ],
+    "no-duplicate-super": true,
+    "no-var-requires": true,
     "no-construct": true,
     "no-debugger": true,
     "no-duplicate-variable": true,
@@ -55,7 +59,10 @@
     "no-unused-expression": true,
     "no-use-before-declare": true,
     "no-var-keyword": true,
+    "no-internal-module": true,
     "object-literal-sort-keys": false,
+    "no-unused-variable": true,
+    "cyclomatic-complexity": true,
     "one-line": [
       true,
       "check-open-brace",
@@ -64,6 +71,7 @@
       "check-whitespace"
     ],
     "prefer-const": true,
+    "prefer-for-of": true,
     "quotemark": [
       true,
       "single"
@@ -97,7 +105,6 @@
       "check-separator",
       "check-type"
     ],
-
     "directive-selector": [true, "attribute", "app", "camelCase"],
     "component-selector": [true, "element", "app", "kebab-case"],
     "use-input-property-decorator": true,

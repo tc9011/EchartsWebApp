@@ -12,7 +12,7 @@
 //     expect(page.getParagraphText()).toEqual('app works!');
 //   });
 // });
-import { browser, element, by } from 'protractor';
+import { browser } from 'protractor';
 
 describe('MEC App', function() {
   it ( '这是一个空的测试，什么都没干', () => {
