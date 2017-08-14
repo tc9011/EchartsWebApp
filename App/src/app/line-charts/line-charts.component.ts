@@ -51,7 +51,8 @@ export class LineChartsComponent implements OnInit {
       'gridTop': 17,
       'gridLeft': 3,
       'gridRight': 4,
-      'gridBottom': 12
+      'gridBottom': 12,
+      'containLabel': false
     };
     this.setChartOption();  // 初始化echarts
   }

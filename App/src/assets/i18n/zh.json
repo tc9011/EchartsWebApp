@@ -14,6 +14,7 @@
 		"Vertical": "垂直",
 		"borderColor": "标题边框颜色",
 		"borderWidth": "标题边框线宽",
+		"containLabel": "坐标轴在网格区域内",
 		"gridBottom": "网格离容器下侧的距离",
 		"gridLeft": "网格离容器左侧的距离",
 		"gridRight": "网格离容器右侧的距离",

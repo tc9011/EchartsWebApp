@@ -207,6 +207,8 @@
           <!--显示直角坐标系网格-->
           <md-slide-toggle class="grid-slide-toggle" [color]="'primary'" [checked]="settings.gridChecked" [(ngModel)]="settings.gridChecked">{{'setting.isGrid' | translate}}</md-slide-toggle>
 
+          <md-slide-toggle class="contain-label-slide-toggle" [color]="'primary'" [checked]="settings.containLabel" [(ngModel)]="settings.containLabel">{{'setting.containLabel' | translate}}</md-slide-toggle>
+
           <!--网格位置-->
           <label for="gridTop" class="grid-top">{{'setting.gridTop' | translate}}</label>
           <md-slider

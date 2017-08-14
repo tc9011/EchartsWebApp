@@ -137,7 +137,8 @@ export class SettingsService {
     this.option.grid.bottom = this.addPercent(settings.gridBottom);
     this.option.grid.left = this.addPercent(settings.gridLeft);
     this.option.grid.right = this.addPercent(settings.gridRight);
-
+    // 标轴的刻度标签
+    this.option.grid.containLabel = settings.containLabel;
 
     this.setXYData(dataGroup);
 
