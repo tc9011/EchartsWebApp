@@ -270,6 +270,24 @@
           </md-card-actions>
         </md-card>
 
+        <md-card>
+          <!--x轴位置-->
+          <md-select class="xAxis-position" [(ngModel)]="settings.xAxisPosition"
+                     placeholder="{{'setting.xAxisPosition' | translate}}">
+            <md-option [value]="'top'">
+              {{'setting.xAxisTop' | translate}}
+            </md-option>
+            <md-option [value]="'bottom'">
+              {{'setting.xAxisBottom' | translate}}
+            </md-option>
+          </md-select>
+
+
+          <md-card-actions>
+            <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
+          </md-card-actions>
+        </md-card>
+
       </section>
     </md-tab>
 

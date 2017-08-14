@@ -78,6 +78,7 @@ export class SettingsService {
       xAxis : [
         {
           type : 'category',
+          position: 'bottom',
           boundaryGap : false,
           data : ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
         }
@@ -144,6 +145,8 @@ export class SettingsService {
     // 网格边框
     this.option.grid.borderWidth = settings.gridBorderWidth;
     this.option.grid.borderColor = settings.gridBorderColor;
+    // x轴位置
+    this.option.xAxis[0].position = settings.xAxisPosition;
 
     this.setXYData(dataGroup);
 

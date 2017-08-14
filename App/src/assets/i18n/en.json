@@ -41,7 +41,10 @@
 		"titleColor": "Title Color",
 		"titleFontSize": "Title Font Size",
 		"titleLeft": "The distance from the left of the title",
-		"titleTop": "The distance from the top of the title"
+		"titleTop": "The distance from the top of the title",
+		"xAxisBottom": "",
+		"xAxisPosition": "",
+		"xAxisTop": ""
 	},
 	"table": {
 		"addItem": "Add Item",
