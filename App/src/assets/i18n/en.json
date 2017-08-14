@@ -44,7 +44,12 @@
 		"titleTop": "The distance from the top of the title",
 		"xAxisBottom": "",
 		"xAxisPosition": "",
-		"xAxisTop": ""
+		"xAxisTop": "",
+		"xAxisType": "",
+		"xAxisTypeCategory": "",
+		"xAxisTypeLog": "",
+		"xAxisTypeTime": "",
+		"xAxisTypeValue": ""
 	},
 	"table": {
 		"addItem": "Add Item",

@@ -44,7 +44,12 @@
 		"titleTop": "标题离容器上侧的距离",
 		"xAxisBottom": "下侧",
 		"xAxisPosition": "x轴位置",
-		"xAxisTop": "上侧"
+		"xAxisTop": "上侧",
+		"xAxisType": "x轴类型",
+		"xAxisTypeCategory": "类目轴（适用于离散的类目数据）",
+		"xAxisTypeLog": "对数轴（适用于对数数据）",
+		"xAxisTypeTime": "时间轴（适用于连续的时序数据）",
+		"xAxisTypeValue": "数值轴（适用于连续数据）"
 	},
 	"table": {
 		"addItem": "增加数据组",

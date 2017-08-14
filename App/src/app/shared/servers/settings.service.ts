@@ -147,6 +147,8 @@ export class SettingsService {
     this.option.grid.borderColor = settings.gridBorderColor;
     // x轴位置
     this.option.xAxis[0].position = settings.xAxisPosition;
+    // x轴类型
+    this.option.xAxis[0].type = settings.xAxisType;
 
     this.setXYData(dataGroup);
 
