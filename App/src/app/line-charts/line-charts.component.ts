@@ -60,7 +60,8 @@ export class LineChartsComponent implements OnInit {
       'xAxisName': '',
       'xAxisNameLocation': '',
       'xAxisFontSize': '',
-      'xAxisColor': ''
+      'xAxisColor': '',
+      'xAxisItemGap': 15
     };
     this.setChartOption();  // 初始化echarts
   }

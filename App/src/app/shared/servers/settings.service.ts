@@ -87,6 +87,7 @@ export class SettingsService {
             color: '',
             fontSize: 12
           },
+          nameGap: 15
         }
       ],
       yAxis : [
@@ -162,6 +163,8 @@ export class SettingsService {
     // x轴名称字体设置
     this.option.xAxis[0].nameTextStyle.color = settings.xAxisColor;
     this.option.xAxis[0].nameTextStyle.fontSize = settings.xAxisFontSize;
+    // x轴名称与轴线间距
+    this.option.xAxis[0].nameGap = settings.xAxisItemGap;
 
 
     this.setXYData(dataGroup);

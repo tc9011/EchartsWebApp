@@ -327,6 +327,16 @@
           <md2-colorpicker class="xAxis-color-picker" placeholder="{{'setting.xAxisColor' | translate}}"
                            [(ngModel)]="settings.xAxisColor"></md2-colorpicker>
 
+          <!--x轴名称与轴线间距-->
+          <label for="xAxisItemGap" class="itemGap xAxisItemGap">{{'setting.xAxisItemGap' | translate}}</label>
+          <md-slider
+            id="xAxisItemGap"
+            [color]="'primary'"
+            [max]="'50'"
+            [min]="'0'"
+            [thumb-label]="true"
+            [(ngModel)]="settings.xAxisItemGap">
+          </md-slider>
 
           <md-card-actions>
             <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>

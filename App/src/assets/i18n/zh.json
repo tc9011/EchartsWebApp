@@ -45,6 +45,7 @@
 		"xAxisBottom": "下侧",
 		"xAxisColor": "x轴名称字体颜色",
 		"xAxisFontSize": "x轴名称字体大小",
+		"xAxisItemGap": "x轴名称与轴线水平间距",
 		"xAxisName": "x轴名称",
 		"xAxisNameEnd": "x轴结束位置",
 		"xAxisNameLocation": "x轴名称位置",
