@@ -42,15 +42,14 @@
 		"titleFontSize": "Title Font Size",
 		"titleLeft": "The distance from the left of the title",
 		"titleTop": "The distance from the top of the title",
-		"xAxisBottom": "Bottom",
-		"xAxisName": "xAxis Name",
-		"xAxisPosition": "xAxis Position",
-		"xAxisTop": "Top",
-		"xAxisType": "xAxis Type",
-		"xAxisTypeCategory": "Category axis",
-		"xAxisTypeLog": "Log axis",
-		"xAxisTypeTime": "Time axis",
-		"xAxisTypeValue": "Numerical axis"
+		"xAxisBottom": "",
+		"xAxisPosition": "",
+		"xAxisTop": "",
+		"xAxisType": "",
+		"xAxisTypeCategory": "",
+		"xAxisTypeLog": "",
+		"xAxisTypeTime": "",
+		"xAxisTypeValue": ""
 	},
 	"table": {
 		"addItem": "Add Item",

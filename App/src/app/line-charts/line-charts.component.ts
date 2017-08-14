@@ -56,7 +56,8 @@ export class LineChartsComponent implements OnInit {
       'gridBorderWidth': '',
       'gridBorderColor': '',
       'xAxisPosition': '',
-      'xAxisType': ''
+      'xAxisType': '',
+      'xAxisName': ''
     };
     this.setChartOption();  // 初始化echarts
   }

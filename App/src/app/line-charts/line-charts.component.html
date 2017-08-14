@@ -297,6 +297,10 @@
               {{'setting.xAxisTypeLog' | translate}}
             </md-option>
           </md-select>
+          <!--x轴名称-->
+          <md-input-container class="input-area">
+            <input mdInput placeholder="{{'setting.xAxisName' | translate}}" [(ngModel)]="settings.xAxisName">
+          </md-input-container>
 
           <md-card-actions>
             <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
