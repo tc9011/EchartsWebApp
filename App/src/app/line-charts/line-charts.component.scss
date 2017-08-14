@@ -115,10 +115,22 @@ md-card{
   margin-top: 35px;
 }
 
-.grid-slide-toggle{
+.grid-slide-toggle,.xAxis-position,.xAxis-type{
   display: block;
 }
 
 .contain-label-slide-toggle{
   display: block;
+}
+
+.xAxisName{
+  margin-left: 0;
+}
+
+.xAxisName,.xAxis-name-location{
+  margin-top: 35px;
+}
+
+.xAxis-type{
+  margin-top: 55px;
 }

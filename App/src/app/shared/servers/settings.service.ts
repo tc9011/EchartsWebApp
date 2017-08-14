@@ -78,6 +78,7 @@ export class SettingsService {
       xAxis : [
         {
           name: '',
+          nameLocation: '',
           type : 'category',
           position: 'bottom',
           boundaryGap : false,
@@ -152,6 +153,8 @@ export class SettingsService {
     this.option.xAxis[0].type = settings.xAxisType;
     // x轴名称
     this.option.xAxis[0].name = settings.xAxisName;
+    // x轴名称位置
+    this.option.xAxis[0].nameLocation = settings.xAxisNameLocation;
 
     this.setXYData(dataGroup);
 

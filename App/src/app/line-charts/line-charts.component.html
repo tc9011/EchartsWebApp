@@ -282,7 +282,7 @@
             </md-option>
           </md-select>
           <!--x轴类型-->
-          <md-select class="xAxis-position" [(ngModel)]="settings.xAxisType"
+          <md-select class="xAxis-type" [(ngModel)]="settings.xAxisType"
                      placeholder="{{'setting.xAxisType' | translate}}">
             <md-option [value]="'value'">
               {{'setting.xAxisTypeValue' | translate}}
@@ -298,9 +298,22 @@
             </md-option>
           </md-select>
           <!--x轴名称-->
-          <md-input-container class="input-area">
+          <md-input-container class="input-area xAxisName">
             <input mdInput placeholder="{{'setting.xAxisName' | translate}}" [(ngModel)]="settings.xAxisName">
           </md-input-container>
+          <!--x轴名称位置-->
+          <md-select class="xAxis-name-location" [(ngModel)]="settings.xAxisNameLocation"
+                     placeholder="{{'setting.xAxisNameLocation' | translate}}">
+            <md-option [value]="'start'">
+              {{'setting.xAxisNameStart' | translate}}
+            </md-option>
+            <md-option [value]="'middle'">
+              {{'setting.xAxisNameMiddle' | translate}}
+            </md-option>
+            <md-option [value]="'end'">
+              {{'setting.xAxisNameEnd' | translate}}
+            </md-option>
+          </md-select>
 
           <md-card-actions>
             <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
