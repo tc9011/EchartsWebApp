@@ -52,7 +52,9 @@ export class LineChartsComponent implements OnInit {
       'gridLeft': 3,
       'gridRight': 4,
       'gridBottom': 12,
-      'containLabel': false
+      'containLabel': false,
+      'gridBorderWidth': '',
+      'gridBorderColor': ''
     };
     this.setChartOption();  // 初始化echarts
   }

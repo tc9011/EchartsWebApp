@@ -71,7 +71,9 @@ export class SettingsService {
         right: '4%',
         bottom: '12%',
         top: '17%',
-        containLabel: true
+        containLabel: true,
+        borderColor: '#ccc',
+        borderWidth: 1
       },
       xAxis : [
         {
@@ -139,6 +141,9 @@ export class SettingsService {
     this.option.grid.right = this.addPercent(settings.gridRight);
     // 标轴的刻度标签
     this.option.grid.containLabel = settings.containLabel;
+    // 网格边框
+    this.option.grid.borderWidth = settings.gridBorderWidth;
+    this.option.grid.borderColor = settings.gridBorderColor;
 
     this.setXYData(dataGroup);
 

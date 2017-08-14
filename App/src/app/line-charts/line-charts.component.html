@@ -206,10 +206,10 @@
         <md-card>
           <!--显示直角坐标系网格-->
           <md-slide-toggle class="grid-slide-toggle" [color]="'primary'" [checked]="settings.gridChecked" [(ngModel)]="settings.gridChecked">{{'setting.isGrid' | translate}}</md-slide-toggle>
-
+          <!--网格-->
           <md-slide-toggle class="contain-label-slide-toggle" [color]="'primary'" [checked]="settings.containLabel" [(ngModel)]="settings.containLabel">{{'setting.containLabel' | translate}}</md-slide-toggle>
 
-          <!--网格位置-->
+          <!--grid区域是否包含坐标轴的刻度标签-->
           <label for="gridTop" class="grid-top">{{'setting.gridTop' | translate}}</label>
           <md-slider
             id="gridTop"
@@ -249,6 +249,21 @@
             [thumb-label]="true"
             [(ngModel)]="settings.gridBottom">
           </md-slider>
+
+          <!--网格边框线宽-->
+          <label for="gridBorderWidth" class="itemGap grid-border-width">{{'setting.gridBorderWidth' | translate}}</label>
+          <md-slider
+            id="gridBorderWidth"
+            [color]="'primary'"
+            [max]="'10'"
+            [min]="'0'"
+            [thumb-label]="true"
+            [(ngModel)]="settings.gridBorderWidth">
+          </md-slider>
+
+          <!--网格边框颜色-->
+          <md2-colorpicker class="grid-border-color-picker" placeholder="{{'setting.gridBorderColor' | translate}}"
+                           [(ngModel)]="settings.gridBorderColor"></md2-colorpicker>
 
           <md-card-actions>
             <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
