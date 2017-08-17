@@ -62,7 +62,7 @@
     "no-internal-module": true,
     "object-literal-sort-keys": false,
     "no-unused-variable": true,
-    "cyclomatic-complexity": true,
+    "cyclomatic-complexity": [true, 10],
     "one-line": [
       true,
       "check-open-brace",
