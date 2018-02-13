@@ -221,7 +221,7 @@ export class SettingsService {
       dataArray = data.split(' ');
 
       // 去除空格影响
-      for (let i = 0; i < dataArray.length; i++) {
+      for (let i = 0, len = dataArray.length; i < len; i++) {
         if (!dataArray[i]) {
           dataArray.splice(i, 1);
         }
@@ -232,7 +232,7 @@ export class SettingsService {
   }
 
   // 增加%
-  addPercent(data: number) {
+  addPercent(data: number): string {
     return data + '%';
   }
 }

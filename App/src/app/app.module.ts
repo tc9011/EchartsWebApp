@@ -40,6 +40,7 @@ import { TextStyleComponent } from './settings/text-style/text-style.component';
 import { ColorComponent } from './settings/color/color.component';
 import { BackgroundColorComponent } from './settings/background-color/background-color.component';
 import {HomeComponent} from "./home/home.component";
+import {CheckHomepageService} from "./shared/servers/check-homepage.service";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -93,7 +94,7 @@ export function createTranslateLoader(http: HttpClient) {
       }
     })
   ],
-  providers: [],
+  providers: [CheckHomepageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
