@@ -3,350 +3,348 @@
 </section>
 
 <section class="right-area">
-  <md-tab-group>
+  <mat-tab-group>
 
-    <md-tab label="{{'chart.data' | translate}}">
+    <mat-tab label="{{'chart.data' | translate}}">
       <!--数据输入区-->
       <section>
-        <button md-raised-button (click)="addItem()" class="add-item">{{"table.addItem" | translate}}</button>
-        <button md-raised-button #deleteBtn (click)="deleteItem()" class="delete-item">{{"table.deleteItem" |
+        <button mat-raised-button (click)="addItem()" class="add-item">{{"table.addItem" | translate}}</button>
+        <button mat-raised-button #deleteBtn (click)="deleteItem()" class="delete-item">{{"table.deleteItem" |
           translate}}
         </button>
-        <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
-        <!--<button md-raised-button (click)="clearData()" class="data-clear">{{"table.clear" | translate}}</button>-->
+        <button mat-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
 
         <section class="data-group" *ngFor="let item of dataGroup;index as i">
-          <md-card>
-            <md-input-container class="input-area">
-              <input mdInput placeholder="{{'table.title' | translate}}" [(ngModel)]="item.title">
-            </md-input-container>
-            <md-input-container class="input-area">
-              <textarea mdInput placeholder="{{'table.xData' | translate}}" [(ngModel)]="item.xData"></textarea>
-            </md-input-container>
-            <md-input-container class="input-area">
-              <textarea mdInput placeholder="{{'table.yData' | translate}}" [(ngModel)]="item.yData"></textarea>
-            </md-input-container>
-          </md-card>
+          <mat-card>
+            <mat-input-container class="input-area">
+              <input matInput placeholder="{{'table.title' | translate}}" [(ngModel)]="item.title">
+            </mat-input-container>
+            <mat-input-container class="input-area">
+              <textarea matInput placeholder="{{'table.xData' | translate}}" [(ngModel)]="item.xData"></textarea>
+            </mat-input-container>
+            <mat-input-container class="input-area">
+              <textarea matInput placeholder="{{'table.yData' | translate}}" [(ngModel)]="item.yData"></textarea>
+            </mat-input-container>
+          </mat-card>
         </section>
 
       </section>
-    </md-tab>
+    </mat-tab>
 
-    <md-tab label="{{'chart.setting' | translate}}">
+    <mat-tab label="{{'chart.setting' | translate}}">
       <!--配置区-->
       <section>
-        <!--<button md-raised-button class="settings-save" (click)="reloadEcharts()">{{"table.save" | translate}}</button>-->
 
-        <md-card>
+        <mat-card>
           <!--是否显示标题-->
-          <md-slide-toggle class="title-slide-toggle" [color]="'primary'" [checked]="settings.titleChecked" [(ngModel)]="settings.titleChecked">{{'setting.isTitle' | translate}}</md-slide-toggle>
+          <mat-slide-toggle class="title-slide-toggle" [color]="'primary'" [checked]="settings.titleChecked" [(ngModel)]="settings.titleChecked">{{'setting.isTitle' | translate}}</mat-slide-toggle>
           <!--标题内容-->
-          <md-input-container class="titles">
-            <input mdInput placeholder="{{'setting.title' | translate}}" [(ngModel)]="settings.title">
-          </md-input-container>
-          <md-input-container class="titles">
-            <input mdInput placeholder="{{'setting.subtitle' | translate}}" [(ngModel)]="settings.subtitle">
-          </md-input-container>
+          <mat-input-container class="titles">
+            <input matInput placeholder="{{'setting.title' | translate}}" [(ngModel)]="settings.title">
+          </mat-input-container>
+          <mat-input-container class="titles">
+            <input matInput placeholder="{{'setting.subtitle' | translate}}" [(ngModel)]="settings.subtitle">
+          </mat-input-container>
 
           <!--标题颜色-->
-          <md2-colorpicker class="title-color-picker" placeholder="{{'setting.titleColor' | translate}}"
-                           [(ngModel)]="settings.titleColor"></md2-colorpicker>
-          <md2-colorpicker class="subtitle-color-picker" placeholder="{{'setting.subtitleColor' | translate}}"
-                           [(ngModel)]="settings.subtitleColor"></md2-colorpicker>
+          <!--<md2-colorpicker class="title-color-picker" placeholder="{{'setting.titleColor' | translate}}"-->
+                           <!--[(ngModel)]="settings.titleColor"></md2-colorpicker>-->
+          <!--<md2-colorpicker class="subtitle-color-picker" placeholder="{{'setting.subtitleColor' | translate}}"-->
+                           <!--[(ngModel)]="settings.subtitleColor"></md2-colorpicker>-->
 
           <!--标题字体大小-->
-          <md-select class="title-font-size" [(ngModel)]="settings.titleFontSize"
+          <mat-select class="title-font-size" [(ngModel)]="settings.titleFontSize"
                      placeholder="{{'setting.titleFontSize' | translate}}">
-            <md-option *ngFor="let titleSize of titleSizes" [value]="titleSize">
+            <mat-option *ngFor="let titleSize of titleSizes" [value]="titleSize">
               {{ titleSize }}
-            </md-option>
-          </md-select>
+            </mat-option>
+          </mat-select>
 
-          <md-select class="subtitle-font-size" [(ngModel)]="settings.subtitleFontSize"
+          <mat-select class="subtitle-font-size" [(ngModel)]="settings.subtitleFontSize"
                      placeholder="{{'setting.subtitleFontSize' | translate}}">
-            <md-option *ngFor="let subtitleSize of subtitleSizes" [value]="subtitleSize">
+            <mat-option *ngFor="let subtitleSize of subtitleSizes" [value]="subtitleSize">
               {{ subtitleSize }}
-            </md-option>
-          </md-select>
+            </mat-option>
+          </mat-select>
 
           <!--主标题和副标题之间间隔-->
           <label for="itemGap" class="itemGap">{{'setting.itemGap' | translate}}</label>
-          <md-slider
+          <mat-slider
             id="itemGap"
             [color]="'primary'"
             [max]="'40'"
             [min]="'0'"
             [thumb-label]="true"
             [(ngModel)]="settings.itemGap">
-          </md-slider>
+          </mat-slider>
 
           <!--标题位置-->
           <label for="titleTop" class="title-top">{{'setting.titleTop' | translate}}</label>
-          <md-slider
+          <mat-slider
             id="titleTop"
             [color]="'primary'"
             [max]="'100'"
             [min]="'0'"
             [thumb-label]="true"
             [(ngModel)]="settings.titleTop">
-          </md-slider>
+          </mat-slider>
 
           <label for="titleLeft" class="title-left">{{'setting.titleLeft' | translate}}</label>
-          <md-slider
+          <mat-slider
             id="titleLeft"
             [color]="'primary'"
             [max]="'100'"
             [min]="'0'"
             [thumb-label]="true"
             [(ngModel)]="settings.titleLeft">
-          </md-slider>
+          </mat-slider>
 
           <!--边框线宽-->
           <label for="borderWidth" class="border-width">{{'setting.borderWidth' | translate}}</label>
-          <md-slider
+          <mat-slider
             id="borderWidth"
             [color]="'primary'"
             [max]="'10'"
             [min]="'0'"
             [thumb-label]="true"
             [(ngModel)]="settings.borderWidth">
-          </md-slider>
+          </mat-slider>
 
           <!--边框颜色-->
-          <md2-colorpicker class="border-color-picker" placeholder="{{'setting.borderColor' | translate}}"
-                           [(ngModel)]="settings.borderColor"></md2-colorpicker>
+          <!--<md2-colorpicker class="border-color-picker" placeholder="{{'setting.borderColor' | translate}}"-->
+                           <!--[(ngModel)]="settings.borderColor"></md2-colorpicker>-->
 
-          <md-card-actions>
-            <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
-          </md-card-actions>
-        </md-card>
+          <mat-card-actions>
+            <button mat-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
+          </mat-card-actions>
+        </mat-card>
 
-        <md-card>
+        <mat-card>
           <!--是否显示图例-->
-          <md-slide-toggle class="legend-slide-toggle" [color]="'primary'" [checked]="settings.legendChecked" [(ngModel)]="settings.legendChecked">{{'setting.isLegend' | translate}}</md-slide-toggle>
+          <mat-slide-toggle class="legend-slide-toggle" [color]="'primary'" [checked]="settings.legendChecked" [(ngModel)]="settings.legendChecked">{{'setting.isLegend' | translate}}</mat-slide-toggle>
 
           <!--图例选择的模式-->
-          <md-slide-toggle class="selectedMode-slide-toggle" [color]="'primary'" [checked]="settings.isSelectedMode" [(ngModel)]="settings.isSelectedMode">{{'setting.isSelectedMode' | translate}}</md-slide-toggle>
+          <mat-slide-toggle class="selectedMode-slide-toggle" [color]="'primary'" [checked]="settings.isSelectedMode" [(ngModel)]="settings.isSelectedMode">{{'setting.isSelectedMode' | translate}}</mat-slide-toggle>
 
           <!--图例字体大小-->
-          <md-select class="legend-font-size" [(ngModel)]="settings.legendFontSize"
+          <mat-select class="legend-font-size" [(ngModel)]="settings.legendFontSize"
                      placeholder="{{'setting.legendFontSize' | translate}}">
-            <md-option *ngFor="let titleSize of titleSizes" [value]="titleSize">
+            <mat-option *ngFor="let titleSize of titleSizes" [value]="titleSize">
               {{ titleSize }}
-            </md-option>
-          </md-select>
+            </mat-option>
+          </mat-select>
 
           <!--图例字体颜色-->
-          <md2-colorpicker class="legend-color-picker" placeholder="{{'setting.legendColor' | translate}}"
-                           [(ngModel)]="settings.legendColor"></md2-colorpicker>
+          <!--<md2-colorpicker class="legend-color-picker" placeholder="{{'setting.legendColor' | translate}}"-->
+                           <!--[(ngModel)]="settings.legendColor"></md2-colorpicker>-->
 
           <!--图例位置-->
           <label for="legendTop" class="legend-top">{{'setting.legendTop' | translate}}</label>
-          <md-slider
+          <mat-slider
             id="legendTop"
             [color]="'primary'"
             [max]="'100'"
             [min]="'0'"
             [thumb-label]="true"
             [(ngModel)]="settings.legendTop">
-          </md-slider>
+          </mat-slider>
 
           <label for="legendLeft" class="legend-left">{{'setting.legendLeft' | translate}}</label>
-          <md-slider
+          <mat-slider
             id="legendLeft"
             [color]="'primary'"
             [max]="'100'"
             [min]="'0'"
             [thumb-label]="true"
             [(ngModel)]="settings.legendLeft">
-          </md-slider>
+          </mat-slider>
 
           <!--图例朝向-->
-          <md-select class="legend-orient" [(ngModel)]="settings.legendOrient"
+          <mat-select class="legend-orient" [(ngModel)]="settings.legendOrient"
                      placeholder="{{'setting.legendOrient' | translate}}">
-            <md-option [value]="'vertical'">
+            <mat-option [value]="'vertical'">
               {{'setting.Vertical' | translate}}
-            </md-option>
-            <md-option [value]="'horizontal'">
+            </mat-option>
+            <mat-option [value]="'horizontal'">
               {{'setting.Horizontal' | translate}}
-            </md-option>
-          </md-select>
+            </mat-option>
+          </mat-select>
 
           <!--图例之间间隔-->
           <label for="legendItemGap" class="itemGap legendItemGap">{{'setting.legendItemGap' | translate}}</label>
-          <md-slider
+          <mat-slider
             id="legendItemGap"
             [color]="'primary'"
             [max]="'200'"
             [min]="'0'"
             [thumb-label]="true"
             [(ngModel)]="settings.legendItemGap">
-          </md-slider>
+          </mat-slider>
 
           <!--边框线宽-->
           <label for="legendBorderWidth" class="itemGap legend-border-width">{{'setting.legendBorderWidth' | translate}}</label>
-          <md-slider
+          <mat-slider
             id="legendBorderWidth"
             [color]="'primary'"
             [max]="'10'"
             [min]="'0'"
             [thumb-label]="true"
             [(ngModel)]="settings.legendBorderWidth">
-          </md-slider>
+          </mat-slider>
 
           <!--边框颜色-->
-          <md2-colorpicker class="legend-border-color-picker" placeholder="{{'setting.legendBorderColor' | translate}}"
-                           [(ngModel)]="settings.legendBorderColor"></md2-colorpicker>
+          <!--<md2-colorpicker class="legend-border-color-picker" placeholder="{{'setting.legendBorderColor' | translate}}"-->
+                           <!--[(ngModel)]="settings.legendBorderColor"></md2-colorpicker>-->
 
-          <md-card-actions>
-            <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
-          </md-card-actions>
-        </md-card>
+          <mat-card-actions>
+            <button mat-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
+          </mat-card-actions>
+        </mat-card>
 
-        <md-card>
+        <mat-card>
           <!--显示直角坐标系网格-->
-          <md-slide-toggle class="grid-slide-toggle" [color]="'primary'" [checked]="settings.gridChecked" [(ngModel)]="settings.gridChecked">{{'setting.isGrid' | translate}}</md-slide-toggle>
+          <mat-slide-toggle class="grid-slide-toggle" [color]="'primary'" [checked]="settings.gridChecked" [(ngModel)]="settings.gridChecked">{{'setting.isGrid' | translate}}</mat-slide-toggle>
           <!--网格-->
-          <md-slide-toggle class="contain-label-slide-toggle" [color]="'primary'" [checked]="settings.containLabel" [(ngModel)]="settings.containLabel">{{'setting.containLabel' | translate}}</md-slide-toggle>
+          <mat-slide-toggle class="contain-label-slide-toggle" [color]="'primary'" [checked]="settings.containLabel" [(ngModel)]="settings.containLabel">{{'setting.containLabel' | translate}}</mat-slide-toggle>
 
           <!--grid区域是否包含坐标轴的刻度标签-->
           <label for="gridTop" class="grid-top">{{'setting.gridTop' | translate}}</label>
-          <md-slider
+          <mat-slider
             id="gridTop"
             [color]="'primary'"
             [max]="'100'"
             [min]="'0'"
             [thumb-label]="true"
             [(ngModel)]="settings.gridTop">
-          </md-slider>
+          </mat-slider>
 
           <label for="gridLeft" class="grid-left">{{'setting.gridLeft' | translate}}</label>
-          <md-slider
+          <mat-slider
             id="gridLeft"
             [color]="'primary'"
             [max]="'100'"
             [min]="'0'"
             [thumb-label]="true"
             [(ngModel)]="settings.gridLeft">
-          </md-slider>
+          </mat-slider>
 
           <label for="gridRight" class="grid-right">{{'setting.gridRight' | translate}}</label>
-          <md-slider
+          <mat-slider
             id="gridRight"
             [color]="'primary'"
             [max]="'100'"
             [min]="'0'"
             [thumb-label]="true"
             [(ngModel)]="settings.gridRight">
-          </md-slider>
+          </mat-slider>
 
           <label for="gridBottom" class="grid-bottom">{{'setting.gridBottom' | translate}}</label>
-          <md-slider
+          <mat-slider
             id="gridBottom"
             [color]="'primary'"
             [max]="'100'"
             [min]="'0'"
             [thumb-label]="true"
             [(ngModel)]="settings.gridBottom">
-          </md-slider>
+          </mat-slider>
 
           <!--网格边框线宽-->
           <label for="gridBorderWidth" class="itemGap grid-border-width">{{'setting.gridBorderWidth' | translate}}</label>
-          <md-slider
+          <mat-slider
             id="gridBorderWidth"
             [color]="'primary'"
             [max]="'10'"
             [min]="'0'"
             [thumb-label]="true"
             [(ngModel)]="settings.gridBorderWidth">
-          </md-slider>
+          </mat-slider>
 
           <!--网格边框颜色-->
-          <md2-colorpicker class="grid-border-color-picker" placeholder="{{'setting.gridBorderColor' | translate}}"
-                           [(ngModel)]="settings.gridBorderColor"></md2-colorpicker>
+          <!--<md2-colorpicker class="grid-border-color-picker" placeholder="{{'setting.gridBorderColor' | translate}}"-->
+                           <!--[(ngModel)]="settings.gridBorderColor"></md2-colorpicker>-->
 
-          <md-card-actions>
-            <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
-          </md-card-actions>
-        </md-card>
+          <mat-card-actions>
+            <button mat-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
+          </mat-card-actions>
+        </mat-card>
 
-        <md-card>
+        <mat-card>
           <!--x轴位置-->
-          <md-select class="xAxis-position" [(ngModel)]="settings.xAxisPosition"
+          <mat-select class="xAxis-position" [(ngModel)]="settings.xAxisPosition"
                      placeholder="{{'setting.xAxisPosition' | translate}}">
-            <md-option [value]="'top'">
+            <mat-option [value]="'top'">
               {{'setting.xAxisTop' | translate}}
-            </md-option>
-            <md-option [value]="'bottom'">
+            </mat-option>
+            <mat-option [value]="'bottom'">
               {{'setting.xAxisBottom' | translate}}
-            </md-option>
-          </md-select>
+            </mat-option>
+          </mat-select>
           <!--x轴类型-->
-          <md-select class="xAxis-type" [(ngModel)]="settings.xAxisType"
+          <mat-select class="xAxis-type" [(ngModel)]="settings.xAxisType"
                      placeholder="{{'setting.xAxisType' | translate}}">
-            <md-option [value]="'value'">
+            <mat-option [value]="'value'">
               {{'setting.xAxisTypeValue' | translate}}
-            </md-option>
-            <md-option [value]="'category'">
+            </mat-option>
+            <mat-option [value]="'category'">
               {{'setting.xAxisTypeCategory' | translate}}
-            </md-option>
-            <md-option [value]="'time'">
+            </mat-option>
+            <mat-option [value]="'time'">
               {{'setting.xAxisTypeTime' | translate}}
-            </md-option>
-            <md-option [value]="'log'">
+            </mat-option>
+            <mat-option [value]="'log'">
               {{'setting.xAxisTypeLog' | translate}}
-            </md-option>
-          </md-select>
+            </mat-option>
+          </mat-select>
           <!--x轴名称-->
-          <md-input-container class="input-area xAxisName">
-            <input mdInput placeholder="{{'setting.xAxisName' | translate}}" [(ngModel)]="settings.xAxisName">
-          </md-input-container>
+          <mat-input-container class="input-area xAxisName">
+            <input matInput placeholder="{{'setting.xAxisName' | translate}}" [(ngModel)]="settings.xAxisName">
+          </mat-input-container>
           <!--x轴名称位置-->
-          <md-select class="xAxis-name-location" [(ngModel)]="settings.xAxisNameLocation"
+          <mat-select class="xAxis-name-location" [(ngModel)]="settings.xAxisNameLocation"
                      placeholder="{{'setting.xAxisNameLocation' | translate}}">
-            <md-option [value]="'start'">
+            <mat-option [value]="'start'">
               {{'setting.xAxisNameStart' | translate}}
-            </md-option>
-            <md-option [value]="'middle'">
+            </mat-option>
+            <mat-option [value]="'middle'">
               {{'setting.xAxisNameMiddle' | translate}}
-            </md-option>
-            <md-option [value]="'end'">
+            </mat-option>
+            <mat-option [value]="'end'">
               {{'setting.xAxisNameEnd' | translate}}
-            </md-option>
-          </md-select>
+            </mat-option>
+          </mat-select>
 
           <!--x轴字体大小-->
-          <md-select class="xAxis-font-size" [(ngModel)]="settings.xAxisFontSize"
+          <mat-select class="xAxis-font-size" [(ngModel)]="settings.xAxisFontSize"
                      placeholder="{{'setting.xAxisFontSize' | translate}}">
-            <md-option *ngFor="let titleSize of titleSizes" [value]="titleSize">
+            <mat-option *ngFor="let titleSize of titleSizes" [value]="titleSize">
               {{ titleSize }}
-            </md-option>
-          </md-select>
+            </mat-option>
+          </mat-select>
 
           <!--x轴字体颜色-->
-          <md2-colorpicker class="xAxis-color-picker" placeholder="{{'setting.xAxisColor' | translate}}"
-                           [(ngModel)]="settings.xAxisColor"></md2-colorpicker>
+          <!--<md2-colorpicker class="xAxis-color-picker" placeholder="{{'setting.xAxisColor' | translate}}"-->
+                           <!--[(ngModel)]="settings.xAxisColor"></md2-colorpicker>-->
 
           <!--x轴名称与轴线间距-->
           <label for="xAxisItemGap" class="itemGap xAxisItemGap">{{'setting.xAxisItemGap' | translate}}</label>
-          <md-slider
+          <mat-slider
             id="xAxisItemGap"
             [color]="'primary'"
             [max]="'50'"
             [min]="'0'"
             [thumb-label]="true"
             [(ngModel)]="settings.xAxisItemGap">
-          </md-slider>
+          </mat-slider>
 
-          <md-card-actions>
-            <button md-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
-          </md-card-actions>
-        </md-card>
+          <mat-card-actions>
+            <button mat-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
+          </mat-card-actions>
+        </mat-card>
 
       </section>
-    </md-tab>
+    </mat-tab>
 
-  </md-tab-group>
+  </mat-tab-group>
 </section>
 
 
