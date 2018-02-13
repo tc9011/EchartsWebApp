@@ -11,6 +11,6 @@ import {homeRoutes} from "./home.routes";
     SharedModule,
     RouterModule.forChild(homeRoutes)
   ],
-  declarations: [HomeComponent]
+  declarations: []
 })
 export class HomeModule { }

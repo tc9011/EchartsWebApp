@@ -2,8 +2,8 @@ import {AppComponent} from "./app.component";
 
 export const appRoutes = [
   {
-    path: 'home',
-    component: AppComponent
+    path: '',
+    loadChildren: './home/home.module#HomeModule',    // lazy load
   },
   {
     path: 'line',

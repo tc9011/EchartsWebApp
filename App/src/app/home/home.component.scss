@@ -1,190 +1,44 @@
 @import '../../assets/css/skins/indigo-pink.scss';
 
-$nav-size:70px;
-$first-fan-angle: 22.5deg;
-$second-fan-angle: 45deg;
-$button-basic-color: $basic-blue;
 
-@keyframes plus-animate {
-  0% {
-    transform-origin: 11px 11.5px;
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform-origin: 11px 11.5px;
-    transform: rotate(360deg);
-  }
-}
-
-li:hover{
-  cursor: pointer;
-}
-
-//第一圈
-@mixin first-fan ($num){
-  @for $i from 1 through $num {
-    .menuHolder li.s2:nth-of-type(#{$i+1}) > a {
-      background: rgb(221-$i*17,221-$i*17,221-$i*17);
-      transform: rotate($i*$first-fan-angle);
-    }
-  }
-}
-
-//第二圈
-@mixin second-fan ($num) {
-  @for $i from 1 through $num {
-    .menuHolder .a3 li:nth-of-type(#{$i+1}) > a {
-      background: rgb(153-$i*17,153-$i*17,153-$i*17);
-      transform: rotate($i*$second-fan-angle);
-    }
-  }
-}
-
-section {
-  position: absolute;
-  left: 0;
-  top: 0;
-  min-width: 100%;
-  min-height: 100vh;
-  background-color: $white;
-}
-
-.fa{
+.background{
   display: flex;
-  margin-top: 15px;
-  margin-left: 15px;
-  color: $white;
+  min-width: 100vw;
+  min-height: 100vh;
+  margin: 0 auto;
+  background: $basic-blue;
 }
 
-.menuHolder {
-  width: $nav-size;
-  height: $nav-size;
-  position: absolute;
-  z-index: 100;
+.card-area {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  .card {
+    width: 150px;
+    height: 140px;
+    margin-right: 20px;
+    background: $basic-pink;
+    border-radius: 40%;
+    color: white;
+    &:last-child{
+      margin-right: 0;
+    }
+    &:hover{
+      cursor: pointer;
+    }
+    &:focus{
+      outline: none;
+    }
+
+    .card-content{
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .iconfont {
+      font-size: 50px;
+    }
+  }
 }
-
-.menuHolder ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 0;
-}
-
-.menuHolder ul li {
-  border-radius: 0 0 3*$nav-size 0;
-  width: 0;
-  height: 0;
-}
-
-.menuHolder ul li a {
-  color: $black;
-  text-decoration: none;
-  font: bold 13px/30px arial, sans-serif;
-  text-align: center;
-  box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.4);
-  transform-origin: 0 0;
-}
-
-.menuHolder ul.p1 li {
-  position: absolute;
-  left: 0;
-  top: 0;
-}
-
-.menuHolder ul.p2, .menuHolder ul.p3 {
-  z-index: -1;
-}
-
-.menuHolder li.s1 > a {
-  position: absolute;
-  display: block;
-  width: $nav-size;
-  height: $nav-size;
-  background: $button-basic-color;
-  border-radius: 0 0 $nav-size 0;
-}
-
-.menuHolder li.s2 > a {
-  position: absolute;
-  display: block;
-  width: 2*$nav-size;
-  padding-left: $nav-size;
-  height: 2*$nav-size;
-  background: #ddd;
-  border-radius: 0 0 2*$nav-size 0;
-}
-
-.menuHolder ul.p3 li a {
-  position: absolute;
-  display: block;
-  width: 3*$nav-size;
-  padding-left: (2*$nav-size)-20;
-  padding-top: 50px;
-  height: 3*$nav-size;
-  background: #999;
-  border-radius: 0 0 3*$nav-size 0;
-}
-
-.menuHolder ul ul {
-  transform-origin: 0 0;
-  transform: rotate(90deg);
-  transition: 1s;
-}
-
-@include first-fan(4);
-@include second-fan(2);
-
-
-.menuHolder li.s1:hover ul.p2, .menuHolder li.s2:hover ul.p3{
-  transform: rotate(0deg);
-}
-
-.menuHolder li.s1:hover i{
-  animation: plus-animate 2s linear infinite;
-}
-
-.menuHolder li.s2:hover ul.p3 span{
-  transform: rotate($first-fan-angle);
-}
-
-.menuHolder ul li:hover > a {
-  background: $button-basic-color;
-  color: $white;
-}
-
-.menuHolder ul li.s2:hover > a {
-  background: rgb(red($button-basic-color)+17,green($button-basic-color)+17,blue($button-basic-color)+17);
-  color: $white;
-}
-
-.menuHolder .a3 li:hover > a {
-  background: rgb(red($button-basic-color)+34,green($button-basic-color)+34,blue($button-basic-color)+34);
-  color: $white;
-}
-
-.menuWindow {
-  width: $nav-size+10px;
-  height: 110px;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 100;
-  transition: 0s 1s;
-}
-
-.menuHolder:hover .menuWindow {
-  width: $nav-size+10px;
-  height: $nav-size+10px;
-  transition: 0s 0s;
-}
-
-.menuHolder span {
-  display: block;
-  transform: rotate(5deg);
-}
-

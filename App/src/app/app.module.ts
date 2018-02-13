@@ -39,6 +39,7 @@ import { SeriesComponent } from './settings/series/series.component';
 import { TextStyleComponent } from './settings/text-style/text-style.component';
 import { ColorComponent } from './settings/color/color.component';
 import { BackgroundColorComponent } from './settings/background-color/background-color.component';
+import {HomeComponent} from "./home/home.component";
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -46,6 +47,7 @@ export function createTranslateLoader(http: HttpClient) {
 
 @NgModule({
   declarations: [
+    HomeComponent,
     AppComponent,
     TitleComponent,
     LegendComponent,
