@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
@@ -80,12 +79,10 @@ export function createTranslateLoader(http: HttpClient) {
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
     BrowserAnimationsModule,
     SharedModule,
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
-    HttpModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
