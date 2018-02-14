@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
+import {PreloadAllModules, RouterModule} from '@angular/router';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
@@ -84,7 +84,9 @@ export function createTranslateLoader(http: HttpClient) {
     FormsModule,
     BrowserAnimationsModule,
     SharedModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes,  {
+      preloadingStrategy: PreloadAllModules
+    }),
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {

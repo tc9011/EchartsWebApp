@@ -1,4 +1,4 @@
-import {AfterViewChecked, Component, OnInit} from '@angular/core';
+import {Component, DoCheck, OnInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
 import {CheckHomepageService} from "./shared/servers/check-homepage.service";
 
@@ -7,7 +7,7 @@ import {CheckHomepageService} from "./shared/servers/check-homepage.service";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit, AfterViewChecked{
+export class AppComponent implements OnInit, DoCheck{
   constructor (public translate: TranslateService, public checkHomepageService: CheckHomepageService) {
     translate.addLangs(['zh'/*, 'en'*/]);
     translate.setDefaultLang('zh');
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit, AfterViewChecked{
 
   }
 
-  ngAfterViewChecked() {
+  ngDoCheck() {
     this.checkHomepageService.checkHomePage();
   }
 }
