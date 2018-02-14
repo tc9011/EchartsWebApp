@@ -19,14 +19,17 @@ import {animate, state, style, transition, trigger} from "@angular/animations";
   ]
 })
 export class HomeComponent implements OnInit {
-  cardState: string = 'inactive';
+  cardState = {
+    line: 'inactive',
+    bar: 'inactive'
+  };
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  toggleState() {
-    this.cardState = this.cardState === 'active' ? 'inactive' : 'active';
+  toggleState(whichCard: string) {
+    this.cardState[whichCard] = this.cardState[whichCard] === 'active' ? 'inactive' : 'active';
   }
 }
