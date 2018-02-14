@@ -7,8 +7,8 @@ import {CheckHomepageService} from "./shared/servers/check-homepage.service";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit, DoCheck{
-  constructor (public translate: TranslateService, public checkHomepageService: CheckHomepageService) {
+export class AppComponent implements OnInit, DoCheck {
+  constructor(public translate: TranslateService, public checkHomepageService: CheckHomepageService) {
     translate.addLangs(['zh'/*, 'en'*/]);
     translate.setDefaultLang('zh');
     translate.use('zh');

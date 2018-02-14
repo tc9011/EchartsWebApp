@@ -20,13 +20,14 @@
     background: $basic-pink;
     border-radius: 40%;
     color: white;
+    outline: none;
     &:last-child{
       margin-right: 0;
     }
     &:hover{
       cursor: pointer;
     }
-    &:focus{
+    .card-content:focus{
       outline: none;
     }
 

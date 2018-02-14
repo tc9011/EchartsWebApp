@@ -1,13 +1,13 @@
 <div class="background">
   <section class="card-area">
-    <mat-card class="card" routerLink="/line">
+    <mat-card class="card" routerLink="/line" [@cardState]="cardState" (mouseenter)="toggleState()" (mouseleave)="toggleState()">
       <mat-card-content class="card-content">
         <i class="iconfont icon-zhexiantu1"></i>
         <p>折线图</p>
       </mat-card-content>
     </mat-card>
     <mat-card class="card">
-      <mat-card-content class="card-content">
+      <mat-card-content class="card-content" routerLink="/bar" [@cardState]="cardState" (mouseenter)="toggleState()" (mouseleave)="toggleState()">
         <i class="iconfont icon-zhuzhuangtu"></i>
         <p>折线图</p>
       </mat-card-content>
