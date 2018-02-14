@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {SettingsService} from '../shared/servers/settings.service';
+import {CheckHomepageService} from "../shared/servers/check-homepage.service";
 
 @Component({
   selector: 'app-bar-charts',
@@ -154,9 +155,12 @@ export class BarChartsComponent implements OnInit {
     ]
   };
 
-  constructor() { }
+  constructor(public checkHomepageService: CheckHomepageService) {
+    this.checkHomepageService.checkHomePage();
+  }
 
   ngOnInit() {
+
   }
 
   onSettingsChange(settings: any) {

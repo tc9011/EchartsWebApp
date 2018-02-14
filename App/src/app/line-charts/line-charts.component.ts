@@ -1,6 +1,7 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {SettingsService} from '../shared/servers/settings.service';
 import {TranslateService} from '@ngx-translate/core';
+import {CheckHomepageService} from "../shared/servers/check-homepage.service";
 
 @Component({
   selector: 'app-line-charts',
@@ -18,7 +19,8 @@ export class LineChartsComponent implements OnInit {
   titleSizes: Array<number>;
   subtitleSizes: Array<number>;
 
-  constructor(private settingsService: SettingsService, public translate: TranslateService) {
+  constructor(private settingsService: SettingsService, public translate: TranslateService, public checkHomepageService: CheckHomepageService) {
+    this.checkHomepageService.checkHomePage();
     this.dataGroup = [{
       title: '邮件营销',
       xData: '周一,周二,周三,周四,周五,周六,周日',

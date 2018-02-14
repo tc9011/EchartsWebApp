@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
-import {ActivatedRoute, Router} from "@angular/router";
+import {Location} from '@angular/common';
 
 @Injectable()
 export class CheckHomepageService {
   public isHomepage: boolean;
 
-  constructor(private router: Router, private route: ActivatedRoute) {
-    const url = route.url;
+  constructor(public Location: Location) {
+
+  }
+
+  public checkHomePage() {
+    this.isHomepage = this.Location.path() === ''
   }
 
 }

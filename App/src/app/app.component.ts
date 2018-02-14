@@ -12,8 +12,10 @@ export class AppComponent implements OnInit{
     translate.addLangs(['zh'/*, 'en'*/]);
     translate.setDefaultLang('zh');
     translate.use('zh');
+    this.checkHomepageService.checkHomePage();
   }
 
   ngOnInit() {
+
   }
 }
