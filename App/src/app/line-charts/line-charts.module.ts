@@ -5,12 +5,14 @@ import { RouterModule } from '@angular/router';
 import { LineChartsComponent } from './line-charts.component';
 import { lineChartsRoutes } from './line-charts.routes';
 import {SharedModule} from '../shared/shared.module';
+import {SettingsModule} from "../settings/settings.module";
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule.forChild(lineChartsRoutes),
-    SharedModule
+    SharedModule,
+    SettingsModule
   ],
   declarations: [LineChartsComponent]
 })

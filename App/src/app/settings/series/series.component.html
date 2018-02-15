@@ -1,3 +1,23 @@
-<p>
-  series works!
-</p>
+<!--数据输入区-->
+<section>
+  <button mat-raised-button (click)="addItem()" class="add-item">{{"table.addItem" | translate}}</button>
+  <button mat-raised-button #deleteBtn (click)="deleteItem()" class="delete-item">{{"table.deleteItem" |
+    translate}}
+  </button>
+  <button mat-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
+
+  <section class="data-group" *ngFor="let item of dataGroup;index as i">
+    <mat-card>
+      <mat-input-container class="input-area">
+        <input matInput placeholder="{{'table.title' | translate}}" [(ngModel)]="item.title">
+      </mat-input-container>
+      <mat-input-container class="input-area">
+        <textarea matInput placeholder="{{'table.xData' | translate}}" [(ngModel)]="item.xData"></textarea>
+      </mat-input-container>
+      <mat-input-container class="input-area">
+        <textarea matInput placeholder="{{'table.yData' | translate}}" [(ngModel)]="item.yData"></textarea>
+      </mat-input-container>
+    </mat-card>
+  </section>
+
+</section>
