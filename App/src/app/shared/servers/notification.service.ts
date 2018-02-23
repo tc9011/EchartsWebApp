@@ -5,20 +5,35 @@ import {Observable} from "rxjs/Observable";
 
 @Injectable()
 export class NotificationService {
-  private subject = new Subject<any>();
+  private notificationSource: Subject<any>;
+  private notification: Observable<any>;
 
-  constructor() { }
+  constructor() {
+    this.initNotification();
+  }
+
+  /**
+   * 初始化主题和观察者
+   */
+  public initNotification(): void {
+    if (!this.notificationSource) {
+      this.notificationSource = new Subject();
+      this.notification = this.notificationSource.asObservable();
+    }
+  }
 
   public publish(message: NotificationTypings) {
-    this.subject.next(message);
+    if (typeof this.notificationSource !== 'undefined') {
+      this.notificationSource.next(message);
+    }
   }
 
   public clearMessage() {
-    this.subject.next();
+    this.notificationSource.next();
   }
 
   public getData(): Observable<any> {
-    return this.subject.asObservable();
+    return this.notification;
   }
 }
 
