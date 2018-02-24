@@ -219,9 +219,10 @@ export class SettingsService {
     if ( data ) {
       data = String(data).replace(/\s|\,|\，/g, ' ');
       dataArray = data.split(' ');
+      const len = dataArray.length;
 
       // 去除空格影响
-      for (let i = 0, len = dataArray.length; i < len; i++) {
+      for (let i = 0; i < len; i++) {
         if (!dataArray[i]) {
           dataArray.splice(i, 1);
         }

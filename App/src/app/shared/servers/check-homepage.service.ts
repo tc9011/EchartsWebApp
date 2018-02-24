@@ -10,7 +10,7 @@ export class CheckHomepageService {
   }
 
   public checkHomePage() {
-    this.isHomepage = this.Location.path() === ''
+    this.isHomepage = this.Location.path() === '';
   }
 
 }
