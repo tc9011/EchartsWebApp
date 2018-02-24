@@ -21,7 +21,15 @@ export class SeriesComponent implements OnInit {
     this.deleteBtn.disabled = true;
   }
 
-  // 增加一块输入区域
+  saveData() {
+
+  }
+
+  /*
+    *
+    * 新增输入区域
+    * ***********************************************
+    * */
   addItem() {
     const _tempObject = {
       title: '',
@@ -36,7 +44,11 @@ export class SeriesComponent implements OnInit {
     }
   }
 
-  // 删除一块输入区域
+  /*
+    *
+    * 删除一块输入区域
+    * ***********************************************
+    * */
   deleteItem() {
     // 删除配置中相应的数据
     this.dataGroup.pop();

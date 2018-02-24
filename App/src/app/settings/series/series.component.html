@@ -4,7 +4,7 @@
   <button mat-raised-button #deleteBtn (click)="deleteItem()" class="delete-item">{{"table.deleteItem" |
     translate}}
   </button>
-  <button mat-raised-button (click)="reloadEcharts()" class="table-save">{{"table.save" | translate}}</button>
+  <button mat-raised-button (click)="saveData()" class="table-save">{{"table.save" | translate}}</button>
 
   <section class="data-group" *ngFor="let item of dataGroup;index as i">
     <mat-card>
