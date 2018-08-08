@@ -1,17 +1,10 @@
 {
   "name": "server",
   "version": "0.0.1",
-  "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "cover:local": "nyc mocha;open coverage/lcov-report/index.html",
-    "cover:hook": "nyc mocha;cat ./coverage/lcov.info | coveralls",
     "lint": "tslint -c tslint.json -p tsconfig.json",
-    "start": "export NODE_ENV=development; ts-node app.ts",
-    "build": "npm run lint && tsc",
-    "ci": "npm run test && npm run lint",
-    "clean": "npm run clean:build",
-    "clean:build": "rm -rf dist"
+    "start": "export NODE_ENV=development; ts-node src/app.ts",
+    "build": "npm run lint && tsc"
   },
   "dependencies": {
     "koa": "^2.5.2",
