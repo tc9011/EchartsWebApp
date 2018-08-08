@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "cover:local": "nyc mocha;open coverage/lcov-report/index.html",
+    "cover:hook": "nyc mocha;cat ./coverage/lcov.info | coveralls",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "start": "export NODE_ENV=development; ts-node app.ts",
+    "build": "npm run lint && tsc",
+    "ci": "npm run test && npm run lint",
+    "clean": "npm run clean:build",
+    "clean:build": "rm -rf dist"
+  },
+  "dependencies": {
+    "koa": "^2.5.2",
+    "koa-custom-response": "^0.3.0",
+    "ts-node": "^7.0.0",
+    "typescript": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/koa": "^2.0.46",
+    "codelyzer": "^4.4.3",
+    "tslint": "^5.11.0"
+  }
+}
