@@ -4,7 +4,8 @@
   "scripts": {
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "start": "export NODE_ENV=development; ts-node src/app.ts",
-    "build": "npm run lint && tsc"
+    "build": "npm run lint && tsc",
+    "webpack": "webpack --config webpack.config.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
@@ -13,8 +14,7 @@
     "koa-custom-response": "^0.3.0",
     "koa-router": "^7.4.0",
     "puppeteer": "^1.6.2",
-    "ts-node": "^7.0.0",
-    "typescript": "^3.0.1"
+    "ts-node": "^7.0.0"
   },
   "devDependencies": {
     "@types/cheerio": "^0.22.8",
@@ -25,7 +25,9 @@
     "@types/puppeteer": "^1.6.0",
     "@types/webpack": "^4.4.9",
     "codelyzer": "^4.4.3",
+    "ts-loader": "^4.4.2",
     "tslint": "^5.11.0",
+    "typescript": "^3.0.1",
     "webpack": "^4.16.5",
     "webpack-cli": "^3.1.0"
   }
