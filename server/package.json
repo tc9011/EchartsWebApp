@@ -7,6 +7,7 @@
     "build": "npm run lint && tsc"
   },
   "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
     "koa": "^2.5.2",
     "koa-bodyparser": "^4.2.1",
     "koa-custom-response": "^0.3.0",
@@ -15,6 +16,7 @@
     "typescript": "^3.0.1"
   },
   "devDependencies": {
+    "@types/cheerio": "^0.22.8",
     "@types/koa": "^2.0.46",
     "@types/koa-bodyparser": "^5.0.1",
     "@types/koa-router": "^7.0.31",
