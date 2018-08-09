@@ -2,31 +2,15 @@
   "name": "server",
   "version": "0.0.1",
   "scripts": {
-    "lint": "tslint -c tslint.json -p tsconfig.json",
-    "start": "export NODE_ENV=development; ts-node src/app.ts",
-    "build": "npm run lint && tsc",
-    "webpack": "webpack --config webpack.config.js"
+    "start": "node src/app.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "koa": "^2.5.2",
     "koa-bodyparser": "^4.2.1",
-    "koa-custom-response": "^0.3.0",
-    "koa-router": "^7.4.0",
-    "ts-node": "^7.0.0"
+    "koa-http-request": "^2.2.1",
+    "koa-json": "^2.0.2",
+    "koa-router": "^7.4.0"
   },
-  "devDependencies": {
-    "@types/cheerio": "^0.22.8",
-    "@types/koa": "^2.0.46",
-    "@types/koa-bodyparser": "^5.0.1",
-    "@types/koa-router": "^7.0.31",
-    "@types/node": "^10.5.7",
-    "@types/webpack": "^4.4.9",
-    "codelyzer": "^4.4.3",
-    "ts-loader": "^4.4.2",
-    "tslint": "^5.11.0",
-    "typescript": "^3.0.1",
-    "webpack": "^4.16.5",
-    "webpack-cli": "^3.1.0"
-  }
+  "devDependencies": {}
 }
