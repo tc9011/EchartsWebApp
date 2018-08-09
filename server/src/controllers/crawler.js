@@ -10,5 +10,3 @@ class Crawler {
 }
 
 export { Crawler };
-
-https://github.com/maochunguang/koa-spider/blob/master/app.js
