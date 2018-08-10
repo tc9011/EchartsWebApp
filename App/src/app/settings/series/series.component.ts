@@ -1,15 +1,17 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NotificationService } from '../../shared/servers/notification/notification.service';
 
 @Component({
   selector: 'app-series',
   templateUrl: './series.component.html',
-  styleUrls: ['./series.component.scss']
+  styleUrls: ['./series.component.scss'],
+  providers: [NotificationService]
 })
 export class SeriesComponent implements OnInit {
   @ViewChild('deleteBtn') deleteBtn: any;
   dataGroup: Array<any>;
 
-  constructor() {
+  constructor(private notificationService: NotificationService) {
     this.dataGroup = [{
       title: '邮件营销',
       xData: '周一,周二,周三,周四,周五,周六,周日',
@@ -59,5 +61,12 @@ export class SeriesComponent implements OnInit {
     if (this.dataGroup.length === 1) {
       this.deleteBtn.disabled = true;
     }
+  }
+
+  saveData() {
+    this.notificationService.publish({
+      id: 'series',
+      message: this.dataGroup
+    })
   }
 }

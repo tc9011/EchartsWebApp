@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SettingsService } from '../shared/servers/settings/settings.service';
 import { TranslateService } from '@ngx-translate/core';
+import { NotificationService } from '../shared/servers/notification/notification.service';
 
 @Component({
   selector: 'app-line-charts',
@@ -9,6 +10,7 @@ import { TranslateService } from '@ngx-translate/core';
   providers: [SettingsService]
 })
 export class LineChartsComponent implements OnInit {
+  dataGroup: Array<any>;
   echartsIntance: any;
   chartOption: any;
   settings: any;
@@ -16,8 +18,12 @@ export class LineChartsComponent implements OnInit {
   titleSizes: Array<number>;
   subtitleSizes: Array<number>;
 
-  constructor(private settingsService: SettingsService, public translate: TranslateService) {
-
+  constructor(private settingsService: SettingsService, public translate: TranslateService, private notificationService: NotificationService) {
+    this.dataGroup = [{
+      title: '邮件营销',
+      xData: '周一,周二,周三,周四,周五,周六,周日',
+      yData: '120, 132, 101, 134, 90, 230, 210'
+    }];
     this.settings = {
       'titleChecked': true,
       'title': '折线图',
@@ -65,6 +71,15 @@ export class LineChartsComponent implements OnInit {
       8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
       28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40
     ];
+    this.notificationService.getData().subscribe(
+      value => {
+        switch (value.id) {
+          case 'series':
+            this.dataGroup = value.message;
+        }
+        this.reloadEcharts();
+      }
+    )
   }
 
   // 重新加载echarts
@@ -76,7 +91,7 @@ export class LineChartsComponent implements OnInit {
   }
 
   setChartOption() {
-    // this.chartOption = this.settingsService.setChartOption(this.settings, this.dataGroup);
+    this.chartOption = this.settingsService.setChartOption(this.settings, this.dataGroup);
   }
 
   onChartInit(ec) {
