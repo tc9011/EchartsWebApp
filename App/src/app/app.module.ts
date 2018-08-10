@@ -12,8 +12,8 @@ import { AppComponent } from './app.component';
 import {SharedModule} from './shared/shared.module';
 import {appRoutes} from './app.routes';
 import {HomeComponent} from './home/home.component';
-import {CheckHomepageService} from './shared/servers/check-homepage.service';
-import {NotificationService} from './shared/servers/notification.service';
+import {CheckHomepageService} from './shared/servers/check-homepage/check-homepage.service';
+import {NotificationService} from './shared/servers/notification/notification.service';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');

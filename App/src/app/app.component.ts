@@ -1,6 +1,6 @@
 import {Component, DoCheck, OnInit} from '@angular/core';
 import {TranslateService} from '@ngx-translate/core';
-import {CheckHomepageService} from './shared/servers/check-homepage.service';
+import {CheckHomepageService} from './shared/servers/check-homepage/check-homepage.service';
 
 @Component({
   selector: 'app-root',

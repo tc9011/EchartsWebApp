@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {SettingsService} from '../shared/servers/settings.service';
+import {SettingsService} from '../shared/servers/settings/settings.service';
 import {TranslateService} from '@ngx-translate/core';
 
 @Component({
