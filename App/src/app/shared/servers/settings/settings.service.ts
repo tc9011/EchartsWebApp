@@ -30,7 +30,7 @@ export class SettingsService {
         borderColor: '#ccc',
         borderWidth: 0
       },
-      tooltip : {
+      tooltip: {
         trigger: 'axis'
       },
       toolbox: {
@@ -75,14 +75,14 @@ export class SettingsService {
         borderColor: '#ccc',
         borderWidth: 1
       },
-      xAxis : [
+      xAxis: [
         {
           name: '',
           nameLocation: '',
-          type : 'category',
+          type: 'category',
           position: 'bottom',
-          boundaryGap : false,
-          data : ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+          boundaryGap: false,
+          data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
           nameTextStyle: {
             color: '',
             fontSize: 12
@@ -90,12 +90,12 @@ export class SettingsService {
           nameGap: 15
         }
       ],
-      yAxis : [
+      yAxis: [
         {
-          type : 'value',
+          type: 'value',
         }
       ],
-      series : []
+      series: []
     };
   }
 
@@ -175,7 +175,7 @@ export class SettingsService {
   // 设置xy轴数据
   setXYData(dataGroup) {
     const dataLength = dataGroup.length,
-        seriesLength = this.option.series.length;
+      seriesLength = this.option.series.length;
 
     if (dataLength < seriesLength) {                     // 删除数据
       for (let m = 0; m < seriesLength - dataLength; m++) {
@@ -216,7 +216,7 @@ export class SettingsService {
   splitData(data: any) {
     let dataArray = [];
 
-    if ( data ) {
+    if (data) {
       data = String(data).replace(/\s|\,|\，/g, ' ');
       dataArray = data.split(' ');
       const len = dataArray.length;

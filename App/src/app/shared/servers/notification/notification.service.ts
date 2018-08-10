@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {Subject} from 'rxjs';
-import {NotificationTypings} from '../../typings/notification.typings';
-import {Observable} from 'rxjs';
+import { Subject } from 'rxjs';
+import { NotificationTypings } from '../../typings/notification.typings';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class NotificationService {

@@ -4,8 +4,8 @@ import { RouterModule } from '@angular/router';
 
 import { LineChartsComponent } from './line-charts.component';
 import { lineChartsRoutes } from './line-charts.routes';
-import {SharedModule} from '../shared/shared.module';
-import {SettingsModule} from '../settings/settings.module';
+import { SharedModule } from '../shared/shared.module';
+import { SettingsModule } from '../settings/settings.module';
 
 @NgModule({
   imports: [
@@ -16,4 +16,5 @@ import {SettingsModule} from '../settings/settings.module';
   ],
   declarations: [LineChartsComponent]
 })
-export class LineChartsModule { }
+export class LineChartsModule {
+}

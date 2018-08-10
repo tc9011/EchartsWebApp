@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {SettingsService} from '../shared/servers/settings/settings.service';
-import {TranslateService} from '@ngx-translate/core';
+import { Component, OnInit } from '@angular/core';
+import { SettingsService } from '../shared/servers/settings/settings.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-line-charts',
@@ -62,7 +62,7 @@ export class LineChartsComponent implements OnInit {
 
   ngOnInit() {
     this.titleSizes = this.subtitleSizes = [
-      8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 , 21, 22, 23, 24, 25, 26, 27,
+      8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27,
       28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40
     ];
   }
@@ -82,7 +82,6 @@ export class LineChartsComponent implements OnInit {
   onChartInit(ec) {
     this.echartsIntance = ec;
   }
-
 
 
   /*clearData(){

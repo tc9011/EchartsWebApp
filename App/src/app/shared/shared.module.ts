@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import {HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
-import {TranslateModule} from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 // import { Md2Module } from 'md2';
 
@@ -39,13 +39,13 @@ import {
   MatTooltipModule,
 } from '@angular/material';
 
-import { NgxEchartsModule  } from 'ngx-echarts';
+import { NgxEchartsModule } from 'ngx-echarts';
 import 'hammerjs';
 
 const sharedModule = [
   FormsModule,
   ReactiveFormsModule,
-  NgxEchartsModule ,
+  NgxEchartsModule,
   HttpClientModule,
   TranslateModule,
 
@@ -89,4 +89,5 @@ const sharedModule = [
   declarations: [],
   exports: sharedModule
 })
-export class SharedModule {}
+export class SharedModule {
+}

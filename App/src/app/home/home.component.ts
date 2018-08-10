@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {animate, state, style, transition, trigger} from '@angular/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-home',
@@ -10,7 +10,7 @@ import {animate, state, style, transition, trigger} from '@angular/animations';
       state('inactive', style({
         transform: 'scale(1)'
       })),
-      state('active',   style({
+      state('active', style({
         transform: 'scale(1.1)'
       })),
       transition('inactive => active', animate('100ms ease-in')),
@@ -24,7 +24,8 @@ export class HomeComponent implements OnInit {
     bar: 'inactive'
   };
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { BarChartsComponent } from './bar-charts.component';
 import { barChartsRoutes } from './bar-charts.routes';
-import {SharedModule} from '../shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   imports: [
@@ -14,4 +14,5 @@ import {SharedModule} from '../shared/shared.module';
   ],
   declarations: [BarChartsComponent]
 })
-export class BarChartsModule { }
+export class BarChartsModule {
+}

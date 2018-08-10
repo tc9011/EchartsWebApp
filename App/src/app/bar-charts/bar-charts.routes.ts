@@ -1,4 +1,4 @@
-import {BarChartsComponent} from './bar-charts.component';
+import { BarChartsComponent } from './bar-charts.component';
 
 export const barChartsRoutes = [
   {

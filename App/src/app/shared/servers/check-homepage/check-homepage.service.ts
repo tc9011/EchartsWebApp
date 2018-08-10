@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {Location} from '@angular/common';
+import { Location } from '@angular/common';
 
 @Injectable()
 export class CheckHomepageService {

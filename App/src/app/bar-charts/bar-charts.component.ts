@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {SettingsService} from '../shared/servers/settings/settings.service';
+import { SettingsService } from '../shared/servers/settings/settings.service';
 
 @Component({
   selector: 'app-bar-charts',
