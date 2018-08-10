@@ -23,10 +23,6 @@ export class SeriesComponent implements OnInit {
     this.deleteBtn.disabled = true;
   }
 
-  saveData() {
-
-  }
-
   /*
     *
     * 新增输入区域
