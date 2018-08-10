@@ -14,6 +14,9 @@
   flex-wrap: wrap;
   margin: auto;
   .card {
+    display: flex;
+    justify-self: center;
+    align-items: center;
     width: 150px;
     height: 140px;
     margin-right: 20px;
@@ -29,10 +32,8 @@
     }
 
     .card-content{
-      display: flex;
-      flex-wrap: nowrap;
-      flex-direction: column;
-      align-items: center;
+      width: 100%;
+      text-align: center;
     }
 
     .iconfont {
