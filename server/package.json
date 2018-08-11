@@ -5,14 +5,7 @@
     "start": "node src/app.js"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "koa": "^2.5.2",
-    "koa-bodyparser": "^4.2.1",
-    "koa-http-request": "^2.2.1",
-    "koa-json": "^2.0.2",
-    "koa-router": "^7.4.0",
-    "request": "^2.87.0",
-    "request-promise": "^4.2.2"
+    "puppeteer": "^1.7.0"
   },
   "devDependencies": {}
 }
