@@ -88,7 +88,7 @@ const sharedModule = [
 @NgModule({
   imports: sharedModule,
   declarations: [SidebarComponent],
-  exports: sharedModule
+  exports: [sharedModule, SidebarComponent]
 })
 export class SharedModule {
 }
