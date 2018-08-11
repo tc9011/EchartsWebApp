@@ -28,6 +28,7 @@ let txtData = '';
 
   console.log(parents);
 
+  // get children option data
   for (result of parents) {
     const option = {
       [result]: [],
@@ -53,6 +54,7 @@ let txtData = '';
   }
   console.log('finish crawling the children option data.');
 
+  // prepare for writing file
   for (let i = 0; i < parents.length; i++) {
     const parentOption = parents[i];
     txtData += 'export interface ' + parentOption + 'Typings {\n';
@@ -63,8 +65,8 @@ let txtData = '';
     txtData += '}\n\n';
   }
 
+  // write file
   console.log('begin to write file.');
-
   fs.writeFile('./src/results/result.ts', txtData, err => {
     console.log(err ? err : 'done');
   });
