@@ -9,7 +9,7 @@ let options = [];
   const page = await browser.newPage();
   await page.goto(configs.url + '#' + configs.path);
 
-  await page.waitFor(5000);
+  await page.waitFor(2000);
   const results = await page.evaluate(() => {
     let parentOptions = [];
     const list = document.querySelectorAll('.dtui-treelist-parent .ecdoc-api-tree-text-prop');
@@ -50,7 +50,7 @@ let options = [];
     console.log(options);
   }
 
-  fs.writeFile('./src/results/result.ts', options, err => {
+  fs.writeFile('./src/results/result.ts', JSON.stringify(options, null, 2), err => {
     console.log(err ? err : 'done');
   });
 
