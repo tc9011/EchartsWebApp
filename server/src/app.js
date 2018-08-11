@@ -1,20 +1,23 @@
 const puppeteer = require('puppeteer');
+const fs = require('fs');
+const configs = require('./config/config');
 
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto('https://example.com');
+  await page.goto(configs.url);
 
-  // Get the "viewport" of the page, as reported by the page.
-  const dimensions = await page.evaluate(() => {
-    return {
-      width: document.documentElement.clientWidth,
-      height: document.documentElement.clientHeight,
-      deviceScaleFactor: window.devicePixelRatio
-    };
+  await page.waitFor(10000);
+  const result = await page.evaluate(() => {
+    let parentOptions = [];
+    const list = document.querySelectorAll('.dtui-treelist-parent .ecdoc-api-tree-text-prop');
+    list.forEach((value, index, listObj) => {
+      parentOptions.push(value.innerText);
+    });
+    return parentOptions;
   });
 
-  console.log('Dimensions:', dimensions);
+  console.log(result);
 
   await browser.close();
 })();
