@@ -43,7 +43,7 @@ async function main() {
       names.forEach((value, index) => {
         let type = types[index].innerText;
         if (types[index].innerText.includes(',')) {
-          type = type.replace(/,/, ' |');
+          type = type.replace(/,/g, ' |');
         }
         const subObj = {
           name: value.innerText,

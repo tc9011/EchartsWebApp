@@ -111,7 +111,7 @@ export interface xAxisTypings {
   nameRotate: number;
   inverse: boolean;
   boundaryGap: boolean | Array;
-  min: number | string, function;
+  min: number | string | function;
   max: number | string;
   scale: boolean;
   splitNumber: number;
@@ -146,7 +146,7 @@ export interface yAxisTypings {
   nameRotate: number;
   inverse: boolean;
   boundaryGap: boolean | Array;
-  min: number | string, function;
+  min: number | string | function;
   max: number | string;
   scale: boolean;
   splitNumber: number;
@@ -187,7 +187,7 @@ export interface radiusAxisTypings {
   nameRotate: number;
   inverse: boolean;
   boundaryGap: boolean | Array;
-  min: number | string, function;
+  min: number | string | function;
   max: number | string;
   scale: boolean;
   splitNumber: number;
@@ -215,7 +215,7 @@ export interface angleAxisTypings {
   clockwise: boolean;
   type: string;
   boundaryGap: boolean | Array;
-  min: number | string, function;
+  min: number | string | function;
   max: number | string;
   scale: boolean;
   splitNumber: number;
@@ -280,7 +280,7 @@ export interface tooltipTypings {
   enterable: boolean;
   confine: boolean;
   transitionDuration: number;
-  position: string | Array, Function;
+  position: string | Array | Function;
   formatter: string | Function;
   backgroundColor: Color;
   borderColor: Color;
@@ -331,10 +331,10 @@ export interface brushTypings {
   id: string;
   toolbox: Array;
   brushLink: Array | string;
-  seriesIndex: Array | number, string;
-  geoIndex: Array | number, string;
-  xAxisIndex: Array | number, string;
-  yAxisIndex: Array | number, string;
+  seriesIndex: Array | number | string;
+  geoIndex: Array | number | string;
+  xAxisIndex: Array | number | string;
+  yAxisIndex: Array | number | string;
   brushType: string;
   brushMode: string;
   transformable: boolean;
@@ -407,7 +407,7 @@ export interface parallelAxisTypings {
   nameRotate: number;
   inverse: boolean;
   boundaryGap: boolean | Array;
-  min: number | string, function;
+  min: number | string | function;
   max: number | string;
   scale: boolean;
   splitNumber: number;
@@ -442,7 +442,7 @@ export interface singleAxisTypings {
   nameRotate: number;
   inverse: boolean;
   boundaryGap: boolean | Array;
-  min: number | string, function;
+  min: number | string | function;
   max: number | string;
   scale: boolean;
   splitNumber: number;
@@ -511,7 +511,7 @@ export interface calendarTypings {
   bottom: string | number;
   width: number | string;
   height: number | string;
-  range: number | string, Array;
+  range: number | string | Array;
   cellSize: number | Array;
   orient: string;
   splitLine: Object;
