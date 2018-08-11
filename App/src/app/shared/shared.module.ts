@@ -41,6 +41,7 @@ import {
 
 import { NgxEchartsModule } from 'ngx-echarts';
 import 'hammerjs';
+import { SidebarComponent } from './component/sidebar/sidebar.component';
 
 const sharedModule = [
   FormsModule,
@@ -86,7 +87,7 @@ const sharedModule = [
 
 @NgModule({
   imports: sharedModule,
-  declarations: [],
+  declarations: [SidebarComponent],
   exports: sharedModule
 })
 export class SharedModule {
