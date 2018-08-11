@@ -41,9 +41,13 @@ let txtData = '';
       const names = document.querySelectorAll('.ecdoc-api-doc-line-label strong');
       const types = document.querySelectorAll('.ecdoc-api-doc-line-head .ecdoc-api-doc-line-type');
       names.forEach((value, index) => {
+        let type = types[index].innerText;
+        if (types[index].innerText.includes(',')) {
+          type = type.replace(/,/, ' |');
+        }
         const subObj = {
           name: value.innerText,
-          type: types[index].innerText,
+          type: type,
         };
         subOptions.push(subObj);
       });
