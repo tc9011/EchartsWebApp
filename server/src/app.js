@@ -5,7 +5,7 @@ const configs = require('./config/config');
 let options = [];
 let txtData = '';
 
-(async () => {
+async function main() {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
@@ -76,4 +76,6 @@ let txtData = '';
   });
 
   await browser.close();
-})();
+}
+
+main();
