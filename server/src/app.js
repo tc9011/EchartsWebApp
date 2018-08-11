@@ -8,15 +8,21 @@ let txtData = '';
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto(configs.url + '#' + configs.path);
 
+  // go to echarts option page
+  await page.goto(configs.url + '#' + configs.path);
   await page.waitFor(5000);
+  console.log('on option page now, begin to crawl the page, wait for a moment.');
+
+  // get parent option data
+  console.log('begin to crawl the parent option data');
   const parents = await page.evaluate(() => {
     let parentOptions = [];
     const list = document.querySelectorAll('.dtui-treelist-parent .ecdoc-api-tree-text-prop');
     list.forEach((value) => {
       parentOptions.push(value.innerText);
     });
+    console.log('finish crawling the parent option data.');
     return parentOptions;
   });
 
@@ -28,6 +34,7 @@ let txtData = '';
     };
     await page.goto(configs.url + '#' + result);
     await page.waitFor(2000);
+    console.log(`begin to crawl the ${result} option data.`);
     option[result] = await page.evaluate(() => {
       let subOptions = [];
       const names = document.querySelectorAll('.ecdoc-api-doc-line-label strong');
@@ -44,6 +51,7 @@ let txtData = '';
 
     options.push(option);
   }
+  console.log('finish crawling the children option data.');
 
   for (let i = 0; i < parents.length; i++) {
     const parentOption = parents[i];
@@ -54,6 +62,9 @@ let txtData = '';
     }
     txtData += '}\n\n';
   }
+
+  console.log('begin to write file.');
+
   fs.writeFile('./src/results/result.ts', txtData, err => {
     console.log(err ? err : 'done');
   });
