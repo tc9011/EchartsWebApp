@@ -14,6 +14,17 @@ async function main() {
   await page.waitFor(5000);
   console.log('on option page now, begin to crawl the page, wait for a moment.');
   const beginTime = Date.now();
+
+  const parents = await getParentOptions(page);
+
+  await getChildrenOptions(page, parents);
+
+  writeToFile(parents, beginTime);
+
+  await browser.close();
+}
+
+async function getParentOptions (page) {
   // get parent option data
   console.log('begin to crawl the parent option data');
   const parents = await page.evaluate(() => {
@@ -22,12 +33,14 @@ async function main() {
     list.forEach((value) => {
       parentOptions.push(value.innerText);
     });
-    console.log('finish crawling the parent option data.');
     return parentOptions;
   });
 
   console.log(parents);
+  return parents
+}
 
+async function getChildrenOptions (page, parents) {
   // get children option data
   for (result of parents) {
     const option = {
@@ -56,8 +69,9 @@ async function main() {
 
     options.push(option);
   }
-  console.log('finish crawling the children option data.');
+}
 
+function writeToFile (parents, beginTime) {
   // prepare for writing file
   txtData = 'const parentOptions = [';
   for (item of parents) {
@@ -81,8 +95,6 @@ async function main() {
     const second = (Date.now() - beginTime) / 1000;
     console.log(`It costs ${second} s`);
   });
-
-  await browser.close();
 }
 
 main();
