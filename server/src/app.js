@@ -13,7 +13,7 @@ async function main() {
   await page.goto(configs.url + '#' + configs.path);
   await page.waitFor(5000);
   console.log('on option page now, begin to crawl the page, wait for a moment.');
-
+  const beginTime = Date.now();
   // get parent option data
   console.log('begin to crawl the parent option data');
   const parents = await page.evaluate(() => {
@@ -59,6 +59,11 @@ async function main() {
   console.log('finish crawling the children option data.');
 
   // prepare for writing file
+  txtData = 'const parentOptions = [';
+  for (item of parents) {
+    txtData += " '" + item + "',";
+  }
+  txtData += '];\n\n';
   for (let i = 0; i < parents.length; i++) {
     const parentOption = parents[i];
     txtData += 'export interface ' + parentOption + 'Typings {\n';
@@ -73,6 +78,8 @@ async function main() {
   console.log('begin to write file.');
   fs.writeFile('./src/results/result.ts', txtData, err => {
     console.log(err ? err : 'done');
+    const second = (Date.now() - beginTime) / 1000;
+    console.log(`It costs ${second} s`);
   });
 
   await browser.close();
