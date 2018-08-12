@@ -1,5 +1,6 @@
 @import "../../../../assets/css/skins/indigo-pink";
 
-.example-container {
+.container {
+  min-height: 100vh;
   border-left: 2px solid $basic-blue;
 }
