@@ -1,0 +1,2 @@
+export const parentOptions = [ 'title', 'legend', 'grid', 'xAxis', 'yAxis', 'polar', 'radiusAxis', 'angleAxis', 'radar', 'dataZoom', 'visualMap', 'tooltip', 'axisPointer', 'toolbox', 'brush', 'geo', 'parallel', 'parallelAxis', 'singleAxis', 'timeline', 'graphic', 'calendar', 'dataset', 'aria', 'series', 'color', 'backgroundColor', 'textStyle', 'animation', 'animationThreshold', 'animationDuration', 'animationEasing', 'animationDelay', 'animationDurationUpdate', 'animationEasingUpdate', 'animationDelayUpdate', 'blendMode', 'hoverLayerThreshold', 'useUTC'];
+
