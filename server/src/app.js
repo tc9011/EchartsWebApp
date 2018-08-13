@@ -17,7 +17,7 @@ async function main() {
 
   const options = await getChildrenOptions(page, parents);
 
-  writeToFile(options, parents, beginTime);
+  writeToFile(parents, options, beginTime);
 
   await browser.close();
 }

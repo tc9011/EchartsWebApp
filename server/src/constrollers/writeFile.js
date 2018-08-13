@@ -2,7 +2,7 @@ const fs = require('fs');
 
 let txtData = '';
 
-module.exports = function (options, parents, beginTime) {
+module.exports = function (parents, options, beginTime) {
   // prepare for writing file
   txtData = 'const parentOptions = [';
   for (item of parents) {
