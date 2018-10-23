@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ParallelComponent } from './parallel.component';
+import { GlobalComponent } from './global.component';
 
-describe('ParallelComponent', () => {
-  let component: ParallelComponent;
-  let fixture: ComponentFixture<ParallelComponent>;
+describe('GlobalComponent', () => {
+  let component: GlobalComponent;
+  let fixture: ComponentFixture<GlobalComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ParallelComponent ]
+      declarations: [ GlobalComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ParallelComponent);
+    fixture = TestBed.createComponent(GlobalComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
