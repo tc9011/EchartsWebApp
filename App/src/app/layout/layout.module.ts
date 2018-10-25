@@ -1,11 +1,19 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { GlobalComponent } from './global/global.component';
+import { SharedModule } from '../shared/shared.module';
+import { SidebarComponent } from './sidebar/sidebar.component';
+
+const LAYOUTCOMPONENT = [
+  GlobalComponent,
+  SidebarComponent
+];
 
 @NgModule({
   imports: [
-    CommonModule
+    SharedModule
   ],
-  declarations: [GlobalComponent]
+  declarations: [GlobalComponent],
+  exports: [...LAYOUTCOMPONENT]
 })
 export class LayoutModule { }
