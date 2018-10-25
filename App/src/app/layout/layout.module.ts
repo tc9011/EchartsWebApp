@@ -15,7 +15,7 @@ const LAYOUTCOMPONENT = [
   imports: [
     SharedModule
   ],
-  declarations: [GlobalComponent],
+  declarations: [...LAYOUTCOMPONENT],
   exports: [...LAYOUTCOMPONENT]
 })
 export class LayoutModule { }
