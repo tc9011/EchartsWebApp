@@ -9,7 +9,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { AppComponent } from './app.component';
 import {SharedModule} from './shared/shared.module';
-import {NotificationService} from './shared/servers/notification/notification.service';
+import {NotificationService} from './core/notification/notification.service';
 import { LayoutModule } from './layout/layout.module';
 import { ViewsModule } from './views/views.module';
 

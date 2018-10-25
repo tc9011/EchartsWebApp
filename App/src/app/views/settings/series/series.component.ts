@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NotificationService } from '../../../shared/servers/notification/notification.service';
+import { NotificationService } from '../../../core/notification/notification.service';
 
 @Component({
   selector: 'app-series',
