@@ -6,8 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { TranslateModule } from '@ngx-translate/core';
 
-// import { Md2Module } from 'md2';
-
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -82,8 +80,6 @@ const sharedModule = [
   MatTabsModule,
   MatToolbarModule,
   MatTooltipModule,
-
-  // Md2Module
 ];
 
 

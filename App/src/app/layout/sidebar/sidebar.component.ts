@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { parentOptions } from '../../shared/typings/settings.typings';
 
 @Component({
