@@ -2,10 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { GlobalComponent } from '../layout/global/global.component';
+import { HomeComponent } from '../layout/home/home.component';
 
 const routes: Routes = [
   {
     path: '',
+    component: HomeComponent
+  },
+  {
+    path: 'chart',
     component: GlobalComponent,
     children: [
       {

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { SettingsService } from '../shared/servers/settings/settings.service';
+
 import { TranslateService } from '@ngx-translate/core';
-import { NotificationService } from '../shared/servers/notification/notification.service';
+
+import { SettingsService } from '../../shared/servers/settings/settings.service';
+import { NotificationService } from '../../shared/servers/notification/notification.service';
 
 @Component({
   selector: 'app-line-charts',
