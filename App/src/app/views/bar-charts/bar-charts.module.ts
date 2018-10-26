@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { BarChartsComponent } from './bar-charts.component';
 import { barChartsRoutes } from './bar-charts.routes';
 import { SharedModule } from '../../shared/shared.module';
+import { LayoutModule } from '../../layout/layout.module';
 
 @NgModule({
   imports: [
-    CommonModule,
+    LayoutModule,
     RouterModule.forChild(barChartsRoutes),
     SharedModule,
   ],

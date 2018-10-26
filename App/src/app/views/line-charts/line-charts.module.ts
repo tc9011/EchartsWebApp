@@ -6,10 +6,11 @@ import { LineChartsComponent } from './line-charts.component';
 import { lineChartsRoutes } from './line-charts.routes';
 import { SharedModule } from '../../shared/shared.module';
 import { SettingsModule } from '../settings/settings.module';
+import { LayoutModule } from '../../layout/layout.module';
 
 @NgModule({
   imports: [
-    CommonModule,
+    LayoutModule,
     RouterModule.forChild(lineChartsRoutes),
     SharedModule,
     SettingsModule

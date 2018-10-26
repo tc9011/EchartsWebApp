@@ -8,7 +8,6 @@ import { parentOptions } from '../../shared/typings/settings.typings';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  parentOptions = parentOptions;
   constructor() {}
 
   ngOnInit() {

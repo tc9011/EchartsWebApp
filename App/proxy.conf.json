@@ -1,8 +1,0 @@
-{
-  "/API": {
-    "target": "http://10.63.246.83:2017",
-    "secure": false,
-    "logLevel": "debug",
-    "changeOrigin": true
-  }
-}
